@@ -1,0 +1,177 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>iOS打包静态库SOP | Gridea</title>
+<link rel="shortcut icon" href="https://tingke.github.io//favicon.ico?v=1560780269650">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://tingke.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://tingke.github.io/">
+  <img class="avatar" src="https://tingke.github.io//images/avatar.png?v=1560780269650" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              iOS打包静态库SOP
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2018-02-20 ·
+              </time>
+              
+            </div>
+            
+            <div class="post-content">
+              <p>今天，领导要求将App中网络请求的核心代码打包成静态库。故上网研究了一下静态库打包的相关知识，边看边试的打包成功了。现在在这里总结下：</p>
+<h2 id="库的基本知识">库的基本知识</h2>
+<p><strong>1、 什么是库？</strong></p>
+<p>所谓库就是程序代码的集合，是共享程序代码的一种方式。</p>
+<!-- more --> 
+<p><strong>2、 库的分类</strong></p>
+<p>根据程序代码的开源情况，库可以分为两类</p>
+<ul>
+<li>
+<p>开源库</p>
+<p>源代码是公开的，你可以看到具体实现。比如GitHub上比较出名的第三方框架AFNetworking、SDWebImage。</p>
+</li>
+<li>
+<p>闭源库</p>
+<p>不公开源代码，只公开调用的接口，看不到具体的实现，是一个编译后的二进制文件。这种常见于一些公司的SDK包，比如高德地图SDK、环信即时通讯SDK等等。而闭源库又分为两类：静态库和动态库。本篇重点要讲的便是其中的静态库。</p>
+</li>
+</ul>
+<p><strong>3、静态库和动态库的存在形式和使用区别</strong></p>
+<p>存在形式：</p>
+<p>静态库
+以&quot;.a&quot;或者“.framework”为文件后缀名
+动态库
+以&quot;.dylib&quot;或者“.framework”为文件后缀名</p>
+<p>使用区别：</p>
+<p>静态库链接时会被完整的复制到可执行文件中，被多次使用就有多份拷贝。
+动态库链接时不复制，程序运行时由系统动态加载到内存，供程序调用。而且系统只加载一次，多个程序共用，节省内存。</p>
+<h2 id="a文件静态库打包"><code>.a</code>文件静态库打包</h2>
+<p><strong>步骤一、新建一个新工程或在老项目中新建一个新Target，选择<code>Cocoa Touch Static Library</code></strong>
+<img src="http://outiw4np3.bkt.clouddn.com/7f52d89fead89117d921568bb87141f9.jpg" alt=""></p>
+<p><strong>步骤二、修改静态库的配置</strong></p>
+<p><code>buildSeting -&gt; Build Active Architecture Only</code>设为NO，使编译后的库支持所有架构。</p>
+<p><img src="http://outiw4np3.bkt.clouddn.com/66345bad9034e95d979b7f8c910d39d9.jpg" alt=""></p>
+<p><code>buildSeting -&gt; iOS Deployment Target</code>设置静态库支持的iOS版本
+<img src="http://outiw4np3.bkt.clouddn.com/0c5ecacd2a60f359b1d69580ff2c80de.jpg" alt=""></p>
+<p><strong>步骤三、新建或拖入需打包的内容</strong></p>
+<p><img src="http://outiw4np3.bkt.clouddn.com/015550852490ac499d17d8d6ba4ca7de.jpg" alt=""></p>
+<p><strong>步骤四、设置公开.h文件</strong>
+<img src="http://outiw4np3.bkt.clouddn.com/6d7cec281fa3f6cf0fa658f75e3e9c6a.jpg" alt=""></p>
+<p><strong>步骤五、选中本Target,<code>Command+B</code>编译（一般编译两次，模拟器的Debug状态和真机的Release状态）。</strong></p>
+<p><img src="http://outiw4np3.bkt.clouddn.com/0a2bd0f7478a9d3830df90c3875dff54.jpg" alt=""></p>
+<p><code>Products</code>中的libKPPW变黑表示编译成功，右键<code>Show in Finder</code>打开静态库路径</p>
+<p><strong>步骤六、打开终端，输入以下命令合并模拟器和真机的静态库</strong></p>
+<pre><code>lipo -create 真机库的路径 模拟器库的路径 -output 合并后新库的路径
+</code></pre>
+<h2 id="framework文件静态库打包"><code>.framework</code>文件静态库打包</h2>
+<p>步骤跟制作 <code>.a</code> 静态库基本一致，但要注意一下几点：</p>
+<ol>
+<li>
+<p>选择 framework</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/foPACGrddJ0HsbypCB0TDBkUaI3CWphvA8ZWV7VVuBS74cicJkI0AXkdTe423iciaxiask4ficqE5p4OnkR30EqQSSA/640" alt=""></p>
+</li>
+<li>
+<p>编译时默认制作成动态库，要在下面选择</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/foPACGrddJ0HsbypCB0TDBkUaI3CWphvt8icFAhSH6XwuNquYfOTu6ofAEe1e9dvFJyjEFXphZYYt8vokIuByRw/640" alt=""></p>
+</li>
+<li>
+<p>合并静态库的时候，要选择 <code>.framework</code> 文件里的 <code>libstaticclib</code> 文件</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/foPACGrddJ0HsbypCB0TDBkUaI3CWphvI13fTK8hhjSgMXjdHvwTvUk57C0MWPoyicjerjfpJyrmuMPbptNWH2g/640" alt=""></p>
+</li>
+</ol>
+
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://tingke.github.io//post/bian-xie-gao-zhi-liang-ios-yu-os-x-dai-ma-de-52-ge-you-xiao-fang-fa">
+              <h3 class="post-title">
+                编写高质量iOS与OS X代码的52个有效方法
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> Copyright © 2019 | 
+  <a class="rss" href="https://tingke.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

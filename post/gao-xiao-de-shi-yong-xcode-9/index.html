@@ -1,0 +1,225 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>高效的使用Xcode 9 | Gridea</title>
+<link rel="shortcut icon" href="https://tingke.github.io//favicon.ico?v=1560780269650">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://tingke.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://tingke.github.io/">
+  <img class="avatar" src="https://tingke.github.io//images/avatar.png?v=1560780269650" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              高效的使用Xcode 9
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2017-11-01 ·
+              </time>
+              
+            </div>
+            
+            <div class="post-content">
+              <p>随着iOS 11的发布，Xcode版本也升级到了9。那么这个版本的Xcode又有哪些变化呢？</p>
+<h2 id="1-跳转方法">1. 跳转方法</h2>
+<p>以前按住Command键，单击任何方法名都可以跳转到方法声明处或者苹果文档中。但是现在却弹出个弹框，如图</p>
+<p><img src="http://outiw4np3.bkt.clouddn.com/136bddeb50e67439fd2425a1b5ec88ce.jpg" alt=""></p>
+<p>此时却Command+Shift+左键才能跳转，才麻烦了。我们只需要在设置中这样就能设置回我们熟悉操作：</p>
+<p><img src="http://api.cocoachina.com/uploads//20170922/1506047607578005.png" alt=""></p>
+<!-- more -->
+<h2 id="2-折叠代码">2. 折叠代码</h2>
+<p>Command+Option+左右箭头  = 折叠或打开代码块</p>
+<h2 id="3-重构相关">3. 重构相关</h2>
+<p>对一个方法或者变量的重命名,在方法上CMD+单击,出现的菜单,选择rename
+<img src="http://api.cocoachina.com/uploads//20170922/1506048006956030.png" alt=""></p>
+<h2 id="4-folder和group的同步性">4. Folder和Group的同步性</h2>
+<p>之前,我们在XCode中,更改Folder的名字,在FInder中工程对应的文件夹的名字并不会同步的改变,这会造成我们重命名文件夹变得非常不方便,往往要先在XCode中移除,然后在Finder中重命名,再添加回Xcode</p>
+<p>现在 在Xcode9中重名命Folder,Finder中的也同步的改变了</p>
+<p>我们之前建议一个虚拟的group,并不会在对应的文件夹中建立真实的目录,当然,这可能是你需要的,也可能是你不需要的功能.在9中,默认行为改变了.变成了会建立对应的真实文件夹.如果还想像之前那样只是建立虚拟的group,需要选择New Group without Folder
+<img src="http://api.cocoachina.com/uploads//20170922/1506049901602588.png" alt=""></p>
+<p>你可能你会担心,区分不了这个group到底是虚拟的,还是实际的</p>
+<p>放心,苹果给出了标识来区分的,虚拟的左下角有个小的三角形
+<img src="http://api.cocoachina.com/uploads//20170922/1506049933727526.png" alt=""></p>
+<h2 id="5-runtime问题检测">5. runtime问题检测</h2>
+<p>在8中,已经包含了Address Scanitizer和Thread Scanitizer,在Xcode9中,又新增了 Undefiner Behavior Scanitizer,它可以实时的检测一系列的问题.不过我们更能明显感受到的是Main Thread Checker,它可以在运行时确保你没有把UI更新 代码写在了非主线程中</p>
+<p>例如,代码中
+<img src="http://api.cocoachina.com/uploads//20170922/1506048625225251.png" alt=""></p>
+<p>可见还是很强大的,虽然我们没有Fabric的源码,但是其内部调用了[UIApplicationsharedApplication].statusBarOrientation],还是被检测到了</p>
+<p>当然了,如果你想关掉它,可以在 scheme editor中操作
+<img src="http://api.cocoachina.com/uploads//20170922/1506048660434469.png" alt=""></p>
+<h2 id="6-模拟器可以多开了并且模拟器可以登录">6. 模拟器可以多开了,并且,模拟器可以登录</h2>
+<p><img src="http://api.cocoachina.com/uploads//20170922/1506049353869658.png" alt=""></p>
+<p>模拟器的外观样式也回归了,直接是iPhone的外观了,以前可能是因为模拟器不能任意调整大小,所以才没外观的吧</p>
+<p>当然了,你可以去掉外观皮肤. 在模拟器的Window show Device Bezels,去掉选项就和以前一样了
+<img src="http://api.cocoachina.com/uploads//20170922/1506049444615552.png" alt=""></p>
+<h2 id="7-无线开发">7. 无线开发</h2>
+<p>这个只支持ios11的机器,很简单,只要在Device那打开支持就行.
+<img src="http://outiw4np3.bkt.clouddn.com/c7036aafad24dc729374d88f5b96e637.jpg" alt=""></p>
+<h2 id="8-调整字体">8. 调整字体</h2>
+<p>cmd +/- 可以用来调整编辑器的字体大小了</p>
+<h2 id="9-关于警告">9. 关于警告</h2>
+<p>我们定义一个不带参数的block,通常是如下的方式</p>
+<p><code>typedef void (^UpdateSwichBtnBlock)();</code></p>
+<p>在xcode9中会提示一个警告</p>
+<p><code>This block declaration is not a prototype Insert ‘void'</code></p>
+<p>解决方式可以是如下的几种</p>
+<ol>
+<li>
+<p><code>typedef void (^UpdateSwichBtnBlock)(void);</code></p>
+<p>但是这样,很多第三方要改,涉及的面太大了,目前可能不太适合,虽然这个是趋势.</p>
+</li>
+<li>
+<p>pragma</p>
+<pre><code>#pragma clang diagnostic push
+#pragma clang diagnostic ignored &quot;-Wstrict-prototypes&quot;
+typedefvoid (^UpdateSwichBtnBlock)();
+#pragma clang diagnostic pop
+</code></pre>
+</li>
+<li>
+<p>彻底的暂时解决所有这种警告的方式</p>
+<p>在工程的设置中</p>
+<p><img src="http://api.cocoachina.com/uploads//20170922/1506047796141945.png" alt=""></p>
+<p>设置为NO,则这些警告就消失了</p>
+<p>不过这不是一种好习惯,只是暂时性的不让提示这种类型的警告而已</p>
+</li>
+</ol>
+<h2 id="10-crash可以直接在本机上看到了">10. crash可以直接在本机上看到了</h2>
+<p><img src="http://api.cocoachina.com/uploads//20170922/1506048237529869.png" alt=""></p>
+<h2 id="11-xcode-在全屏模式下使用-simulator">11. Xcode 在全屏模式下使用 Simulator</h2>
+<p>如果你用的是 13 寸的电脑，那么 Xcode 的全屏模式你应该早已习惯，其实即使是配有显示器，我还是习惯在 Xcode 的全屏模式下开发😎。很可惜的是不能在 Xcode 的全屏模式下使用 Simulator, 自 Xcode 9b3 以后，这个问题便不存在了：</p>
+<p><img src="http://cc.cocimg.com/api/uploads//20180125/1516864278298406.gif" alt=""></p>
+<p>这个功能并不是对所有人默认开放的，如果不幸你的 Xcode 没有默认开启这个功能也不要灰心，我们可以通过打开 Apple Internal menu 来启用这个功能，通过 Apple Internal menu 你能挖掘出 Simulator 的更多新特性。那么问题来了，怎么开启 Apple Internal menu 呢？首先，在更目录里创建 AppleInternal 文件夹，然后重启 Simulator:
+<img src="http://cc.cocimg.com/api/uploads//20180125/1516864313510848.png" alt=""></p>
+<pre><code>cd ~/ 
+sudo mkdir /AppleInternal
+</code></pre>
+<p>多重启 Simulator 后就可以看到 internal 选项 ☝
+但是，</p>
+<p>我在 Mac 使用过程中遇到 <code>Operation Not Permitted</code> 问题，之前都是略过，今天好好摸索了一把，搞明白了道理，记录下来。
+好几次整理移动硬盘数据的时候，都遇到了 Operation Not Permitted 问题，文件移动不了，也删除不掉，第一次遇到没理会，第二次是打开虚拟机，在 Windows 中操作这些问题文件，今天又遇到了，决定消灭它。
+OS X EI Capitan 的 SIP</p>
+<p>Apple 在 OS X 10.11 以后的版本中默认启动了一项系统保护程序，叫做 System Integrity Protection，也被唤作 rootless（寓意让 root 弱一点），该程序意在保护电脑不被恶意程序攻击，但是对于我们这群程序员，很多保护是多余的，甚至给我们带来了很多麻烦。
+SIP 会锁定几个系统文件目录：</p>
+<pre><code>/System
+/sbin
+/usr （/usr/local 除外）
+</code></pre>
+<p>在 SIP 的保护下，部分软件、功能、脚本都会失效，我们可以通过如下步骤关闭 SIP：</p>
+<ul>
+<li>重启电脑，按下 Command + R 直到听到开机声音，此时电脑会进入恢复模式（Recovery Mode）</li>
+<li>当 OSX 工具出现在屏幕中时，下拉工具（Utilities）菜单，选择终端（Terminal）</li>
+<li>键入 csrutil disable，回车</li>
+<li>电脑重启后，SIP 就关闭了</li>
+</ul>
+<p>恢复 SIP 的方式同上，只不过终端中键入 <code>csrutil enable</code>。通过 <code>csrutil status</code> 可以检测系统当前 SIP 的启动状态：</p>
+<pre><code>$ csrutil status
+System Integrity Protection status: enabled.
+</code></pre>
+<p>补充：</p>
+<p>使用命令行，在录制当前模拟器的屏幕</p>
+<pre><code>xcrun simctl io booted recordVideo --type=mp4 &lt;PATH TO VIDEO FILE&gt;
+</code></pre>
+<p><img src="http://outiw4np3.bkt.clouddn.com/5734dc156e651dcfe0b6b11bad8cd335.jpg" alt=""></p>
+<p>上传文件到模拟器中
+<img src="http://outiw4np3.bkt.clouddn.com/e85146fe9468f795c4895c4883727d2e.jpg" alt=""></p>
+<p>打开url(所有苹果的URL计划列表请查阅<a href="https://developer.apple.com/library/content/featuredarticles/iPhoneURLScheme_Reference/Introduction/Introduction.html">文档</a>。)</p>
+<pre><code>xcrun simctl openurl booted &lt;URL&gt;
+</code></pre>
+<p>参考阅读：<br>
+<a href="https://medium.com/flawless-app-stories/simulator-on-steroids-c12774ca6b">iOS Simulator on steroids: Tips &amp; Tricks</a></p>
+
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://tingke.github.io//post/ios11-xia-de-gua-pei-gong-zuo">
+              <h3 class="post-title">
+                iOS11下的适配工作
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> Copyright © 2019 | 
+  <a class="rss" href="https://tingke.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

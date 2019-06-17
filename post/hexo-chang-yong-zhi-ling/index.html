@@ -1,0 +1,145 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hexo常用指令 | Gridea</title>
+<link rel="shortcut icon" href="https://tingke.github.io//favicon.ico?v=1560780269650">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://tingke.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://tingke.github.io/">
+  <img class="avatar" src="https://tingke.github.io//images/avatar.png?v=1560780269650" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Hexo常用指令
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2019-06-17 ·
+              </time>
+              
+            </div>
+            
+            <div class="post-content">
+              <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="create-a-new-post">Create a new post</h3>
+<pre><code class="language-bash">$ hexo new &quot;My New Post&quot;
+</code></pre>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="run-server">Run server</h3>
+<pre><code class="language-bash">$ hexo server
+</code></pre>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="generate-static-files">Generate static files</h3>
+<pre><code class="language-bash">$ hexo generate
+</code></pre>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<pre><code class="language-bash">$ hexo deploy
+</code></pre>
+<p>More info: <a href="https://hexo.io/docs/deployment.html">Deployment</a></p>
+<h3 id="more">More</h3>
+<h4 id="layout布局">Layout布局</h4>
+<p>Hexo提供了3种默认的布局， <code>post</code> 、 <code>page</code> 和 <code>draft</code> ，路径分别为： <code>source/_posts</code> 、 <code>source</code> 、 <code>source/_draft</code> 。如果你将在文章前置申明中，将<code>layout</code>设置为<code>false</code>，那么这篇文章将不会有任何的布局。</p>
+<h4 id="filename文件名">Filename文件名</h4>
+<p>Hexo会默认将文章的标题当做文件名，但是你可以编辑 <code>_config.yml</code> 配置文件中的 <code>new_post_name</code> 来改变默认的文件名。
+例如：使用 hexo new hello 命令创建一篇为hello文章，Hexo会默认在<code>_posts</code>目录下给你创建一个名为hello.md的文件。假如你将 <code>new_post_name</code> 改为了 <code>:year-:month-:day-:title.md</code> ，那么hexo就自动帮你创建名为2015-05-16-hello.md（当前日期为2015年5月16）</p>
+<ul>
+<li>:title 文章标题</li>
+<li>:year 创建年份</li>
+<li>:month 月份，如4月为 04</li>
+<li>:day 日期</li>
+<li>i_month 月份，单数字，比如4月就是 4</li>
+<li>i_day 日期，单数字</li>
+</ul>
+<h4 id="drafts草稿">Drafts草稿</h4>
+<p>Hexo提供草稿功能，在 <code>_drafts</code> 目录下的文章不会发表到网站上，你可以通过命令 <code>hexo publish [layout] &lt;title&gt;</code> 发布你的草稿，改命令会将文章移到 <code>_posts</code> 目录下。但是也可以设置 <code>_config.yml</code> 配置文件的 <code>render_drafts</code> 字段，使草稿默认发布到站点中。</p>
+<h4 id="scaffolds模版">Scaffolds模版</h4>
+<p>当你使用 new 命令创建一篇文章的时候，Hexo会根据scaffolds目录中的模版帮你生成文章。假如执行 <code>hexo new photo &quot;My Gallery&quot;</code> ，Hexo会尝试在scaffolds目录中去寻找photo.md的模版文件，然后基于它创建标题为My Gallery的文章。
+它的用处就是能够在模版中写入你某一类文章都要添加的共同内容，这样你基于模版创建文章的时候，就不用再重复写入那部分内容。</p>
+
+            </div>
+          </article>
+        </div>
+
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> Copyright © 2019 | 
+  <a class="rss" href="https://tingke.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

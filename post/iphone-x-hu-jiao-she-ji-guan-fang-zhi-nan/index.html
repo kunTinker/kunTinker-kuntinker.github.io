@@ -1,0 +1,145 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>iPhone X互交设计官方指南 | Gridea</title>
+<link rel="shortcut icon" href="https://tingke.github.io//favicon.ico?v=1560780269650">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://tingke.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://tingke.github.io/">
+  <img class="avatar" src="https://tingke.github.io//images/avatar.png?v=1560780269650" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              iPhone X互交设计官方指南
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2017-09-14 ·
+              </time>
+              
+            </div>
+            
+            <div class="post-content">
+              <p>One More Thing!</p>
+<p>iPhone X来了，全面屏+独特的“刘海”造型。让我们来了解一下iPhone X吧。</p>
+<h2 id="iphone-x">iPhone X</h2>
+<p>iPhone X包括一个大的、高分辨率的、圆形的、边对边的显示，它提供了前所未有的沉浸式、内容丰富的体验。</p>
+<p><img src="https://developer.apple.com/ios/human-interface-guidelines/images/OV_Hero.png" alt=""></p>
+<!-- more --> 
+<h2 id="screen-size">Screen Size</h2>
+<p>在竖屏方向，iPhoneX显示屏的宽度与iPhone 6、iPhone 7和iPhone 8 4.7显示器的宽度相匹配。但是在iPhone X比4.7寸屏幕高145pt，导致大约20%额外的垂直空间的内容。</p>
+<p><img src="http://outiw4np3.bkt.clouddn.com/09c50a07e949b9bd883ec53245682a2f.jpg" alt=""></p>
+<p><strong>在你的应用程序的所有切图必须提供高分辨率的图像</strong>。iPhone X有一个高分辨率屏幕，符号等的平面、矢量图形，最好是提供独立的PDF文件的分辨率。用于光栅化的切图，同时提供@3X和@2x版本的切图。参见<a href="https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/image-size-and-resolution/"> Image Size and Resolution </a>和<a href="https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/custom-icons/">Custom Icons</a>。</p>
+<h2 id="layout">Layout</h2>
+<p>当为iPhone X设计时，必须确保布局填满屏幕，而不是被设备的圆角、传感器外壳或访问主屏幕的指示器所掩盖。</p>
+<p><img src="http://outiw4np3.bkt.clouddn.com/dfe7cf9898bef9f77db2594c3e3572d6.jpg" alt=""></p>
+<p>大多数使用标准的、系统提供的UI元素（如导航栏、表格和集合）的应用程序会自动适应设备的新形式因素。背景材料扩展到显示的边缘，并且适当地插入和定位UI元素。</p>
+<p><img src="http://outiw4np3.bkt.clouddn.com/e083d0fe55f9407524af1b263e207889.jpg" alt=""></p>
+<p>对于具有自定义布局的应用程序，支持 iPhone X 也应该比较容易，特别是如果您的应用程序使用 Auto Layout 并遵守安全区域和边距布局指南。</p>
+<p><strong>在 iPhone X 上预览您的应用程序</strong>。您可以使用 Simulator(附带 Xcode)来预览应用程序，并检查剪辑和其他布局问题。如宽彩色图像这样的属性，最好在设备上预览。</p>
+<p><strong>提供全屏体验</strong>。确保背景延伸到屏幕的边缘，并且垂直可滚动的布局(如表格和集合)一直延续到底部。</p>
+<p><img src="http://outiw4np3.bkt.clouddn.com/ea144cbca3b93422bc232615b2a64a6e.jpg" alt=""></p>
+<p><strong>插入必要内容以防止裁剪</strong>。一般来说，内容应该是居中对称的，所以它在任何方向看起来都很棒，不会被角落或设备的传感器外壳裁剪，或被访问主屏幕的指示器遮挡。为获得最佳效果，请使用标准的系统提供的界面元素和 Auto Layout 构建您的界面。所有应用程序都应遵循 UIKit 定义的安全区域和布局边距，这些区域可以根据设备和上下文进行适当的填充。安全区域还可以防止内容覆盖状态栏、导航栏、工具栏和标签栏。</p>
+<p><strong>注意状态栏的高度。状态栏在 iPhone X 上比在其他 iPhone 上更高</strong>。如果您的应用程序的固定状态栏高度在状态栏的下方，则您必须更新您的应用程序，才能根据用户的设备动态定位内容。请注意，当背景任务(如录音和位置跟踪)处于活动状态时，iPhoneX 上的状态栏不会改变高度。</p>
+<p><strong>如果您的应用程序目前隐藏状态栏，请重新考虑 iPhone X 上的决定</strong>。iPhone 上的显示高度为 4.7 英寸，iPhone 的显示屏提供了更多的垂直空间内容，状态栏占据了您应用程序本可能赢得的屏幕区域，状态栏还显示了人们发现的有用的信息，只有在交换附加值时候才能被隐藏。</p>
+<p><img src="http://outiw4np3.bkt.clouddn.com/6b91a2d084267fef4dd3912f89fac422.jpg" alt=""></p>
+<p><strong>在重复使用现有图稿时，请注意长宽比差异</strong>。iPhone X 具有不同于 4.7 英寸 iPhone 的长宽比，因此，全屏 4.7 英寸 iPhone 图形在 iPhone X 上全屏显示时出现裁剪或 letterboxed。同样，全屏 iPhone X 图稿在显示时被裁剪或被添加黑边。 全屏显示在 4.7 英寸 iPhone 上，确保重要的视觉内容保持在两种显示尺寸上。</p>
+<p><strong>避免将交互式控件放置在屏幕最底部和角落里</strong>。人们使用显示屏底部的滑动手势访问主屏幕和应用程序切换器，这些手势可能会取消您在此区域中实现的自定义手势。屏幕的两个角落很难让人触及。</p>
+<p><strong>不要遮挡或突出显示关键的显示特性</strong>。请勿尝试隐藏设备的圆角、传感器外壳或通过在屏幕顶部和底部放置黑色条来指示主屏幕的指示器。不要使用像括号、边框、形状或教学文字等视觉装饰来让人注意这些区域。</p>
+<p><strong>允许自动隐藏虚拟Home键，以便轻松访问主屏幕</strong>。当启用自动隐藏时，如果用户没有触摸屏幕几秒钟，Home 键将自动隐藏。当用户再次触摸屏幕时，它会重新出现。这种行为应该只能用于被动观看体验，如播放视频或幻灯片。请参阅 适应性和布局。</p>
+<p>参见 <a href="https://developer.apple.com/ios/human-interface-guidelines/visual-design/adaptivity-and-layout/">Adaptivity and Layout</a>.</p>
+<h2 id="statusbar">StatusBar</h2>
+<p><img src="http://outiw4np3.bkt.clouddn.com/db3f5dd7683619eb72b13fd20d662ba4.jpg" alt=""></p>
+<h2 id="navigationbar的标题">NavigationBar的标题</h2>
+<p>考虑在导航栏中显示当前视图的标题。在大多数情况下，标题帮助人们理解他们在看什么。然而，如果标题导航栏似乎是多余的，你可以把标题空。例如，Notes不会对当前的便笺进行标题，因为第一行内容提供了所需的所有上下文。</p>
+<p><img src="http://outiw4np3.bkt.clouddn.com/8970c1e7760170dc34f0ec1580a04107.jpg" alt=""></p>
+<p><strong>当需要额外强调上下文时，使用大标题</strong>。在一些应用程序中，大标题的粗体文本可以帮助人们浏览和搜索。在标签的布局，例如，大标题可以帮助澄清活动标签和通知用户当他们滚动到顶部。手机使用这种方法，而音乐使用大标题来区分内容区域，如专辑、艺术家、播放列表和广播。当用户开始滚动内容时，一个大标题转换为一个标准标题。大标题在所有应用程序中都没有意义，不应该与内容竞争。虽然时钟应用程序有一个选项卡式布局，但大标题是不必要的，因为每个选项卡都有一个独特的、可识别的布局。对于开发商的引导，参考<a href="https://developer.apple.com/documentation/uikit/uinavigationbar/2908999-preferslargetitles">preferslargetitles</a>。</p>
+<h2 id="tabbar">TabBar</h2>
+<p><img src="http://outiw4np3.bkt.clouddn.com/29d68ad8dae84f8330a02bdd430dd3a8.jpg" alt=""></p>
+<p>本文翻译于<a href="https://developer.apple.com/ios/human-interface-guidelines/overview/iphone-x/">Apple Developer</a></p>
+
+            </div>
+          </article>
+        </div>
+
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> Copyright © 2019 | 
+  <a class="rss" href="https://tingke.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

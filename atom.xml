@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://tingke.github.io/</id>
     <title>Gridea</title>
-    <updated>2019-06-17T13:48:24.530Z</updated>
+    <updated>2019-06-17T14:04:32.418Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://tingke.github.io/"/>
     <link rel="self" href="https://tingke.github.io//atom.xml"/>
@@ -11,11 +11,439 @@
     <icon>https://tingke.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, Gridea</rights>
     <entry>
+        <title type="html"><![CDATA[FileMerge的基本使用]]></title>
+        <id>https://tingke.github.io//post/filemerge-de-ji-ben-shi-yong</id>
+        <link href="https://tingke.github.io//post/filemerge-de-ji-ben-shi-yong">
+        </link>
+        <updated>2018-09-13T13:54:41.000Z</updated>
+        <summary type="html"><![CDATA[<p>作为一个开放人员，比较代码和合并代码是常有的事，以前都是用Beyond Compare这软件来比较的，后面发现Xcode自带的FileMerge也挺好用的，还省的多下载一个软件。下面我将介绍下 XCode自带的FileMerge进行代码合并管理的使用。</p>
+<p>首先。FileMerge是XCode 4.x 自带的一个管理代码合并的工具，在XCode中如果提交svn 或者 git的时候，在展示diff的时候，其实就用到了这个工具的部分功能。</p>
+<p>首先FileMerge，不仅仅只是支持Compare，还能很好的支持merge。而merge是我们管理代码的时候经常性遇到的基础需求。废话少说。下面展示下FileMerge怎么使用</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>作为一个开放人员，比较代码和合并代码是常有的事，以前都是用Beyond Compare这软件来比较的，后面发现Xcode自带的FileMerge也挺好用的，还省的多下载一个软件。下面我将介绍下 XCode自带的FileMerge进行代码合并管理的使用。</p>
+<p>首先。FileMerge是XCode 4.x 自带的一个管理代码合并的工具，在XCode中如果提交svn 或者 git的时候，在展示diff的时候，其实就用到了这个工具的部分功能。</p>
+<p>首先FileMerge，不仅仅只是支持Compare，还能很好的支持merge。而merge是我们管理代码的时候经常性遇到的基础需求。废话少说。下面展示下FileMerge怎么使用</p>
+<!-- more -->
+<p>FileMerge 在 XCode的安装目录可以找到。如下图路径</p>
+<p><img src="http://outiw4np3.bkt.clouddn.com/3edd23c52c074e1e0e87d2763db7f945.jpg" alt=""></p>
+<p>打开应用后界面如下图：
+<img src="http://outiw4np3.bkt.clouddn.com/6374cf0895f1c5b0da7c5be1af19c138.jpg" alt=""></p>
+<p>界面很简单，接下来就是设置Left ，Right。Left Right就是你要比较的项目的根目录。请记住你Left 和 RIght。这个在接下来的操作中非常重要。好了，点击 Compare 进入</p>
+<p>经过比较，灰色为完全相同的文件，黑色表示有不同之处的文件
+<img src="http://outiw4np3.bkt.clouddn.com/cc7fd60fc0125f56722414ee1fe366a1.jpg" alt=""></p>
+<p>使用Comparison打开文件
+<img src="http://outiw4np3.bkt.clouddn.com/34c75426999338eb957f71cea52a17ba.jpg" alt="">
+<img src="http://outiw4np3.bkt.clouddn.com/468790cb7817aa7da408aac59e6e8e0b.jpg" alt=""></p>
+<p>FileMerge是需要等你处理了所有不同处的Actions 以后，在关闭这个界面，回到上一层的时候。看到View 选项下面有 Merge 选项。Combine Filles 其实就是相当于应用你保存的Actions并合并代码。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[《图解HTTP》读书笔记]]></title>
+        <id>https://tingke.github.io//post/lesslesstu-jie-httpgreatergreater-du-shu-bi-ji</id>
+        <link href="https://tingke.github.io//post/lesslesstu-jie-httpgreatergreater-du-shu-bi-ji">
+        </link>
+        <updated>2018-06-29T12:00:40.000Z</updated>
+        <summary type="html"><![CDATA[<h2 id="tcpip-协议族分层">TCP/IP 协议族分层</h2>
+<ol>
+<li>应用层
+<ul>
+<li>向用户提供应用服务，如：<code>HTTP（HyperText Transfer Protocol，超文本传输协议）</code>、<code>FTP（File Transfer Protocol，文件传输协议）</code>、<code>DNS（Domain Name System，域名系统）</code>等</li>
+</ul>
+</li>
+<li>传输层
+<ul>
+<li>为应用层提供处于网络连接中的客户端和服务端的数据传输，如 TCP<code>（Transmission Control Protocol，传输控制协议）</code>、UDP<code>（User Data Protocol，用户数据报协议）</code></li>
+</ul>
+</li>
+<li>网络层
+<ul>
+<li>用来处理在网络上流动的数据包，为数据包的传输选择一条传输线路，如：<code>IP（Internet Protocol，网际协议）</code></li>
+</ul>
+</li>
+<li>数据链路层
+<ul>
+<li>处理连接网络的硬件部分，如：光纤、网卡、驱动等</li>
+</ul>
+</li>
+</ol>
+<p>传输图解
+<img src="http://outiw4np3.bkt.clouddn.com/15e41c7da0dd411dabdbbad1266da079.jpg" alt=""></p>
+]]></summary>
+        <content type="html"><![CDATA[<h2 id="tcpip-协议族分层">TCP/IP 协议族分层</h2>
+<ol>
+<li>应用层
+<ul>
+<li>向用户提供应用服务，如：<code>HTTP（HyperText Transfer Protocol，超文本传输协议）</code>、<code>FTP（File Transfer Protocol，文件传输协议）</code>、<code>DNS（Domain Name System，域名系统）</code>等</li>
+</ul>
+</li>
+<li>传输层
+<ul>
+<li>为应用层提供处于网络连接中的客户端和服务端的数据传输，如 TCP<code>（Transmission Control Protocol，传输控制协议）</code>、UDP<code>（User Data Protocol，用户数据报协议）</code></li>
+</ul>
+</li>
+<li>网络层
+<ul>
+<li>用来处理在网络上流动的数据包，为数据包的传输选择一条传输线路，如：<code>IP（Internet Protocol，网际协议）</code></li>
+</ul>
+</li>
+<li>数据链路层
+<ul>
+<li>处理连接网络的硬件部分，如：光纤、网卡、驱动等</li>
+</ul>
+</li>
+</ol>
+<p>传输图解
+<img src="http://outiw4np3.bkt.clouddn.com/15e41c7da0dd411dabdbbad1266da079.jpg" alt=""></p>
+<!-- more -->
+<h2 id="与-http-紧密相连的tcpip-协议族">与 HTTP 紧密相连的TCP/IP 协议族</h2>
+<h3 id="负责传输的-ip-协议">负责传输的 IP 协议</h3>
+<p>“IP 协议的作用是把各种数据包传送给对方。而要保证确实传送到对方那里，则需要满足各类条件。其中两个重要的条件是 IP 地址和 MAC 地址（Media Access Control Address）。</p>
+<p>IP 地址指明了节点被分配到的地址，MAC 地址是指网卡所属的固定地址。IP 地址可以和 MAC 地址进行配对。IP 地址可变换，但 MAC 地址基本上不会更改。”</p>
+<h3 id="确保可靠性的-tcp-协议">确保可靠性的 TCP 协议</h3>
+<p>“为了准确无误地将数据送达目标处，TCP 协议采用了<strong>三次握手</strong>（three-way handshaking）策略。用 TCP 协议把数据包送出去后，TCP 不会对传送后的情况置之不理，它一定会向对方确认是否成功送达。握手过程中使用了 TCP 的标志（flag） —— SYN（synchronize） 和 ACK（acknowledgement）”
+<img src="http://outiw4np3.bkt.clouddn.com/757742571edfeb7cf1146efeed251d2f.jpg" alt=""></p>
+<p>TCP 为什么是三次握手，不是两次或四次呢？</p>
+<pre><code>三次握手：
+“喂，你听得到吗？”
+“我听得到呀，你听得到我吗？”
+“我能听到你，今天balabala……”
+
+两次握手：
+“喂，你听得到吗？”
+“我听得到呀”
+“喂喂，你听得到吗？”
+“草，我听得到呀！！！！”
+“你TM能不能听到我讲话啊！！喂！”
+“……”
+
+四次握手：
+“喂，你听得到吗？”
+“我听得到呀，你听得到我吗？”
+“我能听到你，你能听到我吗？”
+“……不想跟傻逼说话”
+
+--来自知乎的段子
+</code></pre>
+<p>可以看出四次握手显得过于庸余，而两次握手并不能确定双方的链接稳定了。</p>
+<h3 id="负责域名解析的-dns-协议">负责域名解析的 DNS 协议</h3>
+<p>计算机善于处理长串数字，但不容易理解名称；用户善于记忆名称，而不习惯记忆长串数字，于是 DNS 协议应运而生。</p>
+<blockquote>
+<p>“DNS 协议提供通过域名查找 IP 地址，或逆向从 IP 地址反查域名的服务”</p>
+</blockquote>
+<h3 id="http-与-dnstcpip-关系图">HTTP 与 DNS/TCP/IP 关系图</h3>
+<p><img src="http://outiw4np3.bkt.clouddn.com/8cfb742e225135a59dde1c57682acd95.jpg" alt=""></p>
+<h3 id="uri-和-url">URI 和 URL</h3>
+<p>URI:（Uniform Resource Identifier，统一资源标识符）
+URL：(Uniform Resource Locator，统一资源定位符）</p>
+<p>URI基本格式：
+<img src="http://outiw4np3.bkt.clouddn.com/bb1889fcf7a8d59ac92c161190334370.jpg" alt=""></p>
+<p>协议方案：获取访问资源时要指定协议类型，如ftp、https等
+登录信息：指定用户名和密码作为从服务器端获取资源时必要的登录信息（身份认证）<font color='red'>可选</font><br>
+片段标识：使用片段标识符通常可标记出已获取资源中的子资源（文档内的某个位置）</p>
+<h2 id="http-协议">HTTP 协议</h2>
+<p>一个 HTTP 协议必定有两端，请求访问资源的一端为客户端，提供资源响应的一端为服务器端，并且 HTTP 协议能明确区分哪是客户端哪是服务器端。</p>
+<p>下面是从客户端发送给某服务器的请求报文
+<img src="http://outiw4np3.bkt.clouddn.com/2baf0cb2cca193520fbb5bb85de31ab8.jpg" alt=""></p>
+<p><code>GET</code> 表示访问服务器的类型，俗称“方法”
+<code>//feed/v1/feed/get_attention_list?...uid=</code> 指明了访问的资源对象，也叫做“URI”<br>
+<code>HTTP/1.1</code> 及 HTTP 的版本号，用来提示客户端使用的http协议功能</p>
+<p><img src="http://outiw4np3.bkt.clouddn.com/297363515632a28a51650e64c6a68d56.jpg" alt=""></p>
+<p><strong>请求报文</strong>是由请求方法、请求 URI、协议版本、可选的请求首部字段和内容实体构成的。</p>
+<p><img src="http://outiw4np3.bkt.clouddn.com/68e6c6b31aadffeada3e2b572230a0c1.jpg" alt=""></p>
+<p><strong>响应报文</strong>基本上由协议版本、状态码（表示请求成功或失败的数字代码）、用以解释状态码的原因短语、可选的响应首部字段以及实体主体构成</p>
+<p><img src="http://outiw4np3.bkt.clouddn.com/54322dbb9d6225627c4c19a9fc48b1dd.jpg" alt=""></p>
+<blockquote>
+<p>“HTTP 是一种不保存状态，即无状态（stateless）协议。HTTP 协议自身不对请求和响应之间的通信状态进行保存。也就是说在 HTTP 这个级别，协议对于发送过的请求或响应都不做持久化处理”</p>
+<p>“HTTP/1.1 虽然是无状态协议，但为了实现期望的保持状态功能，于是引入了 Cookie 技术。有了 Cookie 再用 HTTP 协议通信，就可以管理状态了”</p>
+</blockquote>
+<h3 id="http-方法">HTTP 方法</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>获取资源</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>传输实体的主体</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>传输文件</td>
+</tr>
+<tr>
+<td>HEAD</td>
+<td>获取报文首部</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>删除文件</td>
+</tr>
+<tr>
+<td>OPTIONS</td>
+<td>查询支持的方法</td>
+</tr>
+<tr>
+<td>TRACE</td>
+<td>追踪路径</td>
+</tr>
+<tr>
+<td>CONNECT</td>
+<td>要求用隧道协议连接代理</td>
+</tr>
+</tbody>
+</table>
+<p><strong>方法名区分大小写，请注意要用大写字母</strong></p>
+<h3 id="持久连接">持久连接</h3>
+<p>“持久连接的好处在于减少了 TCP 连接的重复建立和断开所造成的额外开销，减轻了服务器端的负载。另外，减少开销的那部分时间，使 HTTP 请求和响应能够更早地结束，这样 Web 页面的显示速度也就相应提高了”</p>
+<p>“持久连接使得多数请求以管线化（pipelining）方式发送成为可能。从前发送请求后需等待并收到响应，才能发送下一个请求。管线化技术出现后，不用等待响应亦可直接发送下一个请求”</p>
+<h3 id="cookie-的状态管理">Cookie 的状态管理</h3>
+<p>“Cookie 技术通过在请求和响应报文中写入 Cookie 信息来控制客户端的状态”</p>
+<p><img src="http://outiw4np3.bkt.clouddn.com/cb588f16318cb814154c878fcbe44a0c.jpg" alt=""></p>
+<h2 id="http-报文内的-http-信息">HTTP 报文内的 HTTP 信息</h2>
+<p>用于 HTTP 协议交互的信息被称为 HTTP 报文。</p>
+<h4 id="http-报文结构">HTTP 报文结构</h4>
+<p><img src="http://outiw4np3.bkt.clouddn.com/7ce8b40311ecd74a53337a4e80fb762f.jpg" alt=""></p>
+<h4 id="http-首部字段">HTTP 首部字段</h4>
+<ol>
+<li>
+<p>通用首部字段</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cache-Control</td>
+<td>控制缓存的行为</td>
+</tr>
+<tr>
+<td>Connection</td>
+<td>逐跳首部、连接的管理</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>创建报文的日期</td>
+</tr>
+<tr>
+<td>Pragma</td>
+<td>报文指令</td>
+</tr>
+<tr>
+<td>Trailer</td>
+<td>报文末端的首部一揽</td>
+</tr>
+<tr>
+<td>Transfer-Encoding</td>
+<td>报文主体的传输编码方式</td>
+</tr>
+<tr>
+<td>Upgrade</td>
+<td>升级为其他协议</td>
+</tr>
+<tr>
+<td>Via</td>
+<td>代理服务器的信息</td>
+</tr>
+<tr>
+<td>Warning</td>
+<td>错误通知</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>请求首部字段</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>响应首部字段</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>实体首部字段</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h4 id="http-返回的状态码">HTTP 返回的状态码</h4>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2XX</td>
+<td>表明请求被正常处理</td>
+</tr>
+<tr>
+<td>200</td>
+<td>“表示从客户端发来的请求在服务器端被正常处理”</td>
+</tr>
+<tr>
+<td>204</td>
+<td>“代表服务器接收的请求已成功处理，但在返回的响应报文中不含实体的主体部分”</td>
+</tr>
+<tr>
+<td>206</td>
+<td>“表示客户端进行了范围请求，而服务器成功执行了这部分的 GET 请求。响应报文中包含由 Content-Range 指定范围的实体内容”</td>
+</tr>
+<tr>
+<td>3XX</td>
+<td>表明浏览器需要执行某些特殊的处理以正确处理请求</td>
+</tr>
+<tr>
+<td>301</td>
+<td>“永久性重定向。该状态码表示请求的资源已被分配了新的 URI，以后应使用资源现在所指的 URI”</td>
+</tr>
+<tr>
+<td>302</td>
+<td>“临时性重定向。该状态码表示请求的资源已被分配了新的 URI，希望用户（本次）能使用新的 URI 访问”</td>
+</tr>
+<tr>
+<td>303</td>
+<td>“由于请求对应的资源存在着另一个 URI，应使用 GET 方法定向获取请求的资源。”</td>
+</tr>
+<tr>
+<td>304</td>
+<td>“表示客户端发送附带条件的请求 2 时，服务器端允许请求访问资源，但未满足条件的情况”</td>
+</tr>
+<tr>
+<td>307</td>
+<td>“临时重定向。该状态码与 302 Found 有着相同的含义。”</td>
+</tr>
+<tr>
+<td>4XX</td>
+<td>“表明客户端是发生错误的原因所在。”</td>
+</tr>
+<tr>
+<td>400</td>
+<td>“该状态码表示请求报文中存在语法错误。当错误发生时，需修改请求的内容后再次发送请求”</td>
+</tr>
+<tr>
+<td>401</td>
+<td>“该状态码表示发送的请求需要有通过 HTTP 认证（BASIC 认证、DIGEST 认证）的认证信息”</td>
+</tr>
+<tr>
+<td>403</td>
+<td>“该状态码表明对请求资源的访问被服务器拒绝了”</td>
+</tr>
+<tr>
+<td>5XX</td>
+<td>“表明服务器本身发生错误”</td>
+</tr>
+<tr>
+<td>500</td>
+<td>“该状态码表明服务器端在执行请求时发生了错误。也有可能是 Web 应用存在的 bug 或某些临时的故障”</td>
+</tr>
+<tr>
+<td>503</td>
+<td>“表明服务器暂时处于超负载或正在进行停机维护，现在无法处理请求”</td>
+</tr>
+</tbody>
+</table>
+<h2 id="http-的缺点">HTTP 的缺点</h2>
+<p>HTTP 主要有这些不足，例举如下。</p>
+<ul>
+<li>
+<p>通信使用明文（不加密），内容可能会被窃听</p>
+</li>
+<li>
+<p>不验证通信方的身份，因此有可能遭遇伪装</p>
+</li>
+<li>
+<p>无法证明报文的完整性，所以有可能已遭篡改</p>
+</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[被苹果弃用的PCH]]></title>
+        <id>https://tingke.github.io//post/bei-ping-guo-qi-yong-de-pch</id>
+        <link href="https://tingke.github.io//post/bei-ping-guo-qi-yong-de-pch">
+        </link>
+        <updated>2018-05-29T12:00:03.000Z</updated>
+        <summary type="html"><![CDATA[<h4 id="pch是什么">PCH是什么？</h4>
+<p><code>PCH</code>是苹果为了提高编译速度引入的一个预编译文件，它所引用的内容能够被项目中的其他文件共享和访问，预编译后的头文件会被缓存起来，再次编译的时候就不需要重新编译 <code>PCH</code> 文件中导入的内容，从而提高编译速度。在Xcode6以前，新增的工程中会自动生成 “工程名-Prefix.pch”文件。</p>
+]]></summary>
+        <content type="html"><![CDATA[<h4 id="pch是什么">PCH是什么？</h4>
+<p><code>PCH</code>是苹果为了提高编译速度引入的一个预编译文件，它所引用的内容能够被项目中的其他文件共享和访问，预编译后的头文件会被缓存起来，再次编译的时候就不需要重新编译 <code>PCH</code> 文件中导入的内容，从而提高编译速度。在Xcode6以前，新增的工程中会自动生成 “工程名-Prefix.pch”文件。</p>
+<!-- more -->
+<p>相信很多iOS开发者都使用 <code>PCH</code> 文件做过以下一些事：</p>
+<ol>
+<li>存放一些宏定义</li>
+<li>引入全局使用的头文件</li>
+<li>开关日志打印</li>
+</ol>
+<p>这样的在编码的时候，不用在不同文件中不停的做引用，编写代码的速度简直快的飞起😂😂。</p>
+<h4 id="这么爽的编码体验苹果为什么放弃主动引入pch">这么爽的编码体验，苹果为什么放弃主动引入PCH？</h4>
+<p>正是iOS开发者的滥用 <code>PCH</code> 文件，造成项目编译缓慢，影响用户体验，与苹果当初引入 <code>PCH</code> 的目的背道而驰了，因此苹果不得不放弃 <code>PCH</code> 的使用。</p>
+<p>我想，罪魁祸首就是开发者大量引入共用性不高的宏定义和头文件，每次修改引入内容造成 PCH的重编译；编译的时候整个工程范围地查找和替换这些宏定义字段，重复导入这些头文件，不慢就奇怪了。</p>
+<h4 id="正确的使用方式">正确的使用方式</h4>
+<ol>
+<li>不要把所有的宏定义都放到平常文件中，尤其是共用性较小的宏定义;</li>
+<li>将公用性高的头文件放到 <code>PCH</code> 中，比如<code>Fundation框架</code>等</li>
+<li>将零散的宏定义专门创建一个头文件来放置，再导入到 <code>PCH</code> 中，方便查看和修改</li>
+</ol>
+<p>其实，过分依赖 <code>PCH</code> 文件也有一些问题：它降低了代码的可移植性。把类中使用的框架等放在 <code>PCH</code> 中，要么你要重新去导入，要么把 <code>PCH</code> 一同拖走，还要删掉没用的代码，代价也是蛮大的。</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Vue.js入门]]></title>
         <id>https://tingke.github.io//post/vuejs-ru-men</id>
         <link href="https://tingke.github.io//post/vuejs-ru-men">
         </link>
-        <updated>2019-06-17T13:37:14.000Z</updated>
+        <updated>2018-03-23T07:00:14.000Z</updated>
         <summary type="html"><![CDATA[<h2 id="vuejs是什么">Vue.js是什么</h2>
 <blockquote>
 <p>[info]Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的<font color='red'><strong>渐进式框架</strong></font>。与其它大型框架不同的是，Vue 被设计为可以<font color='red'><strong>自底向上逐层应用</strong></font>。Vue 的核心库只关注<font color='red'><strong>视图层</strong></font>，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与现代化的工具链以及各种支持类库结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。</p>
@@ -263,6 +691,1041 @@ var app =new Vue({
 </blockquote>
 </li>
 </ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[iOS打包静态库SOP]]></title>
+        <id>https://tingke.github.io//post/ios-da-bao-jing-tai-ku-sop</id>
+        <link href="https://tingke.github.io//post/ios-da-bao-jing-tai-ku-sop">
+        </link>
+        <updated>2018-02-20T13:50:49.000Z</updated>
+        <summary type="html"><![CDATA[<p>今天，领导要求将App中网络请求的核心代码打包成静态库。故上网研究了一下静态库打包的相关知识，边看边试的打包成功了。现在在这里总结下：</p>
+<h2 id="库的基本知识">库的基本知识</h2>
+<p><strong>1、 什么是库？</strong></p>
+<p>所谓库就是程序代码的集合，是共享程序代码的一种方式。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>今天，领导要求将App中网络请求的核心代码打包成静态库。故上网研究了一下静态库打包的相关知识，边看边试的打包成功了。现在在这里总结下：</p>
+<h2 id="库的基本知识">库的基本知识</h2>
+<p><strong>1、 什么是库？</strong></p>
+<p>所谓库就是程序代码的集合，是共享程序代码的一种方式。</p>
+<!-- more --> 
+<p><strong>2、 库的分类</strong></p>
+<p>根据程序代码的开源情况，库可以分为两类</p>
+<ul>
+<li>
+<p>开源库</p>
+<p>源代码是公开的，你可以看到具体实现。比如GitHub上比较出名的第三方框架AFNetworking、SDWebImage。</p>
+</li>
+<li>
+<p>闭源库</p>
+<p>不公开源代码，只公开调用的接口，看不到具体的实现，是一个编译后的二进制文件。这种常见于一些公司的SDK包，比如高德地图SDK、环信即时通讯SDK等等。而闭源库又分为两类：静态库和动态库。本篇重点要讲的便是其中的静态库。</p>
+</li>
+</ul>
+<p><strong>3、静态库和动态库的存在形式和使用区别</strong></p>
+<p>存在形式：</p>
+<p>静态库
+以&quot;.a&quot;或者“.framework”为文件后缀名
+动态库
+以&quot;.dylib&quot;或者“.framework”为文件后缀名</p>
+<p>使用区别：</p>
+<p>静态库链接时会被完整的复制到可执行文件中，被多次使用就有多份拷贝。
+动态库链接时不复制，程序运行时由系统动态加载到内存，供程序调用。而且系统只加载一次，多个程序共用，节省内存。</p>
+<h2 id="a文件静态库打包"><code>.a</code>文件静态库打包</h2>
+<p><strong>步骤一、新建一个新工程或在老项目中新建一个新Target，选择<code>Cocoa Touch Static Library</code></strong>
+<img src="http://outiw4np3.bkt.clouddn.com/7f52d89fead89117d921568bb87141f9.jpg" alt=""></p>
+<p><strong>步骤二、修改静态库的配置</strong></p>
+<p><code>buildSeting -&gt; Build Active Architecture Only</code>设为NO，使编译后的库支持所有架构。</p>
+<p><img src="http://outiw4np3.bkt.clouddn.com/66345bad9034e95d979b7f8c910d39d9.jpg" alt=""></p>
+<p><code>buildSeting -&gt; iOS Deployment Target</code>设置静态库支持的iOS版本
+<img src="http://outiw4np3.bkt.clouddn.com/0c5ecacd2a60f359b1d69580ff2c80de.jpg" alt=""></p>
+<p><strong>步骤三、新建或拖入需打包的内容</strong></p>
+<p><img src="http://outiw4np3.bkt.clouddn.com/015550852490ac499d17d8d6ba4ca7de.jpg" alt=""></p>
+<p><strong>步骤四、设置公开.h文件</strong>
+<img src="http://outiw4np3.bkt.clouddn.com/6d7cec281fa3f6cf0fa658f75e3e9c6a.jpg" alt=""></p>
+<p><strong>步骤五、选中本Target,<code>Command+B</code>编译（一般编译两次，模拟器的Debug状态和真机的Release状态）。</strong></p>
+<p><img src="http://outiw4np3.bkt.clouddn.com/0a2bd0f7478a9d3830df90c3875dff54.jpg" alt=""></p>
+<p><code>Products</code>中的libKPPW变黑表示编译成功，右键<code>Show in Finder</code>打开静态库路径</p>
+<p><strong>步骤六、打开终端，输入以下命令合并模拟器和真机的静态库</strong></p>
+<pre><code>lipo -create 真机库的路径 模拟器库的路径 -output 合并后新库的路径
+</code></pre>
+<h2 id="framework文件静态库打包"><code>.framework</code>文件静态库打包</h2>
+<p>步骤跟制作 <code>.a</code> 静态库基本一致，但要注意一下几点：</p>
+<ol>
+<li>
+<p>选择 framework</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/foPACGrddJ0HsbypCB0TDBkUaI3CWphvA8ZWV7VVuBS74cicJkI0AXkdTe423iciaxiask4ficqE5p4OnkR30EqQSSA/640" alt=""></p>
+</li>
+<li>
+<p>编译时默认制作成动态库，要在下面选择</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/foPACGrddJ0HsbypCB0TDBkUaI3CWphvt8icFAhSH6XwuNquYfOTu6ofAEe1e9dvFJyjEFXphZYYt8vokIuByRw/640" alt=""></p>
+</li>
+<li>
+<p>合并静态库的时候，要选择 <code>.framework</code> 文件里的 <code>libstaticclib</code> 文件</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/foPACGrddJ0HsbypCB0TDBkUaI3CWphvI13fTK8hhjSgMXjdHvwTvUk57C0MWPoyicjerjfpJyrmuMPbptNWH2g/640" alt=""></p>
+</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[编写高质量iOS与OS X代码的52个有效方法]]></title>
+        <id>https://tingke.github.io//post/bian-xie-gao-zhi-liang-ios-yu-os-x-dai-ma-de-52-ge-you-xiao-fang-fa</id>
+        <link href="https://tingke.github.io//post/bian-xie-gao-zhi-liang-ios-yu-os-x-dai-ma-de-52-ge-you-xiao-fang-fa">
+        </link>
+        <updated>2017-12-14T07:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<h2 id="第一章-熟悉objective-c">第一章 熟悉Objective-C</h2>
+<h3 id="第1条了解objective-c语言的起源">第1条：了解Objective-C语言的起源</h3>
+<ol>
+<li>
+<p>Objective-C语言由Smalltalk演化而来，后者是消息型语言的鼻祖。消息与函数调用之间的区别看上去就像这样：</p>
+<pre><code class="language-objc">// Function calling (oc)
+Object *obj = [Object new];
+[obj performWith:parameter1 and:parameter2];
+
+// Function calling (c++)
+Objcet *obj = new Object;
+obj-&gt;perform(parameter1,parameter2);
+</code></pre>
+</li>
+</ol>
+]]></summary>
+        <content type="html"><![CDATA[<h2 id="第一章-熟悉objective-c">第一章 熟悉Objective-C</h2>
+<h3 id="第1条了解objective-c语言的起源">第1条：了解Objective-C语言的起源</h3>
+<ol>
+<li>
+<p>Objective-C语言由Smalltalk演化而来，后者是消息型语言的鼻祖。消息与函数调用之间的区别看上去就像这样：</p>
+<pre><code class="language-objc">// Function calling (oc)
+Object *obj = [Object new];
+[obj performWith:parameter1 and:parameter2];
+
+// Function calling (c++)
+Objcet *obj = new Object;
+obj-&gt;perform(parameter1,parameter2);
+</code></pre>
+ <!-- more -->
+<p>关键区别在于：**使用消息结构的语言，其运行时所执行的代码由运行环境来决定；而使用函数调用的语言，则由编译器决定。**如果范例代码中调用的函数是多态的，那么在运行时就有按照“虚方法表”来查出到底应该执行哪个函数实现。而采用消息结构的语言，不论是否多态，总是在运行时才会去查找所要执行的方法。实际上，编译器甚至不关心接收消息的对象是何种类型。接收消息的对象问题也要在运行时处理，其过程叫做“动态绑定”（dynamic binding），第11条会详述其细节。</p>
+</li>
+</ol>
+<p>more</p>
+<ol start="2">
+<li>Objective-C是C的超集，只有同时掌握了C和OC的核心概念，方能写出高效的OC代码。</li>
+</ol>
+<h3 id="第2条在类的头文件中尽量少引入其他头文件">第2条：在类的头文件中尽量少引入其他头文件</h3>
+<ol>
+<li>尽量晚的引入类的头文件，只有在用到类的实现时，才引入其头文件。这样做能减少一定的编译时间，降低耦合。</li>
+<li>无法使用@class向前声明，比如某个类要遵循协议，这个协议在另一个类中声明的，可以将此协议单独放在一个头文件中或放在分类当中，以降低引用成本。</li>
+</ol>
+<h3 id="第3条多用字面量语法少用与之等价的方法">第3条：多用字面量语法，少用与之等价的方法</h3>
+<ol>
+<li>使用字面量创建字符串、数值、数组、字典更简洁易读，也避免了nil问题。</li>
+<li>字面量无法创建对应的可变类型</li>
+<li>自定义子类无法使用字面量创建对象</li>
+</ol>
+<h3 id="第4条多用类型常量少用define预处理命令">第4条：多用类型常量，少用#define预处理命令</h3>
+<ol>
+<li>类型常量带有类型信息，#define没有</li>
+<li>在.m文件中定义的常量为局部常量，其名称可不加前缀</li>
+<li>在.h文件使用extern声明，并在.m文件中定义其值的常量为全局常量，其名称以相关类名做前缀，加以区分</li>
+</ol>
+<h3 id="第5条多用枚举表示状态-选项和状态码">第5条：多用枚举表示状态、选项和状态码</h3>
+<ol>
+<li>在处理枚举类型的switch语句中不要实现default分支。这样在加入新枚举时，编译器会提示<strong>switch语句未处理全部枚举</strong></li>
+</ol>
+<h2 id="第二章-对象-消息-运行期">第二章 对象、消息、运行期</h2>
+<h3 id="第6条理解属性这一概念">第6条：理解“属性”这一概念</h3>
+<ol>
+<li>属性是由实例变量+对应的存取方法构成</li>
+<li>使用@dynamic声明的属性，编译器不会自动生成对应实例变量和存取方法</li>
+<li>属性设置各种”特质“也会影响编译器生成对应的存取方法，如“atomic”、”readonly”、“strong”、”weak”等</li>
+</ol>
+<h3 id="第7条在对象内部尽量访问实例变量">第7条：在对象内部尽量访问实例变量</h3>
+<ol>
+<li>直接读取实例变量获取数据，这样不经过OC的“方法派发”，编译器生成的代码会直接访问实例变量的那块内存中的值，而不是走方法发消息，这样更快。</li>
+<li>使用属性写入数据，能确保相关的”内存管理语义”得到贯彻。</li>
+<li>在初始化及dealloc方法中，应该直接使用实例变量读写数据，避免子类复写了setter方法造成的异常</li>
+<li>使用了懒加载的属性，应该一直使用属性来读写数据，避免实例变量未初始化</li>
+</ol>
+<h3 id="第8条理解对象等同性这一概念">第8条：理解“对象等同性”这一概念</h3>
+<ol>
+<li><code>==</code>来判等对象时，是比较的俩个指针本身，而不是所指的对象</li>
+<li>若要判断对象的等同性，请提供<code>isEqual:</code>和<code>hash</code>方法</li>
+<li>编写<code>hash</code>方法时，请选择计算速度快、碰撞几率小的算法</li>
+<li>等同对象必须有相同的哈希值，相同哈希值的对象不一定等同。</li>
+</ol>
+<h3 id="第9条以类簇模式隐藏细节">第9条：以”类簇模式“隐藏细节</h3>
+<ol>
+<li>类簇是一种很有用的设计模式，它通过提取所有对象的公共部分组成”抽象基类“，将不同对象的实现隐藏在公共接口背后。</li>
+</ol>
+<h3 id="第10条在既有类中使用关联对象存放自定义数据">第10条：在既有类中使用关联对象存放自定义数据</h3>
+<ol>
+<li><code>objc_setAssociatedObject</code>和<code>objc_getAssociatedObject</code>,如何使用在这里就不多说了。值得强调的一点是，用关联对象可能会引入难于查找的bug，所以可能要看情况谨慎选择</li>
+</ol>
+<h3 id="第11条理解objc_msgsend的作用">第11条：理解objc_msgSend的作用</h3>
+<ol>
+<li>
+<p>在Objective-C中，调用一个方法:</p>
+<pre><code>id returnValue = [object messageName:parameter];
+</code></pre>
+<p>它会转化为</p>
+<pre><code>id returnValue = objc_msgSend(object,@selector(messageName),parameter);
+</code></pre>
+<p>所以，消息传递的核心函数是：</p>
+<pre><code>void objc_msgSend(id self, SEL cmd, ...)
+</code></pre>
+<p>它能就收2个及以上的参数，第一个代表<strong>接受者</strong>，第二个代表<strong>选择子</strong>，后续参数为<strong>传递的参数</strong>。</p>
+<p>它的调用顺序是：</p>
+<ol>
+<li>搜索<strong>接受者</strong>所属类中的“方法列表”，若能找到与<strong>选择子</strong>名称相符的方法，就跳转至此方法</li>
+<li>若未找到，就沿着继承体系向上查找，若找到相符的跳转至该方法</li>
+<li>若未找到，执行“消息转发”</li>
+</ol>
+</li>
+</ol>
+<h3 id="第12条理解消息转发机制">第12条：理解消息转发机制</h3>
+<p><img src="http://upload-images.jianshu.io/upload_images/1818095-e7a25f32f80550ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h3 id="第13条用方法调配技术调试黑盒方法">第13条：用“方法调配技术”调试“黑盒方法”</h3>
+<ol>
+<li><strong>方法调配</strong>又称为**“method swizzling”**，使用另一份实现来替换原有的方法实现。</li>
+<li>在运行期中，可以向类中新增或替换选择子所对应的方法实现</li>
+</ol>
+<pre><code>void method_exchangeImplementations(Method m1, Method m2)
+</code></pre>
+<h3 id="第14条理解类对象的用意">第14条：理解“类对象”的用意</h3>
+<ol>
+<li>每一个Class都有一个isa指针指向一个唯一的Meta Class</li>
+<li>每一个Meta Class的isa指针都指向最上层的Meta Class，这个Meta Class是NSObject的Meta Class。(包括NSObject的Meta Class的isa指针也是指向的NSObject的Meta Class，也就是自己，这里形成了个闭环)</li>
+<li>每一个Meta Class的super class指针指向它原本Class的 Super Class的Meta Class (这里最上层的NSObject的Meta Class的super class指针还是指向自己)</li>
+<li>最上层的NSObject Class的super class指向 nil</li>
+</ol>
+<h2 id="第三章-接口和api设计">第三章 接口和API设计</h2>
+<h3 id="第15条用前缀避免命名空间冲突">第15条：用前缀避免命名空间冲突</h3>
+<p>Objective-C没有类似其他语言那样的命名空间机制(namespace)，比如说PHP中的</p>
+<pre><code>&lt;?php
+namespace Root\Sub\subnamespace;
+</code></pre>
+<p>这就会导致当你不小心实现了两个相同名字的类，或者把两个相对独立的库导入项目时而他们又恰好有重名的类的时候该类所对应的符号和Meta Class符号定义了两次。所以很容易产生这种命名冲突，让程序的链接过程中出现出现重复的符号造成报错。
+为了避免这种情况，我们要尽量在类名，以及分类和分类方法上增加前缀，还有一些宏定义等等根据自己项目来定吧</p>
+<h3 id="第16条提供全能初始化方法">第16条：提供“全能初始化方法”</h3>
+<ol>
+<li>在类中提供一个全能初始化方法，并与文档中指明。其他初始化方法均应调用此方法。</li>
+<li>若全能初始化方法此超类不同，则需覆写超类中的方法。</li>
+<li>如果超类的初始化方法不适用于子类，那么应覆写这个超类方法，并在其中抛出异常。</li>
+</ol>
+<h3 id="第17条实现description方法">第17条：实现description方法</h3>
+<p>实现description或debugDescription方法，方便调试时打印更多有用的信息。</p>
+<h3 id="第18条尽量使用不可变对象">第18条：尽量使用不可变对象</h3>
+<p>封装对象提供最小的访问权限：</p>
+<ol>
+<li>只用于对象内部修改的属性使用<code>readonly</code>修饰</li>
+<li>可变集合不要作为属性公开，而是应该提供相关的方法修改集合。</li>
+</ol>
+<pre><code>//Language.h
+@property (nonatomic, strong) NSSet *set;
+
+应该改为
+
+//Language.h
+@property (nonatomic, strong, readonly) NSSet *languages;
+- (void)addLanguage:(NSString *)language;
+- (void)removeLanguage:(NSString *)language;
+//**.m
+@implementation Language {
+    NSMutableSet *mutableLanguages;
+}
+- (NSSet *)languages {
+    return [_mutableLanguages copy];
+}
+- (void)addLanguage:(NSString *)language {
+    [_mutableLanguages addObject:language];
+}
+- (void)removeLanguage:(NSString *)language {
+     [_mutableLanguages removeObject:language];
+}
+</code></pre>
+<h3 id="第19条使用清晰而协调的命名方式">第19条：使用清晰而协调的命名方式</h3>
+<ol>
+<li>
+<p>方法的命名规范</p>
+<blockquote>
+<ol>
+<li>如果方法的返回值是新创建的，那么方法名的首个词应该是返回值的类型，除非前面还有修饰语，例如localizedString。属性的存取方法不遵循这种命名方式，因为一般认为这些方法不会创建新对象，即便有时返回内部对象的一份拷贝，我们也认为那相当于原有的对象。这些存取方法应该按照其所对应的属性来命名。<br>
+<font color=red>eg: + (instancetype)string;</font></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>应该把表示参数类型的名词放在参数前面。<br>
+<font color=red>eg:- (int)intValue</font></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>如果方法要在当前对象上执行操作，那么就应该包含动词；若执行操作时还需要参数，则应该在动词后面加上一个或多个名词。<br>
+<font color=red>eg:- (BOOL)hasPrefix:(NSString *)str</font></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li>不要使用str这种简称，应该用string这样的全称。<br>
+<font color=red>eg:- (BOOL)isEqualToString:(NSString *)aString</font></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="5">
+<li>Boolean属性应加is前缀。如果某方法返回非属性的Boolean值，那么应该根据其功能，选用has或is当前缀。<br>
+<font color=red>eg:- (BOOL)isEqualToString:(NSString *)aString</font></li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="6">
+<li>将get这个前缀留给那些借由“输出参数”来保存返回值的方法，比如说，把返回值填充到“C语言式数组”里的那种方法就可以使用这个词做前缀。<br>
+<font color=red>eg:- (void)getCharacters:(unichar *)buffer range:(NSRange)range</font></li>
+</ol>
+</blockquote>
+</li>
+<li>
+<p>类与协议的命名</p>
+<blockquote>
+<p>命名方式应该协调一致:</p>
+<ol>
+<li>继承的子类命名中必须包含父类名</li>
+<li>定义的委托协议，应该包含委托发起方的名称</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+<p>总结：</p>
+<ol>
+<li>方法名应该言简意赅，从左至右读起来像一个句子</li>
+<li>方法名里不要使用缩略后的类型名称</li>
+<li>方法名务必要确保风格一致</li>
+</ol>
+<h3 id="第20条为私有方法名加前缀">第20条：为私有方法名加前缀</h3>
+<ol>
+<li>加不加无所谓，只是为了区分公共方法和私有方法</li>
+<li>苹果公司的私有方法以<code>_</code>开头</li>
+</ol>
+<h3 id="第21条理解objective-c错误模型">第21条：理解Objective-C错误模型</h3>
+<ol>
+<li>
+<p>为什么不使用异常处理机制？<br>
+答：事实上，OC是具备异常处理机制的，但是具体情况下不会启用该机制。原因是ARC下默认不是“异常安全”的。
+理由是,如果抛出异常，那么本应该在作用域末尾释放的对象在现在不能自动释放了。 如果想生成“异常安全”的代码，需要设置编译标志“-fobjc-arc-exceptions”，并且需要引入额外的代码，在不抛出异常时，也照样执行这段代码。
+即使不用ARC，也很难在抛出异常后不会导致内存泄露。</p>
+</li>
+<li>
+<p>如何处理不那么严重的错误？<br>
+答：另方法返回0/nil，或者使用NSError。</p>
+</li>
+<li>
+<p>NSError的使用方法</p>
+</li>
+</ol>
+<h3 id="第22条理解nscopying协议">第22条：理解NSCopying协议</h3>
+<ol>
+<li>
+<p>什么是NSCopying协议？<br>
+答：在OC开发中，使用对象时经常需要拷贝它，我们会通过copy/mutbleCopy来完成。如果想让自己的类支持拷贝，那必须要实现NSCopying协议，只需要实现一个方法：</p>
+<pre><code>- (id)copyWithZone:(NSZone*)zone
+</code></pre>
+</li>
+</ol>
+<p>当然如果要求返回对象是可变的类型就要用到NSMutableCopying协议，相应方法</p>
+<pre><code>```
+- (id)mutableCopyWithZone:(NSZone *)zone
+```
+</code></pre>
+<ol start="2">
+<li>浅拷贝VS深拷贝<br>
+在拷贝对象时，需要注意拷贝执行的是浅拷贝还是深拷贝。深拷贝在拷贝对象时，会将对象的底层数据也进行了拷贝。浅拷贝是创建了一个新的对象指向要拷贝的内容。一般情况应该尽量执行浅拷贝。</li>
+</ol>
+<h2 id="第四章协议与分类">第四章：协议与分类</h2>
+<h3 id="第23条通过委托和数据源协议进行对象间通信">第23条：通过委托和数据源协议进行对象间通信</h3>
+<ol>
+<li><strong>委托模式</strong>：定义一套接口，某对象若要接受另一个对象的委托，则需遵从此接口，以便成为其“委托对象”。而这“另一个对象”则可以给其委托对象回传一些信息，也可以在发生相关事件时通知委托对象。</li>
+<li>委托属性以weak修饰，</li>
+<li>相应事件或传值</li>
+<li>数据与业务解耦</li>
+</ol>
+<h3 id="第24条将类的实现代码分散到便于管理的数个分类中">第24条：将类的实现代码分散到便于管理的数个分类中</h3>
+<p>相当于重构代码：将相关联的属性、方法封装到一个分类中</p>
+<ol>
+<li>分散后的代码便于阅读</li>
+<li>便于调试，分类名会被打印出来</li>
+</ol>
+<h3 id="第25条总是为第三方类的分类名称加前缀">第25条：总是为第三方类的分类名称加前缀</h3>
+<p>为分类名称及其方法加上你的专有前缀，以防覆盖了“主实现”或其他分类的方法，造成不可预知的错误</p>
+<h3 id="第26条勿在分类中声明属性">第26条：勿在分类中声明属性</h3>
+<p>属性是封装数据的方式。尽管技术上说，分类里也可以声明属性，但这种做法还是要尽量避免。因为它们无法把实现属性所需的实例变量合成出来。</p>
+<h3 id="第27条使用class-continuation分类隐藏实现细节">第27条：使用“class-continuation分类”隐藏实现细节</h3>
+<ol>
+<li>“class-continuation分类”与其他分类不同，它必须定义在其所连续的那个类的实现文件里。</li>
+<li>“class-continuation分类”中可以新增实例变量</li>
+<li>“class-continuation分类”中可将只读属性扩展为读写</li>
+<li>“class-continuation分类”中可声明协议，外部无从查之</li>
+</ol>
+<h3 id="第28条通过协议提供匿名对象">第28条：通过协议提供匿名对象</h3>
+<p>应用场景：</p>
+<pre><code>@property (nonatomic,weak) id&lt;UITableViewDelegate&gt; delegate;
+</code></pre>
+<p>只有遵守了UITableViewDelegate协议的类都可以成为deleagte属性，delegate也就是<strong>匿名的</strong>了。</p>
+<p>有时对象类型 并不重要，重要的是 对象有没有实现某些方法，在此情况下级可以使用 匿名类型 来表达这一概念。</p>
+<pre><code>@interface EOCDatabaseManager : NSObject
+
++ (id)sharedInstance;
+
+- (id&lt;EOCDatabaseConnection&gt;)connectionWithIdentifier:(NSString *)identifier;
+@end
+</code></pre>
+<h2 id="第五章内存管理">第五章：内存管理</h2>
+<h3 id="第29条理解引用计数">第29条：理解引用计数</h3>
+<p>自动引用计数（ARC，Automatic Reference Counting）是指内存管理中对引用采取自动计数的技术；</p>
+<p>ObjC采用引用计数（reference counting）的技术来进行管理：</p>
+<ol>
+<li>每个对象都有一个关联的整数，称为引用计数器；</li>
+<li>当代码需要使用该对象时，则将对象的引用计数加1；</li>
+<li>当代码结束使用该对象时，则将对象的引用计数减1；</li>
+<li>当引用计数的值变为0时，表示对象没有被任何代码使用，此时对象将被释放。</li>
+</ol>
+<p>与之对应的消息发送方法如下：</p>
+<ol>
+<li>当对象被创建（通过alloc、new或copy等方法）时，其引用计数初始值为1；</li>
+<li>給对象发送retain消息，其引用计数加1；</li>
+<li>給对象发送release消息，其引用计数减1；</li>
+<li>当对象引用计数归0时，ObjC給对象发送dealloc消息销毁对象。</li>
+</ol>
+<p>autorelease就是自动释放，当給一个对象发送autorelease消息时，方法会在未来某个时间給这个对象发送release消息将其释放，在这个时间段内，对象还是可以使用的。</p>
+<p>原理 : 对象接收到autorelease消息时，它会被添加到了当前的自动释放池中，当自动释放池被销毁时，会給池里所有的对象发送release消息。</p>
+<ol>
+<li>设置ARC有效的编译方法如下：
+指定编译器属性为：”-fobjc-arc”。</li>
+<li>设置ARC无效的编译方法如下：
+指定编译器属性为：”-fno-objc-arc”。</li>
+</ol>
+<h3 id="第30条以arc简化引用计数">第30条：以ARC简化引用计数</h3>
+<ol>
+<li>使用ARC，可以省略对于引用计数的操作，所以在ARC下调用对象的retain，release，autorelease，dealloc方法时系统会报错。</li>
+<li>这里要注意CoreFoundation 对象不归ARC管理，开发中如果有用到还是要谁创建谁释放，适时调用CFRetain/CFRelease。</li>
+</ol>
+<h3 id="第31条在dealloc方法中只释放引用并解除监听">第31条：在dealloc方法中只释放引用并解除监听</h3>
+<ol>
+<li>dealloc的调用时机：对象在经历其生命期后，最终会被系统回收，这时就会执行dealloc方法。</li>
+<li>dealloc方法不能主动调用</li>
+<li>dealloc方法中，尽量不要执行其他方法，因为系统已经当前这个待回收的对象彻底摧毁了，这时会出现异常错误或崩溃</li>
+</ol>
+<h3 id="第32条编写异常安全代码时留意内存管理问题">第32条：编写“异常安全代码”时留意内存管理问题</h3>
+<p>OC中抛出异常的时候可能会引起内存泄漏，注意一下使用的时机，或者注意在@try捕获异常中清理干净。</p>
+<h3 id="第33条以弱引用避免保留环">第33条：以弱引用避免保留环</h3>
+<p>几个对象以某种方式相互引用，造成内存泄露，我们称之为<strong>循环引用</strong>。
+为避免循环引用，常使用<code>weak</code>或<code>unsafe_unretained</code>修饰。</p>
+<p><code>weak</code>和<code>unsafe_unretained</code>的区别：<br>
+当引用的对象移除后，<code>unsafe_unretained</code>仍指向那个回收的实例，而<code>weak</code>指向nil。（所以<code>weak</code>比<code>unsafe_unretained</code>更安全）</p>
+<h3 id="第34条以自动释放池块降低内存峰值">第34条：以“自动释放池块”降低内存峰值</h3>
+<p>内存峰值：应用程序在某个时间段内的最大内存用量</p>
+<p><strong>自动释放池块会在线程执行下一次事件循环时清空</strong></p>
+<pre><code>// 自动释放池块
+@autoreleasepool{}
+</code></pre>
+<pre><code>// 在遍历大数组或大字典时，可以使用自动释放池块降低内存峰值
+NSArray *people = /*一个很大的数组*/
+NSMutableArray *employeesArray = [NSMutableArray new];
+for (NSStirng *name in people) {
+    @autoreleasepool {
+        MLEmployee *employee = [MLEmployee alloc] initWithName:name];
+        [employeesArray addObject:employee];
+    }
+}
+</code></pre>
+<h3 id="第35条用僵尸对象调试内存管理问题">第35条：用“僵尸对象”调试内存管理问题</h3>
+<ol>
+<li>
+<p>如何开启僵尸对象</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1457495-586f50d111cab802.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+</li>
+<li>
+<p>什么是僵尸对象</p>
+<p>开启之后，系统在回收对象时，不将其真正的回收，而是把它的isa指针指向特殊的僵尸类，变成僵尸对象。</p>
+</li>
+<li>
+<p>僵尸对象有什么用</p>
+<p>僵尸类能够响应所有的选择子，响应方式为：打印一条包含消息内容以及其接收者的消息，然后终止应用程序。</p>
+</li>
+</ol>
+<h3 id="第36条不用使用retaincount">第36条：不用使用retainCount</h3>
+<p>在苹果引入ARC之后retainCount已经正式废弃，任何时候都不要调用这个retainCount方法来查看引用计数了，因为这个值实际上已经没有准确性了。但是在MRC下还是可以正常使用</p>
+<h2 id="第六章块与大中枢派发">第六章：块与大中枢派发</h2>
+<h3 id="第37条理解块这一概念">第37条：理解“块”这一概念</h3>
+<ol>
+<li>
+<p>块用^表示，后面接一对花括号，括号内是块的实现代码。</p>
+</li>
+<li>
+<p>块可以捕获所有在它声明范围内的变量。(即保存一份指向这些变量的指针)</p>
+</li>
+<li>
+<p>在块中被修改了值的变量要用<code>__block</code>修饰。块总能修改实例变量，所有实例变量不用加<code>__block</code>修饰</p>
+</li>
+<li>
+<p>如果通过读取或写入操作了实例变量，也会自动捕获self。此时极易产生<strong>循环引用</strong>。</p>
+</li>
+<li>
+<p>根据块在内存中的位置，块被分为3种类型：</p>
+<ul>
+<li>
+<p>全局块（NSGlobalBlock）<br>
+这种块运行时无需获取外界任何状态，块所使用的内存区域在编译器就可以完全确定，所以该块声明在全局内存中。如果全局块执行copy会是一个空操作，相当于什么都没做。</p>
+<pre><code>void(^block)() = ^{
+    NSLog(@&quot;I am a NSGlobalBlock&quot;);
+}
+</code></pre>
+</li>
+<li>
+<p>栈块（NSStackBlock）<br>
+栈块保存于栈区，超出变量作用域，栈上的block以及__block变量都会被销毁。</p>
+</li>
+<li>
+<p>堆块（NSMallocBlock）<br>
+堆块内存保存于堆区，在变量作用域结束时不受影响。</p>
+</li>
+</ul>
+<p>总结：</p>
+<pre><code>1. 如果一个block中引用了全局变量，或者没有引用任何外部变量(属性、实例变量、局部变量)，那么该block为全局块。
+2. 其它引用情况(局部变量，实例变量，属性)为栈块。  
+3. 如果block是栈块，将block对象赋值给其他对象时，此对象变成堆块（因为Clang编译器帮我们往block发送了copy消息）  
+</code></pre>
+</li>
+</ol>
+<h3 id="第38条为常用的块类型创建typedef">第38条：为常用的块类型创建typedef</h3>
+<ol>
+<li>以typedef重新定义块类型，可令块的使用更加简单</li>
+</ol>
+<pre><code>// 从新定义
+typedef void (^SuccessBlock)(id responseDic);
+
+- (void)getDataWithHost:(NSString *)host success:(void (^)(id responseDic))success;
+// 可修改为
+- (void)getDataWithHost:(NSString *)host success:(SuccessBlock)success;
+</code></pre>
+<h3 id="第39条用handler块降低代码分散程度">第39条：用handler块降低代码分散程度</h3>
+<p>在iOS开发中，我们经常需要异步执行一些任务，然后等待任务执行结束之后通知相关方法。相比于委托模式，使用handler块的代码更加简洁紧凑。</p>
+<h3 id="第40条用块引用其属性对象时不要出现保留环">第40条：用块引用其属性对象时不要出现保留环</h3>
+<ol>
+<li>如果块所捕获的对象直接或间接地保留了块本身，那么就得当心保留环问题。</li>
+<li>一定要找个适当的时机解除保留环，而不能把责任推给API的调用者。</li>
+</ol>
+<h3 id="第41条多用派发队列少用同步锁">第41条：多用派发队列，少用同步锁</h3>
+<p>在iOS开发中，如果有多个线程要执行同一份代码，我们可能需要加锁来实现某种同步机制。有人可能第一印象想到的就是@synchronized(self)，例如：</p>
+<pre><code>- (NSString*)someString {
+    @synchronized(self) {
+        return _someString;
+    }
+}
+- (void)setSomeString:(NSString*)someString {
+     @synchronized(self) {
+        _someString = someString;
+    }
+}
+</code></pre>
+<p>这样写法效率很低，而且也不能保证线程中觉得的安全。如果有很多属性，那么每个属性的同步块都要等其他同步块执行完毕才能执行。
+应该用GCD来替换：</p>
+<pre><code>_syncQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+
+//读取字符串
+- (NSString*)someString {
+    __block NSString *localSomeString;
+     dispatch_sync(_syncQueue, ^{
+        localSomeString = _someString;
+    });
+     return localSomeString;
+}
+- (void)setSomeString:(NSString*)someString {
+     dispatch_barrier_async(_syncQueue, ^{
+        _someString = someString;
+    });
+}
+</code></pre>
+<h3 id="第42条多用gcd少用performselector系列">第42条：多用GCD，少用performSelector系列</h3>
+<ol>
+<li>为什么要谨慎使用performSelector
+<ul>
+<li>内存管理问题：在ARC下使用performSelector我们经常会看到编译器发出如下警告：<code>warning: performSelector may cause a leak because its selector is unknown [-Warc-performSelector-leaks]</code>。因为编译器无法确定将要执行的选择子具体是什么，也就无法插入适当的内存管理方法。</li>
+<li>performSelector的返回值只能是void或对象类型。</li>
+<li>performSelector无法处理带有多个参数的选择子，最多只能处理两个参数。</li>
+</ul>
+</li>
+<li>GCD中有很多方法可以替代performSelector使用</li>
+</ol>
+<h3 id="第43条掌握gcd及操作队列的使用时机">第43条：掌握GCD及操作队列的使用时机</h3>
+<p>GCD是纯C的API，任务以较轻量级的块来表示；而操作队列是OC的对象。</p>
+<p>使用NSOperation及NSOperationQueue的优点：</p>
+<ol>
+<li>支持取消某个操作：在运行任务前，可以在NSOperation对象上调用cancel方法，用以表明此任务不需要执行。不过已经启动的任务无法取消。GCD队列是无法取消的，GCD是“安排好之后就不管了（fire and forget）”。</li>
+<li>支持指定操作间的依赖关系：一个操作可以依赖其他多个操作，例如从服务器下载并处理文件的动作可以用操作来表示，而在处理其他文件之前必须先下载“清单文件”。而后续的下载工作，都要依赖于先下载的清单文件这一操作。这时如果操作队列允许并发执行的话，后续的下载操作就可以在他依赖的下载清单文件操作执行完毕之后开始同时执行。</li>
+<li>支持通过KVO监控NSOperation对象的属性：可以通过isCancelled属性来判断任务是否已取消，通过isFinished属性来判断任务是否已经完成等等。</li>
+<li>支持指定操作的优先级：操作的优先级表示此操作与队列中其他操作之间的优先关系，优先级搞的操作先执行，优先级低的后执行。GCD的队列也有优先级，不过不是针对整个队列的。</li>
+<li>重用NSOperation对象。在开发中你可以使用NSOperation的子类或者自己创建NSOperation对象来保存一些信息，可以在类中定义方法，使得代码能够多次使用。不必重复自己。</li>
+</ol>
+<h3 id="第44条通过dispath-group机制根据系统资源状况来执行任务">第44条：通过Dispath Group机制，根据系统资源状况来执行任务</h3>
+<p>dispatch group是GCD的一项特性，能够把任务分组。调用者可以等待这组任务执行完毕，也可以在提供回调函数之后继续往下执行，这组任务完成时，调用者会得到通知。</p>
+<pre><code>dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIOITY_DEFAULT, 0);
+
+dispatch_group_t group = dispatch_group_create;
+for(id object in collection) {
+    dispatch_group_async(group, queue, ^{
+        [object performTask];
+    });
+}
+
+// 阻塞线程
+dispatch_group_wait(group,DISPATCH_TIME_FOREVER);
+
+// 或者继续其他操作
+dispatch_group_notify(group,dispatch_get_main_queue(),^{
+    // continue something
+});
+
+</code></pre>
+<h3 id="第45条使用dispatch_one来执行只需运行一次的线程安全代码">第45条：使用dispatch_one来执行只需运行一次的线程安全代码</h3>
+<p>常用于单例</p>
+<pre><code>+ (id)sharedInstance {
+     static EOCClass *sharedInstance = nil;
+     static dispatch_once_t onceToken;
+     dispatch_once(&amp;onceToken, ^{
+﻿            sharedInstance = [[self alloc] init];
+    });
+     return sharedInstance;
+}
+</code></pre>
+<h3 id="第46条不要使用dispatch_get_current_queue">第46条：不要使用dispatch_get_current_queue</h3>
+<ol>
+<li>dispatch_get_current_queue 函数的行为常常与开发者所预期的不同，此函数已经废弃，只应做调试之用。</li>
+<li>由于GCD是按层级来组织的，所以无法单用某个队列对象来描述&quot;当前队列&quot;这一概念。</li>
+<li>dispatch_get_current_queue 函数用于解决由不可以重入的代码所引发的死锁，然后能用此函数解决的问题，通常也可以用&quot;队列特定数据&quot;来解决。</li>
+</ol>
+<h2 id="第七章系统框架">第七章：系统框架</h2>
+<h3 id="第47条熟悉系统框架">第47条：熟悉系统框架</h3>
+<p>在Objective-C中除了Foundation 与CoreFoundation之外还有很多系统库，其中包括但不限于下面列出的这些：</p>
+<ol>
+<li>CFNetwork:此框架提供了C语言级别的网络通信能力，它将BSD socket抽象成了易于使用的网络接口。而Foundation则将该框架里的部分内容封装为Objective-C接口，以便进行网络通信。</li>
+<li>CoreAudio:此框架所提供的C语言API可以用来操作设备上的音频硬件。</li>
+<li>AVFoundation:此框架所提供的Objective-C对象可用来回访并录制音频及视频，比如能够在UI视图类里播放视频。</li>
+<li>CoreData:此框架所提供的Objective-C接口可以将对象放入数据库，将数据持久化。</li>
+<li>CoreText:此框架提供的C语言接口可以高效执行文字排版以及渲染操作。</li>
+<li>SpriteKit :游戏框架</li>
+<li>CoreLocation、MapKit :定位地图相关框架</li>
+<li>Address Book框架:需要使用通讯录时才使用该框架</li>
+<li>Music Libraries框架:音乐库相关框架</li>
+<li>HealthKit框架：健康相关框架</li>
+<li>HomeKit框架：为智能化硬件提供的框架</li>
+<li>CloudKit : iCloud相关的框架</li>
+<li>Passbook、PassKit框架：为了在应用中用户可以很容易的访问他们之前购买的活动门票、旅行车票、优惠券等等提供的框架</li>
+</ol>
+<h3 id="第48条多用块枚举少用for循环">第48条：多用块枚举，少用for循环</h3>
+<pre><code>- (void)test1
+{
+    NSArray *array = @[@&quot;1&quot;,@&quot;2&quot;,@&quot;3&quot;,@&quot;4&quot;,@&quot;5&quot;];
+    
+    // OC1.0中的NSEnumerator遍历
+    NSEnumerator *xx = [array objectEnumerator];
+    NSString *str;
+    while ((str = [xx nextObject]) != nil) {
+        NSLog(@&quot;%@&quot;,[xx nextObject]);
+    }
+}
+
+- (void)test2
+{
+    NSArray *array = @[@&quot;1&quot;,@&quot;2&quot;,@&quot;3&quot;,@&quot;4&quot;,@&quot;5&quot;];
+    
+    // OC2.0 遵守NSFastEnumeration协议
+    for (NSString *str in array) {
+        NSLog(@&quot;%@&quot;,str);
+    }
+}
+
+- (void)test3
+{
+    NSArray *array = @[@&quot;1&quot;,@&quot;2&quot;,@&quot;3&quot;,@&quot;4&quot;,@&quot;5&quot;];
+    
+    // 基于块的遍历
+    [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSLog(@&quot;%@&quot;,obj);
+    }];
+}
+</code></pre>
+<h3 id="第49条对自定义其内存管理语义的collection使用无缝桥接">第49条：对自定义其内存管理语义的collection使用无缝桥接</h3>
+<ol>
+<li>
+<p>什么是无缝桥接</p>
+<p>OC集合对象与C语言的数据结构相互平滑转换被称为<strong>无缝桥接</strong></p>
+</li>
+<li>
+<p>如何使用无缝桥接</p>
+<pre><code>NSArray *anNSArray = @[@1, @2, @3, @4, @5];
+</code></pre>
+</li>
+</ol>
+<p>CFArrayRef aCFArray = (__bridge CFArrayRef)anNSArray;
+NSLog(@&quot;Size of array = %li&quot;, CFArrayGetCount(aCFArray));
+//Output: Size of array = 5</p>
+<pre><code>// __bridge:将oc对象转换为c的数据结构，arc依然具备这个对象的所有权。c的数据结构转换为oc对象，arc并没有对象的所有权
+//__bridge_retain:将oc对象转换为c的数据结构，arc失去这个对象的所有权，故c的数据结构使用完毕后要添加CFRelease(aCFArray)将其释放
+//__bridge_transfer:将c的数据结构转换为oc对象，arc获取对象所有权
+```
+</code></pre>
+<h3 id="第50条构建缓存时使用nscache而不是nsdictionary">第50条：构建缓存时使用NSCache而不是NSDictionary</h3>
+<ol>
+<li>使用NSCache时，当系统资源耗尽时，它会自动删减缓存</li>
+<li>当键不支持拷贝时，使用NSCache只会保留键，而NSDictionary需要编写复杂代码实现。</li>
+<li>NSCache是线程安全的，NSDictionary需要自己编写多线程下读取规则。</li>
+<li>NSPurgeableData与NSCache搭配使用，可实现自动清楚数据的功能</li>
+</ol>
+<h3 id="第51条精简initialize和load的实现代码">第51条：精简initialize和load的实现代码</h3>
+<ol>
+<li>load方法在类刚刚加载进程序时调用，此时运行期系统还处于“脆弱状态”。可能有些类还没有加载进程序中。在执行load方法时程序会阻塞，所有不要load中写入复杂代码</li>
+<li>initialize方法在类第一次调用时执行。此时所有类已经加载进程序中，运行期系统能确保initialize一定会在<strong>线程安全的环境</strong>中执行。</li>
+<li>了解load和initialize方法的异同点</li>
+</ol>
+<h3 id="第五十二条别忘了nstimer会保留其目标对象">第五十二条：别忘了NSTimer会保留其目标对象</h3>
+<p>在iOS开发中经常会用到定时器:NSTimer，由于NSTimer会生成指向其使用者的引用，而其使用者如果也引用了NSTimer，那就形成了<strong>循环引用</strong>。</p>
+<p>在dealloc方法中移除定时器，此时的dealloc并不会执行。</p>
+<p>那么怎么解决呢？</p>
+<pre><code>// 使用block执行，避免引用self
+
+__weak typeof(self) weakself = self;
+[NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
+    __strong typeof(weakself) strongself = weakself;
+    [strongself doSomething];
+}];
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[高效的使用Xcode 9]]></title>
+        <id>https://tingke.github.io//post/gao-xiao-de-shi-yong-xcode-9</id>
+        <link href="https://tingke.github.io//post/gao-xiao-de-shi-yong-xcode-9">
+        </link>
+        <updated>2017-11-01T08:56:28.000Z</updated>
+        <summary type="html"><![CDATA[<p>随着iOS 11的发布，Xcode版本也升级到了9。那么这个版本的Xcode又有哪些变化呢？</p>
+<h2 id="1-跳转方法">1. 跳转方法</h2>
+<p>以前按住Command键，单击任何方法名都可以跳转到方法声明处或者苹果文档中。但是现在却弹出个弹框，如图</p>
+<p><img src="http://outiw4np3.bkt.clouddn.com/136bddeb50e67439fd2425a1b5ec88ce.jpg" alt=""></p>
+<p>此时却Command+Shift+左键才能跳转，才麻烦了。我们只需要在设置中这样就能设置回我们熟悉操作：</p>
+<p><img src="http://api.cocoachina.com/uploads//20170922/1506047607578005.png" alt=""></p>
+]]></summary>
+        <content type="html"><![CDATA[<p>随着iOS 11的发布，Xcode版本也升级到了9。那么这个版本的Xcode又有哪些变化呢？</p>
+<h2 id="1-跳转方法">1. 跳转方法</h2>
+<p>以前按住Command键，单击任何方法名都可以跳转到方法声明处或者苹果文档中。但是现在却弹出个弹框，如图</p>
+<p><img src="http://outiw4np3.bkt.clouddn.com/136bddeb50e67439fd2425a1b5ec88ce.jpg" alt=""></p>
+<p>此时却Command+Shift+左键才能跳转，才麻烦了。我们只需要在设置中这样就能设置回我们熟悉操作：</p>
+<p><img src="http://api.cocoachina.com/uploads//20170922/1506047607578005.png" alt=""></p>
+<!-- more -->
+<h2 id="2-折叠代码">2. 折叠代码</h2>
+<p>Command+Option+左右箭头  = 折叠或打开代码块</p>
+<h2 id="3-重构相关">3. 重构相关</h2>
+<p>对一个方法或者变量的重命名,在方法上CMD+单击,出现的菜单,选择rename
+<img src="http://api.cocoachina.com/uploads//20170922/1506048006956030.png" alt=""></p>
+<h2 id="4-folder和group的同步性">4. Folder和Group的同步性</h2>
+<p>之前,我们在XCode中,更改Folder的名字,在FInder中工程对应的文件夹的名字并不会同步的改变,这会造成我们重命名文件夹变得非常不方便,往往要先在XCode中移除,然后在Finder中重命名,再添加回Xcode</p>
+<p>现在 在Xcode9中重名命Folder,Finder中的也同步的改变了</p>
+<p>我们之前建议一个虚拟的group,并不会在对应的文件夹中建立真实的目录,当然,这可能是你需要的,也可能是你不需要的功能.在9中,默认行为改变了.变成了会建立对应的真实文件夹.如果还想像之前那样只是建立虚拟的group,需要选择New Group without Folder
+<img src="http://api.cocoachina.com/uploads//20170922/1506049901602588.png" alt=""></p>
+<p>你可能你会担心,区分不了这个group到底是虚拟的,还是实际的</p>
+<p>放心,苹果给出了标识来区分的,虚拟的左下角有个小的三角形
+<img src="http://api.cocoachina.com/uploads//20170922/1506049933727526.png" alt=""></p>
+<h2 id="5-runtime问题检测">5. runtime问题检测</h2>
+<p>在8中,已经包含了Address Scanitizer和Thread Scanitizer,在Xcode9中,又新增了 Undefiner Behavior Scanitizer,它可以实时的检测一系列的问题.不过我们更能明显感受到的是Main Thread Checker,它可以在运行时确保你没有把UI更新 代码写在了非主线程中</p>
+<p>例如,代码中
+<img src="http://api.cocoachina.com/uploads//20170922/1506048625225251.png" alt=""></p>
+<p>可见还是很强大的,虽然我们没有Fabric的源码,但是其内部调用了[UIApplicationsharedApplication].statusBarOrientation],还是被检测到了</p>
+<p>当然了,如果你想关掉它,可以在 scheme editor中操作
+<img src="http://api.cocoachina.com/uploads//20170922/1506048660434469.png" alt=""></p>
+<h2 id="6-模拟器可以多开了并且模拟器可以登录">6. 模拟器可以多开了,并且,模拟器可以登录</h2>
+<p><img src="http://api.cocoachina.com/uploads//20170922/1506049353869658.png" alt=""></p>
+<p>模拟器的外观样式也回归了,直接是iPhone的外观了,以前可能是因为模拟器不能任意调整大小,所以才没外观的吧</p>
+<p>当然了,你可以去掉外观皮肤. 在模拟器的Window show Device Bezels,去掉选项就和以前一样了
+<img src="http://api.cocoachina.com/uploads//20170922/1506049444615552.png" alt=""></p>
+<h2 id="7-无线开发">7. 无线开发</h2>
+<p>这个只支持ios11的机器,很简单,只要在Device那打开支持就行.
+<img src="http://outiw4np3.bkt.clouddn.com/c7036aafad24dc729374d88f5b96e637.jpg" alt=""></p>
+<h2 id="8-调整字体">8. 调整字体</h2>
+<p>cmd +/- 可以用来调整编辑器的字体大小了</p>
+<h2 id="9-关于警告">9. 关于警告</h2>
+<p>我们定义一个不带参数的block,通常是如下的方式</p>
+<p><code>typedef void (^UpdateSwichBtnBlock)();</code></p>
+<p>在xcode9中会提示一个警告</p>
+<p><code>This block declaration is not a prototype Insert ‘void'</code></p>
+<p>解决方式可以是如下的几种</p>
+<ol>
+<li>
+<p><code>typedef void (^UpdateSwichBtnBlock)(void);</code></p>
+<p>但是这样,很多第三方要改,涉及的面太大了,目前可能不太适合,虽然这个是趋势.</p>
+</li>
+<li>
+<p>pragma</p>
+<pre><code>#pragma clang diagnostic push
+#pragma clang diagnostic ignored &quot;-Wstrict-prototypes&quot;
+typedefvoid (^UpdateSwichBtnBlock)();
+#pragma clang diagnostic pop
+</code></pre>
+</li>
+<li>
+<p>彻底的暂时解决所有这种警告的方式</p>
+<p>在工程的设置中</p>
+<p><img src="http://api.cocoachina.com/uploads//20170922/1506047796141945.png" alt=""></p>
+<p>设置为NO,则这些警告就消失了</p>
+<p>不过这不是一种好习惯,只是暂时性的不让提示这种类型的警告而已</p>
+</li>
+</ol>
+<h2 id="10-crash可以直接在本机上看到了">10. crash可以直接在本机上看到了</h2>
+<p><img src="http://api.cocoachina.com/uploads//20170922/1506048237529869.png" alt=""></p>
+<h2 id="11-xcode-在全屏模式下使用-simulator">11. Xcode 在全屏模式下使用 Simulator</h2>
+<p>如果你用的是 13 寸的电脑，那么 Xcode 的全屏模式你应该早已习惯，其实即使是配有显示器，我还是习惯在 Xcode 的全屏模式下开发😎。很可惜的是不能在 Xcode 的全屏模式下使用 Simulator, 自 Xcode 9b3 以后，这个问题便不存在了：</p>
+<p><img src="http://cc.cocimg.com/api/uploads//20180125/1516864278298406.gif" alt=""></p>
+<p>这个功能并不是对所有人默认开放的，如果不幸你的 Xcode 没有默认开启这个功能也不要灰心，我们可以通过打开 Apple Internal menu 来启用这个功能，通过 Apple Internal menu 你能挖掘出 Simulator 的更多新特性。那么问题来了，怎么开启 Apple Internal menu 呢？首先，在更目录里创建 AppleInternal 文件夹，然后重启 Simulator:
+<img src="http://cc.cocimg.com/api/uploads//20180125/1516864313510848.png" alt=""></p>
+<pre><code>cd ~/ 
+sudo mkdir /AppleInternal
+</code></pre>
+<p>多重启 Simulator 后就可以看到 internal 选项 ☝
+但是，</p>
+<p>我在 Mac 使用过程中遇到 <code>Operation Not Permitted</code> 问题，之前都是略过，今天好好摸索了一把，搞明白了道理，记录下来。
+好几次整理移动硬盘数据的时候，都遇到了 Operation Not Permitted 问题，文件移动不了，也删除不掉，第一次遇到没理会，第二次是打开虚拟机，在 Windows 中操作这些问题文件，今天又遇到了，决定消灭它。
+OS X EI Capitan 的 SIP</p>
+<p>Apple 在 OS X 10.11 以后的版本中默认启动了一项系统保护程序，叫做 System Integrity Protection，也被唤作 rootless（寓意让 root 弱一点），该程序意在保护电脑不被恶意程序攻击，但是对于我们这群程序员，很多保护是多余的，甚至给我们带来了很多麻烦。
+SIP 会锁定几个系统文件目录：</p>
+<pre><code>/System
+/sbin
+/usr （/usr/local 除外）
+</code></pre>
+<p>在 SIP 的保护下，部分软件、功能、脚本都会失效，我们可以通过如下步骤关闭 SIP：</p>
+<ul>
+<li>重启电脑，按下 Command + R 直到听到开机声音，此时电脑会进入恢复模式（Recovery Mode）</li>
+<li>当 OSX 工具出现在屏幕中时，下拉工具（Utilities）菜单，选择终端（Terminal）</li>
+<li>键入 csrutil disable，回车</li>
+<li>电脑重启后，SIP 就关闭了</li>
+</ul>
+<p>恢复 SIP 的方式同上，只不过终端中键入 <code>csrutil enable</code>。通过 <code>csrutil status</code> 可以检测系统当前 SIP 的启动状态：</p>
+<pre><code>$ csrutil status
+System Integrity Protection status: enabled.
+</code></pre>
+<p>补充：</p>
+<p>使用命令行，在录制当前模拟器的屏幕</p>
+<pre><code>xcrun simctl io booted recordVideo --type=mp4 &lt;PATH TO VIDEO FILE&gt;
+</code></pre>
+<p><img src="http://outiw4np3.bkt.clouddn.com/5734dc156e651dcfe0b6b11bad8cd335.jpg" alt=""></p>
+<p>上传文件到模拟器中
+<img src="http://outiw4np3.bkt.clouddn.com/e85146fe9468f795c4895c4883727d2e.jpg" alt=""></p>
+<p>打开url(所有苹果的URL计划列表请查阅<a href="https://developer.apple.com/library/content/featuredarticles/iPhoneURLScheme_Reference/Introduction/Introduction.html">文档</a>。)</p>
+<pre><code>xcrun simctl openurl booted &lt;URL&gt;
+</code></pre>
+<p>参考阅读：<br>
+<a href="https://medium.com/flawless-app-stories/simulator-on-steroids-c12774ca6b">iOS Simulator on steroids: Tips &amp; Tricks</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[iOS11下的适配工作]]></title>
+        <id>https://tingke.github.io//post/ios11-xia-de-gua-pei-gong-zuo</id>
+        <link href="https://tingke.github.io//post/ios11-xia-de-gua-pei-gong-zuo">
+        </link>
+        <updated>2017-10-13T13:53:12.000Z</updated>
+        <summary type="html"><![CDATA[<blockquote>
+<p>今年的苹果，发布iOS 11的同时，也大胆的发布了异型屏iPhone X。独特的“刘海”造型又在手机样式方面独领风骚。但是这也为iOS开发工作增加了难度。</p>
+</blockquote>
+<p>iPhone X的屏幕尺寸相关变化</p>
+<ol>
+<li>高度增加了145pt，变成812pt.</li>
+<li>屏幕圆角显示，注意至少留10pt边距。</li>
+<li>状态栏高度由20pt变成44pt，留意这个距离就能避开“刘海”的尴尬，相应的导航栏以上变化64-&gt;88。</li>
+<li>底部工具栏需要为home indicator留出34pt边距。</li>
+<li>物理分辨率为1125px * 2436px，使用@3倍图</li>
+</ol>
+]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>今年的苹果，发布iOS 11的同时，也大胆的发布了异型屏iPhone X。独特的“刘海”造型又在手机样式方面独领风骚。但是这也为iOS开发工作增加了难度。</p>
+</blockquote>
+<p>iPhone X的屏幕尺寸相关变化</p>
+<ol>
+<li>高度增加了145pt，变成812pt.</li>
+<li>屏幕圆角显示，注意至少留10pt边距。</li>
+<li>状态栏高度由20pt变成44pt，留意这个距离就能避开“刘海”的尴尬，相应的导航栏以上变化64-&gt;88。</li>
+<li>底部工具栏需要为home indicator留出34pt边距。</li>
+<li>物理分辨率为1125px * 2436px，使用@3倍图</li>
+</ol>
+<!-- more -->
+<p>本次系统升级带来了以下内容：</p>
+<ol>
+<li>集成了搜索的大标题栏</li>
+<li>提倡在安全区域内布局</li>
+<li>导航栏的titleView支持自动布局</li>
+<li>废除了xxx，新增了xxx</li>
+<li>App中必须添加 1024 x 1024 的应用图标的图片</li>
+</ol>
+<h2 id="app启动图片适配">App启动图片适配</h2>
+<p>相信有一部分道友的APP在iPhone X上运行时并没有像想象中那样占满整个屏幕, 而是保持着原有的高度 在屏幕中心位置, 针对这个问题 目前经过实验得出可以通过以下方式使APP按照全屏模式运行:</p>
+<ol>
+<li>通过LaunchScreen.storyboard方式启动</li>
+<li>如果使用的是Assets中的LaunchImage, 在增加了iPhone X尺寸的图片配置后.</li>
+</ol>
+<p>LaunchScreen.storyboard方式不用多说, 这里说一下如何在LaunchImage中增加iPhone X尺寸的图片配置.</p>
+<p>准备一张尺寸:1125 * 2436的启动图片, 移动到LaunchImage的Finder目录中, 并在LaunchImage中的Contents.json文件中增加 (注意Json格式):</p>
+<pre><code class="language-json">{
+    &quot;extent&quot; : &quot;full-screen&quot;,
+    &quot;idiom&quot; : &quot;iphone&quot;,
+    &quot;subtype&quot; : &quot;2436h&quot;,
+    &quot;filename&quot; : &quot;图片名.png&quot;,
+    &quot;minimum-system-version&quot; : &quot;11.0&quot;,
+    &quot;orientation&quot; : &quot;portrait&quot;,
+    &quot;scale&quot; : &quot;3x&quot;
+}
+</code></pre>
+<p>iOS 11为UIView增加了两个新的属性safeAreaInsets和safeAreaLayoutGuide, 通过这两个属性我们可以获得安全区域的范围, 通过上图可以很清楚的看到安全区域的范围, 我们要做的是让那些不能被遮挡的内容和控件在安全区域范围内显示, 注意!这句话非常重要.</p>
+<ul>
+<li>safeAreaInsets 适用于手动计算.</li>
+<li>safeAreaLayoutGuide 适用于自动布局.</li>
+</ul>
+<h2 id="uinavigation">UINavigation</h2>
+<ol>
+<li>
+<p>大标题</p>
+<p>在UI navigation bar中新增了一个BOOL属性prefersLargeTitles,将该属性设置为ture，navigation bar就会在整个APP中显示大标题，如果想要在控制不同页面大标题的显示，可以通过设置当前页面的navigationItem的largeTitleDisplayMode属性；</p>
+<pre><code class="language-objc">if (@available(iOS 11.0, *)) {
+        self.navigationController.navigationBar.prefersLargeTitles = YES;
+}
+</code></pre>
+<p><img src="http://outiw4np3.bkt.clouddn.com/b4814514cb2f3e3b4ca3bd04b131dba6.jpg" alt=""></p>
+</li>
+<li>
+<p>titleView引入自动布局</p>
+<p>会导致titleView变形，只需要在自定义view中实现<code>intrinsicContentSize</code>方法</p>
+<pre><code class="language-objc">- (CGSize)intrinsicContentSize {
+    return UILayoutFittingExpandedSize;
+}
+</code></pre>
+</li>
+<li>
+<p>加入<code>searchController</code>属性</p>
+<p>把你的UISearchController赋值给navigationItem，就可以实现将UISearchController集成到Navigation。</p>
+<pre><code class="language-objc">if (@available(iOS 11.0, *)) {
+    self.navigationItem.searchController = self.searchController;
+    self.navigationItem.hidesSearchBarWhenScrolling = YES;
+}else{
+    self.searchController.searchBar.bounds = CGRectMake(0, 0, self.view.frame.size.width, 44);
+    self.tableView.tableHeaderView = self.searchController.searchBar;
+    [self.tableView setContentOffset:CGPointMake(0, 44)];
+}
+</code></pre>
+<p><img src="http://outiw4np3.bkt.clouddn.com/fab08ab5005d661bda069710de20b8c7.jpg" alt=""></p>
+</li>
+</ol>
+<h2 id="uitableview">UITableView</h2>
+<ol>
+<li>
+<p>在iOS 11中默认启用Self-Sizing</p>
+<p>这个应该是UITableView最大的改变。我们知道在iOS8引入Self-Sizing 之后，我们可以通过实现estimatedRowHeight相关的属性来展示动态的内容，实现了estimatedRowHeight属性后，得到的初始contenSize是个估算值，是通过estimatedRowHeight x cell的个数得到的，并不是最终的contenSize，tableView就不会一次性计算所有的cell的高度了，只会计算当前屏幕能够显示的cell个数再加上几个，滑动时，tableView不停地得到新的cell，更新自己的contenSize，在滑到最后的时候，会得到正确的contenSize。</p>
+<p>Self-Sizing在iOS11下是默认开启的，Headers, footers, and cells都默认开启Self-Sizing，所有estimated 高度默认值从iOS11之前的 0 改变为UITableViewAutomaticDimension。</p>
+<p>iOS11下不想使用Self-Sizing的话，可以通过以下方式关闭：（前言中提到的问题也是通过这种方式解决的）</p>
+<pre><code class="language-objc">self.tableView.estimatedRowHeight = 0;
+self.tableView.estimatedSectionHeaderHeight = 0;
+self.tableView.estimatedSectionFooterHeight = 0;
+</code></pre>
+</li>
+</ol>
+<h2 id="uiviewcontroller">UIViewController</h2>
+<ol>
+<li>
+<p><code>automaticallyAdjustsScrollViewInsets</code> &amp;&amp; <code>contentInsetAdjustmentBehavior</code></p>
+<blockquote>
+<p>在iOS 11之前，由于<code>UIViewController</code>的<code>automaticallyAdjustsScrollViewInsets = true</code>，在UI布局时，会出现界面中的第一个scrollView控件中的内容向下偏移64px。所以部分开发者会在开始UI布局时会将将<code>automaticallyAdjustsScrollViewInsets = false</code>。</p>
+</blockquote>
+<blockquote>
+<p>而在iOS 11直接废除了这个属性，而在<code>UIScrollView</code>中添加了<code>contentInsetAdjustmentBehavior</code>属性来计算<code>adjustedContentInset</code>的范围。<code>adjustContentInset</code>表示<code>contentView.frame.origin</code>偏移了<code>scrollview.frame.origin</code>多少；</p>
+</blockquote>
+<pre><code class="language-objc">/*
+如果scrollview在一个automaticallyAdjustsScrollViewContentInset = YES的controller上，
+并且这个Controller包含在一个navigation controller中，
+这种情况下会设置在top &amp; bottom上 adjustedContentInset = safeAreaInset + contentInset不管是否滚动。
+其他情况下与UIScrollViewContentInsetAdjustmentScrollableAxes相同
+*/ 
+UIScrollViewContentInsetAdjustmentAutomatic, 
+</code></pre>
+<pre><code class="language-objc">/*
+在可滚动方向上adjustedContentInset = safeAreaInset + contentInset，
+在不可滚动方向上adjustedContentInset = contentInset；
+依赖于scrollEnabled和alwaysBounceHorizontal / vertical = YES，scrollEnabled默认为yes，
+所以大多数情况下，计算方式还是adjustedContentInset = safeAreaInset + contentInset
+*/ 
+UIScrollViewContentInsetAdjustmentScrollableAxes, 
+</code></pre>
+<pre><code class="language-objc">/*
+不计算内边距,adjustedContentInset = contentInset
+*/ 
+UIScrollViewContentInsetAdjustmentNever, 
+</code></pre>
+<pre><code class="language-objc">/*
+根据safeAreaInsets 计算内边距,adjustedContentInset = safeAreaInset + contentInset
+*/ 
+UIScrollViewContentInsetAdjustmentAlways, 
+</code></pre>
+</li>
+</ol>
+<h1 id="iphone-x-在push时tabbar上移">iPhone X 在push时TabBar上移</h1>
+<h2 id="总结">总结</h2>
+<p>在iOS 11发布了不久后，APP适配iOS 11和iPhone X也是踩坑不少，把自己遇到过的坑记录下来，和大家一起分享。</p>
+<p>参考文章：</p>
+<p><a href="http://www.cocoachina.com/ios/20171011/20737.html">iOS11、iPhone X、Xcode9 适配指南</a></p>
+<p><a href="http://www.10tiao.com/html/330/201707/2653579210/1.html">你可能需要为你的 APP 适配 iOS 11</a></p>
+<p><a href="https://www.lee1994.com/guan-yu-iphone/">关于iPhone X 的适配</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[iPhone X互交设计官方指南]]></title>
+        <id>https://tingke.github.io//post/iphone-x-hu-jiao-she-ji-guan-fang-zhi-nan</id>
+        <link href="https://tingke.github.io//post/iphone-x-hu-jiao-she-ji-guan-fang-zhi-nan">
+        </link>
+        <updated>2017-09-14T07:00:59.000Z</updated>
+        <summary type="html"><![CDATA[<p>One More Thing!</p>
+<p>iPhone X来了，全面屏+独特的“刘海”造型。让我们来了解一下iPhone X吧。</p>
+<h2 id="iphone-x">iPhone X</h2>
+<p>iPhone X包括一个大的、高分辨率的、圆形的、边对边的显示，它提供了前所未有的沉浸式、内容丰富的体验。</p>
+<p><img src="https://developer.apple.com/ios/human-interface-guidelines/images/OV_Hero.png" alt=""></p>
+]]></summary>
+        <content type="html"><![CDATA[<p>One More Thing!</p>
+<p>iPhone X来了，全面屏+独特的“刘海”造型。让我们来了解一下iPhone X吧。</p>
+<h2 id="iphone-x">iPhone X</h2>
+<p>iPhone X包括一个大的、高分辨率的、圆形的、边对边的显示，它提供了前所未有的沉浸式、内容丰富的体验。</p>
+<p><img src="https://developer.apple.com/ios/human-interface-guidelines/images/OV_Hero.png" alt=""></p>
+<!-- more --> 
+<h2 id="screen-size">Screen Size</h2>
+<p>在竖屏方向，iPhoneX显示屏的宽度与iPhone 6、iPhone 7和iPhone 8 4.7显示器的宽度相匹配。但是在iPhone X比4.7寸屏幕高145pt，导致大约20%额外的垂直空间的内容。</p>
+<p><img src="http://outiw4np3.bkt.clouddn.com/09c50a07e949b9bd883ec53245682a2f.jpg" alt=""></p>
+<p><strong>在你的应用程序的所有切图必须提供高分辨率的图像</strong>。iPhone X有一个高分辨率屏幕，符号等的平面、矢量图形，最好是提供独立的PDF文件的分辨率。用于光栅化的切图，同时提供@3X和@2x版本的切图。参见<a href="https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/image-size-and-resolution/"> Image Size and Resolution </a>和<a href="https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/custom-icons/">Custom Icons</a>。</p>
+<h2 id="layout">Layout</h2>
+<p>当为iPhone X设计时，必须确保布局填满屏幕，而不是被设备的圆角、传感器外壳或访问主屏幕的指示器所掩盖。</p>
+<p><img src="http://outiw4np3.bkt.clouddn.com/dfe7cf9898bef9f77db2594c3e3572d6.jpg" alt=""></p>
+<p>大多数使用标准的、系统提供的UI元素（如导航栏、表格和集合）的应用程序会自动适应设备的新形式因素。背景材料扩展到显示的边缘，并且适当地插入和定位UI元素。</p>
+<p><img src="http://outiw4np3.bkt.clouddn.com/e083d0fe55f9407524af1b263e207889.jpg" alt=""></p>
+<p>对于具有自定义布局的应用程序，支持 iPhone X 也应该比较容易，特别是如果您的应用程序使用 Auto Layout 并遵守安全区域和边距布局指南。</p>
+<p><strong>在 iPhone X 上预览您的应用程序</strong>。您可以使用 Simulator(附带 Xcode)来预览应用程序，并检查剪辑和其他布局问题。如宽彩色图像这样的属性，最好在设备上预览。</p>
+<p><strong>提供全屏体验</strong>。确保背景延伸到屏幕的边缘，并且垂直可滚动的布局(如表格和集合)一直延续到底部。</p>
+<p><img src="http://outiw4np3.bkt.clouddn.com/ea144cbca3b93422bc232615b2a64a6e.jpg" alt=""></p>
+<p><strong>插入必要内容以防止裁剪</strong>。一般来说，内容应该是居中对称的，所以它在任何方向看起来都很棒，不会被角落或设备的传感器外壳裁剪，或被访问主屏幕的指示器遮挡。为获得最佳效果，请使用标准的系统提供的界面元素和 Auto Layout 构建您的界面。所有应用程序都应遵循 UIKit 定义的安全区域和布局边距，这些区域可以根据设备和上下文进行适当的填充。安全区域还可以防止内容覆盖状态栏、导航栏、工具栏和标签栏。</p>
+<p><strong>注意状态栏的高度。状态栏在 iPhone X 上比在其他 iPhone 上更高</strong>。如果您的应用程序的固定状态栏高度在状态栏的下方，则您必须更新您的应用程序，才能根据用户的设备动态定位内容。请注意，当背景任务(如录音和位置跟踪)处于活动状态时，iPhoneX 上的状态栏不会改变高度。</p>
+<p><strong>如果您的应用程序目前隐藏状态栏，请重新考虑 iPhone X 上的决定</strong>。iPhone 上的显示高度为 4.7 英寸，iPhone 的显示屏提供了更多的垂直空间内容，状态栏占据了您应用程序本可能赢得的屏幕区域，状态栏还显示了人们发现的有用的信息，只有在交换附加值时候才能被隐藏。</p>
+<p><img src="http://outiw4np3.bkt.clouddn.com/6b91a2d084267fef4dd3912f89fac422.jpg" alt=""></p>
+<p><strong>在重复使用现有图稿时，请注意长宽比差异</strong>。iPhone X 具有不同于 4.7 英寸 iPhone 的长宽比，因此，全屏 4.7 英寸 iPhone 图形在 iPhone X 上全屏显示时出现裁剪或 letterboxed。同样，全屏 iPhone X 图稿在显示时被裁剪或被添加黑边。 全屏显示在 4.7 英寸 iPhone 上，确保重要的视觉内容保持在两种显示尺寸上。</p>
+<p><strong>避免将交互式控件放置在屏幕最底部和角落里</strong>。人们使用显示屏底部的滑动手势访问主屏幕和应用程序切换器，这些手势可能会取消您在此区域中实现的自定义手势。屏幕的两个角落很难让人触及。</p>
+<p><strong>不要遮挡或突出显示关键的显示特性</strong>。请勿尝试隐藏设备的圆角、传感器外壳或通过在屏幕顶部和底部放置黑色条来指示主屏幕的指示器。不要使用像括号、边框、形状或教学文字等视觉装饰来让人注意这些区域。</p>
+<p><strong>允许自动隐藏虚拟Home键，以便轻松访问主屏幕</strong>。当启用自动隐藏时，如果用户没有触摸屏幕几秒钟，Home 键将自动隐藏。当用户再次触摸屏幕时，它会重新出现。这种行为应该只能用于被动观看体验，如播放视频或幻灯片。请参阅 适应性和布局。</p>
+<p>参见 <a href="https://developer.apple.com/ios/human-interface-guidelines/visual-design/adaptivity-and-layout/">Adaptivity and Layout</a>.</p>
+<h2 id="statusbar">StatusBar</h2>
+<p><img src="http://outiw4np3.bkt.clouddn.com/db3f5dd7683619eb72b13fd20d662ba4.jpg" alt=""></p>
+<h2 id="navigationbar的标题">NavigationBar的标题</h2>
+<p>考虑在导航栏中显示当前视图的标题。在大多数情况下，标题帮助人们理解他们在看什么。然而，如果标题导航栏似乎是多余的，你可以把标题空。例如，Notes不会对当前的便笺进行标题，因为第一行内容提供了所需的所有上下文。</p>
+<p><img src="http://outiw4np3.bkt.clouddn.com/8970c1e7760170dc34f0ec1580a04107.jpg" alt=""></p>
+<p><strong>当需要额外强调上下文时，使用大标题</strong>。在一些应用程序中，大标题的粗体文本可以帮助人们浏览和搜索。在标签的布局，例如，大标题可以帮助澄清活动标签和通知用户当他们滚动到顶部。手机使用这种方法，而音乐使用大标题来区分内容区域，如专辑、艺术家、播放列表和广播。当用户开始滚动内容时，一个大标题转换为一个标准标题。大标题在所有应用程序中都没有意义，不应该与内容竞争。虽然时钟应用程序有一个选项卡式布局，但大标题是不必要的，因为每个选项卡都有一个独特的、可识别的布局。对于开发商的引导，参考<a href="https://developer.apple.com/documentation/uikit/uinavigationbar/2908999-preferslargetitles">preferslargetitles</a>。</p>
+<h2 id="tabbar">TabBar</h2>
+<p><img src="http://outiw4np3.bkt.clouddn.com/29d68ad8dae84f8330a02bdd430dd3a8.jpg" alt=""></p>
+<p>本文翻译于<a href="https://developer.apple.com/ios/human-interface-guidelines/overview/iphone-x/">Apple Developer</a></p>
 ]]></content>
     </entry>
 </feed>

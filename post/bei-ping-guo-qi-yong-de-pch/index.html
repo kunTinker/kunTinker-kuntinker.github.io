@@ -1,0 +1,137 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>被苹果弃用的PCH | Gridea</title>
+<link rel="shortcut icon" href="https://tingke.github.io//favicon.ico?v=1560780269650">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://tingke.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://tingke.github.io/">
+  <img class="avatar" src="https://tingke.github.io//images/avatar.png?v=1560780269650" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              被苹果弃用的PCH
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2018-05-29 ·
+              </time>
+              
+            </div>
+            
+            <div class="post-content">
+              <h4 id="pch是什么">PCH是什么？</h4>
+<p><code>PCH</code>是苹果为了提高编译速度引入的一个预编译文件，它所引用的内容能够被项目中的其他文件共享和访问，预编译后的头文件会被缓存起来，再次编译的时候就不需要重新编译 <code>PCH</code> 文件中导入的内容，从而提高编译速度。在Xcode6以前，新增的工程中会自动生成 “工程名-Prefix.pch”文件。</p>
+<!-- more -->
+<p>相信很多iOS开发者都使用 <code>PCH</code> 文件做过以下一些事：</p>
+<ol>
+<li>存放一些宏定义</li>
+<li>引入全局使用的头文件</li>
+<li>开关日志打印</li>
+</ol>
+<p>这样的在编码的时候，不用在不同文件中不停的做引用，编写代码的速度简直快的飞起😂😂。</p>
+<h4 id="这么爽的编码体验苹果为什么放弃主动引入pch">这么爽的编码体验，苹果为什么放弃主动引入PCH？</h4>
+<p>正是iOS开发者的滥用 <code>PCH</code> 文件，造成项目编译缓慢，影响用户体验，与苹果当初引入 <code>PCH</code> 的目的背道而驰了，因此苹果不得不放弃 <code>PCH</code> 的使用。</p>
+<p>我想，罪魁祸首就是开发者大量引入共用性不高的宏定义和头文件，每次修改引入内容造成 PCH的重编译；编译的时候整个工程范围地查找和替换这些宏定义字段，重复导入这些头文件，不慢就奇怪了。</p>
+<h4 id="正确的使用方式">正确的使用方式</h4>
+<ol>
+<li>不要把所有的宏定义都放到平常文件中，尤其是共用性较小的宏定义;</li>
+<li>将公用性高的头文件放到 <code>PCH</code> 中，比如<code>Fundation框架</code>等</li>
+<li>将零散的宏定义专门创建一个头文件来放置，再导入到 <code>PCH</code> 中，方便查看和修改</li>
+</ol>
+<p>其实，过分依赖 <code>PCH</code> 文件也有一些问题：它降低了代码的可移植性。把类中使用的框架等放在 <code>PCH</code> 中，要么你要重新去导入，要么把 <code>PCH</code> 一同拖走，还要删掉没用的代码，代价也是蛮大的。</p>
+
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://tingke.github.io//post/vuejs-ru-men">
+              <h3 class="post-title">
+                Vue.js入门
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> Copyright © 2019 | 
+  <a class="rss" href="https://tingke.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>
