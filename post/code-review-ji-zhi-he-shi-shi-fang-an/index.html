@@ -1,0 +1,243 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Code Review 机制和实施方案 | 好学习</title>
+<link rel="shortcut icon" href="https://tingke.github.io//favicon.ico?v=1562078616937">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://tingke.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142389147-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-142389147-1');
+</script>
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://tingke.github.io/">
+  <img class="avatar" src="https://tingke.github.io//images/avatar.png?v=1562078616937" alt="">
+  </a>
+  <h1 class="site-title">
+    好学习
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Code Review 机制和实施方案
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2019-06-25 ·
+              </time>
+              
+            </div>
+            
+              <div class="post-feature-image" style="background-image: url('https://tingke.github.io//post-images/code-review-ji-zhi-he-shi-shi-fang-an.png')">
+              </div>
+            
+            <div class="post-content">
+              <h2 id="开展-review-的目的">开展 Review 的目的</h2>
+<p>Code Review应该是软件工程最最有价值的一个活动。首先，我们先来看看Code Reivew的用处：</p>
+<!-- more -->
+<ol>
+<li>Code reviews 中，可以通过大家的建议增进代码的质量。</li>
+<li>Code reviews  是一个传递知识的手段，可以让其它并不熟悉代码的人知道作者的意图和想法，从而可以在以后轻松维护代码。</li>
+<li>Code reviews 也鼓励程序员们相互学习对方的长处和优点。</li>
+<li>Code reviews 也可以被用来确认自己的设计和实现是一个清楚和简单的。</li>
+<li>Code reviews 不应该承担发现代码错误的职责。Code Review主要是审核代码的质量，如可读性，可维护性，以及程序的逻辑和对需求和设计的实现。代码中的bug和错误应该由单元测试，功能测试，性能测试，回归测试来保证的</li>
+<li>Code reviews 不应该成为保证代码风格和编码标准的手段。编码风格和代码规范都属于死的东西，每个程序员在把自己的代码提交团队Review的时候，代码就应该是符合规范的，这是默认值，属于每个人自己的事情，不应该交由团队来完成，否则只会浪费大家本来就不够的时间。</li>
+</ol>
+<h2 id="code-review的原则">Code Review的原则</h2>
+<ol>
+<li>
+<p>经常进行Code Review
+当你面对那近万行的代码，以前N多掺和在一起的功能，你会发现，整个Code Review变得非常地艰难，用不了一会儿，你就会发现大家都在拼命地打着哈欠，但还是要坚持，有时候，这样的Review会持续3个小时以上，相当的夸张。</p>
+</li>
+<li>
+<p>Code Review不要太正式，而且要短
+只有不正式的Code Review才会让你和评审者放轻松，人只有放松了，才会表现得很真实，很真诚。记住Review只不过是一种形式，而只有在相互信任中通过相互的讨论得到了有意义和有建设性的建议和意见，那才是最实在的。</p>
+</li>
+<li>
+<p>尽可能的让不同的人Review你的代码
+不同的人可以全面的从各个方面评论你的代码，有的从实现的角度，有的从需求的角度，有的从用户使用的角度，有的从算法的角度，有的从性能效率的角度，有的从易读的角度，有的从扩展性的角度……</p>
+</li>
+<li>
+<p>保持积极的正面态度
+无论是代码作者，还是评审者，都需要一种积极向上的正面的态度，作者需要能够虚心接受别人的建议，因为别人的建议是为了让你做得更好；评审者也需要以一种积极的正面的态度向作者提意见，因为那是和你在一个战壕里的战友。记住，你不是一段代码，你是一个人！</p>
+</li>
+<li>
+<p>学会享受Code Review
+如果你到了一个人人都喜欢Code Reivew的团阿，那么，你会进入到一个生机勃勃的地方，在那里，每个人都能写出质量非常好的代码，在那里，你不需要经理的管理，团队会自适应一切变化，他们相互学习，相互帮助，不仅仅是写出好的代码，而且团队和其中的每个人都会自动进化</p>
+</li>
+</ol>
+<h2 id="如何开展code-review">如何开展Code Review</h2>
+<p>目前业界运作CodeReview的方式有多种方式：强制&amp;非强制、线上交流&amp;线下会议、小片段&amp;大模块、事前&amp;事后、高频率&amp;低频率，等等……据了解，目前每种形态都有各自的市场，被不同的团队运用着。</p>
+<p>接下来分析下各种形态的优缺点，供大家参考：</p>
+<ol>
+<li>
+<p>强制&amp;非强制： 按照经验，CodeReview启动前期建议采用强制要求，否则很难有效开展起来。坚持一段时间待习惯养成后再考虑自由度。</p>
+</li>
+<li>
+<p>小片段&amp;大模块：如果想要让问题暴露更充分或降低review的难度，建议采用细粒度方式进行，即小片段提交小片段review。如果更关注全局设计和逻辑思路的学习和找茬，那么可以用模块方式统一review。但很多时候这两种方式是可以结合运作的。</p>
+</li>
+<li>
+<p>线上交流&amp;线下会议： 如果想提高效率，建议采用线上方式进行交流，这里要推荐公司的Code平台，上面支持CodeReview的功能都已经比较齐全。如果更喜欢全员一起找茬的那种快感，那么可以采用线下会议方式开展，但采用开会的方式，一般成本较高，可看团队接受度。</p>
+</li>
+<li>
+<p>事前&amp;事后：这里指的是发布前还是发布后。版本发布后统一进行CodeReview的方式更多是一种代码交流活动， 起不到代码质量把关的作用。反之，如果在版本发布前就对代码进行CodeReview，就可以对质量问题起到很好的把关作用。这里是时间和质量之间的权衡。</p>
+</li>
+<li>
+<p>高频率&amp;低频率：建议的是把代码交流放在每一天，所以频率越高越好。具体根据团队实际情况进行安排即可。</p>
+</li>
+<li>
+<p>此外，也有团队采用模块owner把关质量的CodeReview方式，这种更多是从质量风险规避角度上考虑，在代码提交前owner检查是否有质量问题，确认没有问题后方能发布，有这方面需要的团队也可以考虑这种方式。</p>
+</li>
+</ol>
+<h2 id="代码审查清单">代码审查清单</h2>
+<h3 id="设计常规项">设计常规项</h3>
+<ol>
+<li>设计是否合理符合通常设计模式，</li>
+<li>逻辑是否考虑闭环全面考虑</li>
+<li>扩展性是否考虑</li>
+<li>是否存在安全漏洞</li>
+</ol>
+<h3 id="编码常规项">编码常规项</h3>
+<ol>
+<li>代码是否内存泄漏，是否UI成红色，是否性能低下，是否会形成crash</li>
+<li>各种异常逻辑是否处理</li>
+<li>代码能够工作么？它有没有实现预期的功能，逻辑是否正确等。</li>
+<li>所有的代码是否简单易懂？</li>
+<li>代码符合你所遵循的编程规范么？这通常包括大括号的位置，变量名和函数名，行的长度，缩进，格式和注释。</li>
+<li>是否存在多余的或是重复的代码？</li>
+<li>代码是否尽可能的模块化了？</li>
+<li>是否有可以被替换的全局变量？</li>
+<li>是否有被注释掉的代码？</li>
+<li>循环是否设置了长度和正确的终止条件？</li>
+<li>是否有可以被库函数替代的代码？</li>
+<li>是否有可以删除的日志或调试代码？</li>
+</ol>
+<h3 id="安全">安全</h3>
+<ol>
+<li>所有的数据输入是否都进行了检查（检测正确的类型，长度，格式和范围）并且进行了编码？</li>
+<li>在哪里使用了第三方工具，返回的错误是否被捕获？</li>
+<li>输出的值是否进行了检查并且编码？</li>
+<li>无效的参数值是否能够处理？</li>
+</ol>
+<h3 id="文档">文档</h3>
+<ol>
+<li>是否有注释，并且描述了代码的意图？</li>
+<li>所有的函数都有注释吗？</li>
+<li>对非常规行为和边界情况处理是否有描述？</li>
+<li>第三方库的使用和函数是否有文档？</li>
+<li>数据结构和计量单位是否进行了解释？</li>
+<li>是否有未完成的代码？如果是的话，是不是应该移除，或者用合适的标记进行标记比如‘TODO’？</li>
+</ol>
+<h3 id="测试">测试</h3>
+<ol>
+<li>代码是否可以测试？比如，不要添加太多的或是隐藏的依赖关系，不能够初始化对象，测试框架可以使用方法等。</li>
+<li>是否存在测试，它们是否可以被理解？比如，至少达到你满意的代码覆盖(code coverage)。</li>
+<li>单元测试是否真正的测试了代码是否可以完成预期的功能？</li>
+<li>是否检查了数组的“越界“错误？</li>
+<li>是否有可以被已经存在的API所替代的测试代码？</li>
+</ol>
+<p>参考阅读：</p>
+<ol>
+<li><a href="https://segmentfault.com/a/1190000003967247">为什么要坚持code review</a></li>
+<li><a href="https://www.imooc.com/article/details/id/2991">Code Review 不知道什么时候你会进行到这一步？</a></li>
+<li><a href="https://segmentfault.com/a/1190000016155779">基于GitLab的Code Review教程</a></li>
+<li><a href="https://my.oschina.net/powertoolsteam/blog/1928077">这四类Code Review方法你都知道吗？</a></li>
+<li><a href="https://blog.csdn.net/fishmai/article/details/78651521">代码review总结</a></li>
+<li><a href="https://gitee.com/douyadg/FE-Standard">我们的代码规范</a></li>
+<li><a href="https://github.com/ecomfe/spec">百度的代码规范</a></li>
+</ol>
+
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://tingke.github.io//post/filemerge-de-ji-ben-shi-yong">
+              <h3 class="post-title">
+                FileMerge的基本使用
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> Copyright © 2019 | 
+  <a class="rss" href="https://tingke.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>
