@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://tingke.github.io/</id>
     <title>好学习</title>
-    <updated>2019-07-02T14:43:44.702Z</updated>
+    <updated>2019-08-07T18:38:33.065Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://tingke.github.io/"/>
     <link rel="self" href="https://tingke.github.io//atom.xml"/>
@@ -10,6 +10,127 @@
     <logo>https://tingke.github.io//images/avatar.png</logo>
     <icon>https://tingke.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, 好学习</rights>
+    <entry>
+        <title type="html"><![CDATA[CSS 四大布局]]></title>
+        <id>https://tingke.github.io//post/css-si-da-bu-ju</id>
+        <link href="https://tingke.github.io//post/css-si-da-bu-ju">
+        </link>
+        <updated>2019-07-08T13:47:22.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="css-四大布局">CSS 四大布局</h1>
+<p>本文简单介绍 CSS 中的一些常见布局</p>
+<h2 id="1-流式布局">1. 流式布局</h2>
+<p>流式布局遵守标准文档流规则，通过CSS改变标签的display属性 block/inline-block。</p>
+<p>HTML 中有 block 和 inline-block 两种标签，它们在流式布局中具有不同的表现：</p>
+<ol>
+<li>
+<p>inline-block 标签可以嵌套在 block 标签中，反之则不可；</p>
+</li>
+<li>
+<p>可以通过 display 修改标签属于 block 或者 inline-block 类型；</p>
+</li>
+<li>
+<p>block 类型的标签布局是每一个标签独占一行，而 inline-block 标签会一个挨着一个进行布局；<br>
+<img src="https://tingke.github.io//post-images/1562596159796.png" alt=""></p>
+<p><img src="https://tingke.github.io//post-images/1562596197614.png" alt=""></p>
+</li>
+</ol>
+<h2 id="2-定位">2. 定位</h2>
+<p>通过 position 的方式可以打破流式布局，它支持的值有：static，relative，absolute，fix 和 sticky。</p>
+<ol>
+<li>static：默认值，它遵循流水布局；</li>
+<li>relative：相对布局，需要结合 top、bottom、left 和 right 配合使用，仅设置 position:relative 属性不管作用。它不会打破默认的布局的方式，只会在默认的布局方式发生偏移</li>
+<li>absolute：绝对布局，这种布局方式会 使元素脱离原有的流式布局</li>
+<li>fix：它的作用就是把某个元素固定到某个位置，比如把下面的标题「Web布局方式」始终固定到顶部，无论如何滑动都不会改变其位置。</li>
+<li>sticky：它的作用是在某个位置固定某个元素的位置，比如滑动到某个位置后，让其固定。</li>
+</ol>
+<pre><code class="language-css">.div2 {
+    /* 绝对定位:脱离标准文档流，相对父级元素位置定位 */
+    background-color: blue;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+}
+.div3 {
+    /* 固定定位:脱离标准文档流，固定于网页窗口位置定位 */
+    background-color: green;
+    position: fixed;
+    left: 250px;
+    top: 250px;
+}
+.div4 {
+    background-color: green;
+    /* 继承父级元素的定位属性 */
+    position: inherit;  
+    left: 250px;
+    top: 250px;
+}
+</code></pre>
+<p><img src="https://tingke.github.io//post-images/1562596209511.png" alt=""></p>
+<h2 id="3-flexbox">3. Flexbox</h2>
+<p>Flexbox 布局是通过 CSS 中的属性 display：flex 来控制的，布局时需要指定一个容器 flex container，然后把要布局的元素放到容器中，这些元素被称为 flex item</p>
+<p>Flexbox 会把整个布局按两根轴（主轴（main axis），与主轴交叉的轴（cross axis））来布局。最外层为容器，容器内部为 item。整个布局思路就是按照不同的轴对 item 进行布局。</p>
+<h3 id="flex相关属性">Flex相关属性：</h3>
+<ol>
+<li>flex-direction: 布局方向，决定子元素要按照什么方向进行布局，也就是「主轴」的方向。</li>
+<li>flex-wrap: 定义子元素「超出」容器后该如何布局; no-wrap：可超出 | wrap：自动换行 | wrap-reverse：反向主轴排序自动换行</li>
+<li>flex-flow: 为 flex-direction | flex-wrap 的复合</li>
+<li>justify-content: 「主轴」的对齐方式；flex-start：左对齐 | flex-end：右对齐 | center：居中 | space-between：两端对齐，项目之间间隔相等 | space-around：项目两侧间隔相等，中间间隔是两边的2倍</li>
+<li>align-items: 定义交叉轴的对齐方式; center：居中对齐 | flex-start：左对齐 | flex-end：右对齐 | stretch：拉伸 | baseline：基线</li>
+<li>align-content: 如果存在多行，将对多行进行对齐，如果只有一行将不起作用，它会影响 align-items 的对齐方式；</li>
+</ol>
+<h3 id="flex-item相关属性">Flex-item相关属性：</h3>
+<ol>
+<li>order : 控制显示顺序，默认值为 0，可以设置负数和整数。值越小越往前排，值越大越往后排</li>
+<li>flex-grow : 表示当容器存在「剩余空间」时，该如何分配剩余空间，默认值为 0，也就是说不会分配剩余空间</li>
+<li>flex-shrink : 当容器空间不足时该如何缩小子元素，默认值为 1。如果设置为 0，即使容器空间不足，也不会缩小；</li>
+<li>flex-basic ：它表示占用的最小空间，计算剩余空间会利用这个值来计算。</li>
+<li>flex ：为 flex-grow, flex-shrink, flex-basic 的混合值，默认为0 1 auto；</li>
+<li>align-self : 对齐方式，它默认继承自父元素的 align-items 值，可通过这个属性来修改这个值</li>
+</ol>
+<pre><code class="language-css">.container {
+    display: flex;
+    /* #
+    row 主轴就是 X 轴的方向（默认）
+    #row-reverse 主轴的相反方向
+    #column 主轴方向为 Y 轴
+    #column-reverse 主轴的相反方向 
+    */
+    flex-direction: column;
+    text-align: center;
+}
+.container1 {
+    display: flex;
+    /* flex-wrap: 定义子元素「超出」容器后该如何布局; */
+    flex-wrap: wrap;
+    /* justify-content: 「主轴」的对齐方式； */
+    justify-content: center;
+    /* align-items: 定义交叉轴的对齐方式; */
+}
+.container1 div {
+    /* width: 50px;
+    height: 50px; */
+    padding: 60px;
+    background-color: blue;
+    box-sizing: border-box;
+    display: inline;
+    margin: 10px;
+}
+.container1 div:nth-child(3) {
+    background-color: red;
+    order: 1;
+    flex-grow: 1;
+    align-self: center;
+}
+.footer {
+    background-color: yellow;
+}
+</code></pre>
+<p><img src="https://tingke.github.io//post-images/1562596231416.png" alt=""></p>
+<h2 id="4-grid">4. Grid</h2>
+<p>它将网页划分成一个个网格，可以任意组合不同的网格，做出各种各样的布局。</p>
+<p>Flex 布局是轴线布局，只能指定&quot;项目&quot;针对轴线的位置，可以看作是一维布局。Grid 布局则是将容器划分成&quot;行&quot;和&quot;列&quot;，产生单元格，然后指定&quot;项目所在&quot;的单元格，可以看作是二维布局。Grid 布局远比 Flex 布局强大。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Code Review 机制和实施方案]]></title>
         <id>https://tingke.github.io//post/code-review-ji-zhi-he-shi-shi-fang-an</id>
@@ -33,23 +154,23 @@
 <h2 id="code-review的原则">Code Review的原则</h2>
 <ol>
 <li>
-<p>经常进行Code Review
+<p>经常进行Code Review<br>
 当你面对那近万行的代码，以前N多掺和在一起的功能，你会发现，整个Code Review变得非常地艰难，用不了一会儿，你就会发现大家都在拼命地打着哈欠，但还是要坚持，有时候，这样的Review会持续3个小时以上，相当的夸张。</p>
 </li>
 <li>
-<p>Code Review不要太正式，而且要短
+<p>Code Review不要太正式，而且要短<br>
 只有不正式的Code Review才会让你和评审者放轻松，人只有放松了，才会表现得很真实，很真诚。记住Review只不过是一种形式，而只有在相互信任中通过相互的讨论得到了有意义和有建设性的建议和意见，那才是最实在的。</p>
 </li>
 <li>
-<p>尽可能的让不同的人Review你的代码
+<p>尽可能的让不同的人Review你的代码<br>
 不同的人可以全面的从各个方面评论你的代码，有的从实现的角度，有的从需求的角度，有的从用户使用的角度，有的从算法的角度，有的从性能效率的角度，有的从易读的角度，有的从扩展性的角度……</p>
 </li>
 <li>
-<p>保持积极的正面态度
+<p>保持积极的正面态度<br>
 无论是代码作者，还是评审者，都需要一种积极向上的正面的态度，作者需要能够虚心接受别人的建议，因为别人的建议是为了让你做得更好；评审者也需要以一种积极的正面的态度向作者提意见，因为那是和你在一个战壕里的战友。记住，你不是一段代码，你是一个人！</p>
 </li>
 <li>
-<p>学会享受Code Review
+<p>学会享受Code Review<br>
 如果你到了一个人人都喜欢Code Reivew的团阿，那么，你会进入到一个生机勃勃的地方，在那里，每个人都能写出质量非常好的代码，在那里，你不需要经理的管理，团队会自适应一切变化，他们相互学习，相互帮助，不仅仅是写出好的代码，而且团队和其中的每个人都会自动进化</p>
 </li>
 </ol>
@@ -151,13 +272,13 @@
 <!-- more -->
 <p>FileMerge 在 XCode的安装目录可以找到。如下图路径</p>
 <p><img src="http://outiw4np3.bkt.clouddn.com/3edd23c52c074e1e0e87d2763db7f945.jpg" alt=""></p>
-<p>打开应用后界面如下图：
+<p>打开应用后界面如下图：<br>
 <img src="http://outiw4np3.bkt.clouddn.com/6374cf0895f1c5b0da7c5be1af19c138.jpg" alt=""></p>
 <p>界面很简单，接下来就是设置Left ，Right。Left Right就是你要比较的项目的根目录。请记住你Left 和 RIght。这个在接下来的操作中非常重要。好了，点击 Compare 进入</p>
-<p>经过比较，灰色为完全相同的文件，黑色表示有不同之处的文件
+<p>经过比较，灰色为完全相同的文件，黑色表示有不同之处的文件<br>
 <img src="http://outiw4np3.bkt.clouddn.com/cc7fd60fc0125f56722414ee1fe366a1.jpg" alt=""></p>
-<p>使用Comparison打开文件
-<img src="http://outiw4np3.bkt.clouddn.com/34c75426999338eb957f71cea52a17ba.jpg" alt="">
+<p>使用Comparison打开文件<br>
+<img src="http://outiw4np3.bkt.clouddn.com/34c75426999338eb957f71cea52a17ba.jpg" alt=""><br>
 <img src="http://outiw4np3.bkt.clouddn.com/468790cb7817aa7da408aac59e6e8e0b.jpg" alt=""></p>
 <p>FileMerge是需要等你处理了所有不同处的Actions 以后，在关闭这个界面，回到上一层的时候。看到View 选项下面有 Merge 选项。Combine Filles 其实就是相当于应用你保存的Actions并合并代码。</p>
 ]]></content>
@@ -191,7 +312,7 @@
 </ul>
 </li>
 </ol>
-<p>传输图解
+<p>传输图解<br>
 <img src="http://outiw4np3.bkt.clouddn.com/15e41c7da0dd411dabdbbad1266da079.jpg" alt=""></p>
 ]]></summary>
         <content type="html"><![CDATA[<h2 id="tcpip-协议族分层">TCP/IP 协议族分层</h2>
@@ -217,7 +338,7 @@
 </ul>
 </li>
 </ol>
-<p>传输图解
+<p>传输图解<br>
 <img src="http://outiw4np3.bkt.clouddn.com/15e41c7da0dd411dabdbbad1266da079.jpg" alt=""></p>
 <!-- more -->
 <h2 id="与-http-紧密相连的tcpip-协议族">与 HTTP 紧密相连的TCP/IP 协议族</h2>
@@ -225,7 +346,7 @@
 <p>“IP 协议的作用是把各种数据包传送给对方。而要保证确实传送到对方那里，则需要满足各类条件。其中两个重要的条件是 IP 地址和 MAC 地址（Media Access Control Address）。</p>
 <p>IP 地址指明了节点被分配到的地址，MAC 地址是指网卡所属的固定地址。IP 地址可以和 MAC 地址进行配对。IP 地址可变换，但 MAC 地址基本上不会更改。”</p>
 <h3 id="确保可靠性的-tcp-协议">确保可靠性的 TCP 协议</h3>
-<p>“为了准确无误地将数据送达目标处，TCP 协议采用了<strong>三次握手</strong>（three-way handshaking）策略。用 TCP 协议把数据包送出去后，TCP 不会对传送后的情况置之不理，它一定会向对方确认是否成功送达。握手过程中使用了 TCP 的标志（flag） —— SYN（synchronize） 和 ACK（acknowledgement）”
+<p>“为了准确无误地将数据送达目标处，TCP 协议采用了<strong>三次握手</strong>（three-way handshaking）策略。用 TCP 协议把数据包送出去后，TCP 不会对传送后的情况置之不理，它一定会向对方确认是否成功送达。握手过程中使用了 TCP 的标志（flag） —— SYN（synchronize） 和 ACK（acknowledgement）”<br>
 <img src="http://outiw4np3.bkt.clouddn.com/757742571edfeb7cf1146efeed251d2f.jpg" alt=""></p>
 <p>TCP 为什么是三次握手，不是两次或四次呢？</p>
 <pre><code>三次握手：
@@ -258,18 +379,18 @@
 <h3 id="http-与-dnstcpip-关系图">HTTP 与 DNS/TCP/IP 关系图</h3>
 <p><img src="http://outiw4np3.bkt.clouddn.com/8cfb742e225135a59dde1c57682acd95.jpg" alt=""></p>
 <h3 id="uri-和-url">URI 和 URL</h3>
-<p>URI:（Uniform Resource Identifier，统一资源标识符）
+<p>URI:（Uniform Resource Identifier，统一资源标识符）<br>
 URL：(Uniform Resource Locator，统一资源定位符）</p>
-<p>URI基本格式：
+<p>URI基本格式：<br>
 <img src="http://outiw4np3.bkt.clouddn.com/bb1889fcf7a8d59ac92c161190334370.jpg" alt=""></p>
-<p>协议方案：获取访问资源时要指定协议类型，如ftp、https等
+<p>协议方案：获取访问资源时要指定协议类型，如ftp、https等<br>
 登录信息：指定用户名和密码作为从服务器端获取资源时必要的登录信息（身份认证）<font color='red'>可选</font><br>
 片段标识：使用片段标识符通常可标记出已获取资源中的子资源（文档内的某个位置）</p>
 <h2 id="http-协议">HTTP 协议</h2>
 <p>一个 HTTP 协议必定有两端，请求访问资源的一端为客户端，提供资源响应的一端为服务器端，并且 HTTP 协议能明确区分哪是客户端哪是服务器端。</p>
-<p>下面是从客户端发送给某服务器的请求报文
+<p>下面是从客户端发送给某服务器的请求报文<br>
 <img src="http://outiw4np3.bkt.clouddn.com/2baf0cb2cca193520fbb5bb85de31ab8.jpg" alt=""></p>
-<p><code>GET</code> 表示访问服务器的类型，俗称“方法”
+<p><code>GET</code> 表示访问服务器的类型，俗称“方法”<br>
 <code>//feed/v1/feed/get_attention_list?...uid=</code> 指明了访问的资源对象，也叫做“URI”<br>
 <code>HTTP/1.1</code> 及 HTTP 的版本号，用来提示客户端使用的http协议功能</p>
 <p><img src="http://outiw4np3.bkt.clouddn.com/297363515632a28a51650e64c6a68d56.jpg" alt=""></p>
@@ -590,13 +711,13 @@ URL：(Uniform Resource Locator，统一资源定位符）</p>
 </code></pre>
 </li>
 <li>
-<p><strong>NPM</strong>
+<p><strong>NPM</strong><br>
 在用 <strong>Vue</strong> 构建大型应用时推荐使用 NPM 安装[1]。NPM 能很好地和诸如 webpack 或 Browserify 模块打包器配合使用。同时 Vue 也提供配套工具来开发单文件组件。</p>
 <pre><code class="language-sh">$ npm install vue
 </code></pre>
 </li>
 <li>
-<p><strong>命令行工具（CLI）</strong>
+<p><strong>命令行工具（CLI）</strong><br>
 Vue 提供一个官方命令行工具，可用于快速搭建大型单页应用。该工具为现代化的前端开发工作流提供了开箱即用的构建配置。只需几分钟即可创建并启动一个带热重载、保存时静态检查以及可用于生产环境的构建配置的项目：</p>
 <pre><code class="language-sh"># 全局安装 vue-clir
 $ npm install --global vue-cli
@@ -608,7 +729,7 @@ $ npm run dev
 
 </code></pre>
 <blockquote>
-<p>[warning]
+<p>[warning]<br>
 CLI 工具假定用户对 Node.js 和相关构建工具有一定程度的了解。如果你是新手，我们强烈建议先在不用构建工具的情况下通读指南，在熟悉 Vue 本身之后再使用 CLI。</p>
 </blockquote>
 </li>
@@ -706,7 +827,7 @@ var app =new Vue({
 <h3 id="实例生命周期钩子">实例生命周期钩子</h3>
 <p><code>beforeCreate</code>:在实例初始化之后，数据观测 (data observer) 和 event/watcher 事件配置之前被调用。</p>
 <p><code>creaated</code>:在实例创建完成后被立即调用。在这一步，实例已完成以下的配置：数据观测 (data observer)，属性和方法的运算，watch/event 事件回调。然而，挂载阶段还没开始，<code>$el</code> 属性目前不可见。</p>
-<p><code>beforeMount</code>:在挂载开始之前被调用：相关的 <code>render</code> 函数首次被调用。
+<p><code>beforeMount</code>:在挂载开始之前被调用：相关的 <code>render</code> 函数首次被调用。<br>
 <code>mounted</code>:<code>el</code> 被新创建的 <code>vm.$el</code> 替换，并挂载到实例上去之后调用该钩子。如果 root 实例挂载了一个文档内元素，当 <code>mounted</code> 被调用时 <code>vm.$el</code> 也在文档内。</p>
 <p><code>beforeUpdate</code>: 数据更新时调用，发生在虚拟 DOM 打补丁之前。这里适合在更新之前访问现有的 DOM，比如手动移除已添加的事件监听器。</p>
 <p><code>updated</code>:由于数据更改导致的虚拟 DOM 重新渲染和打补丁，在这之后会调用该钩子</p>
@@ -751,7 +872,7 @@ var app =new Vue({
 <p><strong>v-on</strong>：事件绑定。【v-on：同等于@】，用于需要人机操作交互的地方</p>
 </li>
 <li>
-<p><strong>v-cloak</strong>：这个指令保持在元素上直到关联实例结束编译。和 CSS 规则如 <code>[v-cloak] { display: none }</code> 一起用时，这个指令可以隐藏未编译的 Mustache 标签直到实例准备完毕。
+<p><strong>v-cloak</strong>：这个指令保持在元素上直到关联实例结束编译。和 CSS 规则如 <code>[v-cloak] { display: none }</code> 一起用时，这个指令可以隐藏未编译的 Mustache 标签直到实例准备完毕。<br>
 在使用 HTML 绑定 Vue实例时，在页面加载时会闪烁。为了效果更明显，我们可以延后加载 Vue 实例。</p>
 <pre><code class="language-js">setTimeout(() =&gt; {
     new Vue({
@@ -848,24 +969,24 @@ var app =new Vue({
 </ul>
 <p><strong>3、静态库和动态库的存在形式和使用区别</strong></p>
 <p>存在形式：</p>
-<p>静态库
-以&quot;.a&quot;或者“.framework”为文件后缀名
-动态库
+<p>静态库<br>
+以&quot;.a&quot;或者“.framework”为文件后缀名<br>
+动态库<br>
 以&quot;.dylib&quot;或者“.framework”为文件后缀名</p>
 <p>使用区别：</p>
-<p>静态库链接时会被完整的复制到可执行文件中，被多次使用就有多份拷贝。
+<p>静态库链接时会被完整的复制到可执行文件中，被多次使用就有多份拷贝。<br>
 动态库链接时不复制，程序运行时由系统动态加载到内存，供程序调用。而且系统只加载一次，多个程序共用，节省内存。</p>
 <h2 id="a文件静态库打包"><code>.a</code>文件静态库打包</h2>
-<p><strong>步骤一、新建一个新工程或在老项目中新建一个新Target，选择<code>Cocoa Touch Static Library</code></strong>
+<p><strong>步骤一、新建一个新工程或在老项目中新建一个新Target，选择<code>Cocoa Touch Static Library</code></strong><br>
 <img src="http://outiw4np3.bkt.clouddn.com/7f52d89fead89117d921568bb87141f9.jpg" alt=""></p>
 <p><strong>步骤二、修改静态库的配置</strong></p>
 <p><code>buildSeting -&gt; Build Active Architecture Only</code>设为NO，使编译后的库支持所有架构。</p>
 <p><img src="http://outiw4np3.bkt.clouddn.com/66345bad9034e95d979b7f8c910d39d9.jpg" alt=""></p>
-<p><code>buildSeting -&gt; iOS Deployment Target</code>设置静态库支持的iOS版本
+<p><code>buildSeting -&gt; iOS Deployment Target</code>设置静态库支持的iOS版本<br>
 <img src="http://outiw4np3.bkt.clouddn.com/0c5ecacd2a60f359b1d69580ff2c80de.jpg" alt=""></p>
 <p><strong>步骤三、新建或拖入需打包的内容</strong></p>
 <p><img src="http://outiw4np3.bkt.clouddn.com/015550852490ac499d17d8d6ba4ca7de.jpg" alt=""></p>
-<p><strong>步骤四、设置公开.h文件</strong>
+<p><strong>步骤四、设置公开.h文件</strong><br>
 <img src="http://outiw4np3.bkt.clouddn.com/6d7cec281fa3f6cf0fa658f75e3e9c6a.jpg" alt=""></p>
 <p><strong>步骤五、选中本Target,<code>Command+B</code>编译（一般编译两次，模拟器的Debug状态和真机的Release状态）。</strong></p>
 <p><img src="http://outiw4np3.bkt.clouddn.com/0a2bd0f7478a9d3830df90c3875dff54.jpg" alt=""></p>
@@ -1027,7 +1148,7 @@ obj-&gt;perform(parameter1,parameter2);
 <pre><code>&lt;?php
 namespace Root\Sub\subnamespace;
 </code></pre>
-<p>这就会导致当你不小心实现了两个相同名字的类，或者把两个相对独立的库导入项目时而他们又恰好有重名的类的时候该类所对应的符号和Meta Class符号定义了两次。所以很容易产生这种命名冲突，让程序的链接过程中出现出现重复的符号造成报错。
+<p>这就会导致当你不小心实现了两个相同名字的类，或者把两个相对独立的库导入项目时而他们又恰好有重名的类的时候该类所对应的符号和Meta Class符号定义了两次。所以很容易产生这种命名冲突，让程序的链接过程中出现出现重复的符号造成报错。<br>
 为了避免这种情况，我们要尽量在类名，以及分类和分类方法上增加前缀，还有一些宏定义等等根据自己项目来定吧</p>
 <h3 id="第16条提供全能初始化方法">第16条：提供“全能初始化方法”</h3>
 <ol>
@@ -1133,8 +1254,8 @@ namespace Root\Sub\subnamespace;
 <ol>
 <li>
 <p>为什么不使用异常处理机制？<br>
-答：事实上，OC是具备异常处理机制的，但是具体情况下不会启用该机制。原因是ARC下默认不是“异常安全”的。
-理由是,如果抛出异常，那么本应该在作用域末尾释放的对象在现在不能自动释放了。 如果想生成“异常安全”的代码，需要设置编译标志“-fobjc-arc-exceptions”，并且需要引入额外的代码，在不抛出异常时，也照样执行这段代码。
+答：事实上，OC是具备异常处理机制的，但是具体情况下不会启用该机制。原因是ARC下默认不是“异常安全”的。<br>
+理由是,如果抛出异常，那么本应该在作用域末尾释放的对象在现在不能自动释放了。 如果想生成“异常安全”的代码，需要设置编译标志“-fobjc-arc-exceptions”，并且需要引入额外的代码，在不抛出异常时，也照样执行这段代码。<br>
 即使不用ARC，也很难在抛出异常后不会导致内存泄露。</p>
 </li>
 <li>
@@ -1221,9 +1342,9 @@ namespace Root\Sub\subnamespace;
 <p>autorelease就是自动释放，当給一个对象发送autorelease消息时，方法会在未来某个时间給这个对象发送release消息将其释放，在这个时间段内，对象还是可以使用的。</p>
 <p>原理 : 对象接收到autorelease消息时，它会被添加到了当前的自动释放池中，当自动释放池被销毁时，会給池里所有的对象发送release消息。</p>
 <ol>
-<li>设置ARC有效的编译方法如下：
+<li>设置ARC有效的编译方法如下：<br>
 指定编译器属性为：”-fobjc-arc”。</li>
-<li>设置ARC无效的编译方法如下：
+<li>设置ARC无效的编译方法如下：<br>
 指定编译器属性为：”-fno-objc-arc”。</li>
 </ol>
 <h3 id="第30条以arc简化引用计数">第30条：以ARC简化引用计数</h3>
@@ -1240,7 +1361,7 @@ namespace Root\Sub\subnamespace;
 <h3 id="第32条编写异常安全代码时留意内存管理问题">第32条：编写“异常安全代码”时留意内存管理问题</h3>
 <p>OC中抛出异常的时候可能会引起内存泄漏，注意一下使用的时机，或者注意在@try捕获异常中清理干净。</p>
 <h3 id="第33条以弱引用避免保留环">第33条：以弱引用避免保留环</h3>
-<p>几个对象以某种方式相互引用，造成内存泄露，我们称之为<strong>循环引用</strong>。
+<p>几个对象以某种方式相互引用，造成内存泄露，我们称之为<strong>循环引用</strong>。<br>
 为避免循环引用，常使用<code>weak</code>或<code>unsafe_unretained</code>修饰。</p>
 <p><code>weak</code>和<code>unsafe_unretained</code>的区别：<br>
 当引用的对象移除后，<code>unsafe_unretained</code>仍指向那个回收的实例，而<code>weak</code>指向nil。（所以<code>weak</code>比<code>unsafe_unretained</code>更安全）</p>
@@ -1350,7 +1471,7 @@ typedef void (^SuccessBlock)(id responseDic);
     }
 }
 </code></pre>
-<p>这样写法效率很低，而且也不能保证线程中觉得的安全。如果有很多属性，那么每个属性的同步块都要等其他同步块执行完毕才能执行。
+<p>这样写法效率很低，而且也不能保证线程中觉得的安全。如果有很多属性，那么每个属性的同步块都要等其他同步块执行完毕才能执行。<br>
 应该用GCD来替换：</p>
 <pre><code>_syncQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
 
@@ -1489,8 +1610,8 @@ dispatch_group_notify(group,dispatch_get_main_queue(),^{
 </code></pre>
 </li>
 </ol>
-<p>CFArrayRef aCFArray = (__bridge CFArrayRef)anNSArray;
-NSLog(@&quot;Size of array = %li&quot;, CFArrayGetCount(aCFArray));
+<p>CFArrayRef aCFArray = (__bridge CFArrayRef)anNSArray;<br>
+NSLog(@&quot;Size of array = %li&quot;, CFArrayGetCount(aCFArray));<br>
 //Output: Size of array = 5</p>
 <pre><code>// __bridge:将oc对象转换为c的数据结构，arc依然具备这个对象的所有权。c的数据结构转换为oc对象，arc并没有对象的所有权
 //__bridge_retain:将oc对象转换为c的数据结构，arc失去这个对象的所有权，故c的数据结构使用完毕后要添加CFRelease(aCFArray)将其释放
@@ -1547,30 +1668,30 @@ __weak typeof(self) weakself = self;
 <h2 id="2-折叠代码">2. 折叠代码</h2>
 <p>Command+Option+左右箭头  = 折叠或打开代码块</p>
 <h2 id="3-重构相关">3. 重构相关</h2>
-<p>对一个方法或者变量的重命名,在方法上CMD+单击,出现的菜单,选择rename
+<p>对一个方法或者变量的重命名,在方法上CMD+单击,出现的菜单,选择rename<br>
 <img src="http://api.cocoachina.com/uploads//20170922/1506048006956030.png" alt=""></p>
 <h2 id="4-folder和group的同步性">4. Folder和Group的同步性</h2>
 <p>之前,我们在XCode中,更改Folder的名字,在FInder中工程对应的文件夹的名字并不会同步的改变,这会造成我们重命名文件夹变得非常不方便,往往要先在XCode中移除,然后在Finder中重命名,再添加回Xcode</p>
 <p>现在 在Xcode9中重名命Folder,Finder中的也同步的改变了</p>
-<p>我们之前建议一个虚拟的group,并不会在对应的文件夹中建立真实的目录,当然,这可能是你需要的,也可能是你不需要的功能.在9中,默认行为改变了.变成了会建立对应的真实文件夹.如果还想像之前那样只是建立虚拟的group,需要选择New Group without Folder
+<p>我们之前建议一个虚拟的group,并不会在对应的文件夹中建立真实的目录,当然,这可能是你需要的,也可能是你不需要的功能.在9中,默认行为改变了.变成了会建立对应的真实文件夹.如果还想像之前那样只是建立虚拟的group,需要选择New Group without Folder<br>
 <img src="http://api.cocoachina.com/uploads//20170922/1506049901602588.png" alt=""></p>
 <p>你可能你会担心,区分不了这个group到底是虚拟的,还是实际的</p>
-<p>放心,苹果给出了标识来区分的,虚拟的左下角有个小的三角形
+<p>放心,苹果给出了标识来区分的,虚拟的左下角有个小的三角形<br>
 <img src="http://api.cocoachina.com/uploads//20170922/1506049933727526.png" alt=""></p>
 <h2 id="5-runtime问题检测">5. runtime问题检测</h2>
 <p>在8中,已经包含了Address Scanitizer和Thread Scanitizer,在Xcode9中,又新增了 Undefiner Behavior Scanitizer,它可以实时的检测一系列的问题.不过我们更能明显感受到的是Main Thread Checker,它可以在运行时确保你没有把UI更新 代码写在了非主线程中</p>
-<p>例如,代码中
+<p>例如,代码中<br>
 <img src="http://api.cocoachina.com/uploads//20170922/1506048625225251.png" alt=""></p>
 <p>可见还是很强大的,虽然我们没有Fabric的源码,但是其内部调用了[UIApplicationsharedApplication].statusBarOrientation],还是被检测到了</p>
-<p>当然了,如果你想关掉它,可以在 scheme editor中操作
+<p>当然了,如果你想关掉它,可以在 scheme editor中操作<br>
 <img src="http://api.cocoachina.com/uploads//20170922/1506048660434469.png" alt=""></p>
 <h2 id="6-模拟器可以多开了并且模拟器可以登录">6. 模拟器可以多开了,并且,模拟器可以登录</h2>
 <p><img src="http://api.cocoachina.com/uploads//20170922/1506049353869658.png" alt=""></p>
 <p>模拟器的外观样式也回归了,直接是iPhone的外观了,以前可能是因为模拟器不能任意调整大小,所以才没外观的吧</p>
-<p>当然了,你可以去掉外观皮肤. 在模拟器的Window show Device Bezels,去掉选项就和以前一样了
+<p>当然了,你可以去掉外观皮肤. 在模拟器的Window show Device Bezels,去掉选项就和以前一样了<br>
 <img src="http://api.cocoachina.com/uploads//20170922/1506049444615552.png" alt=""></p>
 <h2 id="7-无线开发">7. 无线开发</h2>
-<p>这个只支持ios11的机器,很简单,只要在Device那打开支持就行.
+<p>这个只支持ios11的机器,很简单,只要在Device那打开支持就行.<br>
 <img src="http://outiw4np3.bkt.clouddn.com/c7036aafad24dc729374d88f5b96e637.jpg" alt=""></p>
 <h2 id="8-调整字体">8. 调整字体</h2>
 <p>cmd +/- 可以用来调整编辑器的字体大小了</p>
@@ -1606,17 +1727,17 @@ typedefvoid (^UpdateSwichBtnBlock)();
 <h2 id="11-xcode-在全屏模式下使用-simulator">11. Xcode 在全屏模式下使用 Simulator</h2>
 <p>如果你用的是 13 寸的电脑，那么 Xcode 的全屏模式你应该早已习惯，其实即使是配有显示器，我还是习惯在 Xcode 的全屏模式下开发😎。很可惜的是不能在 Xcode 的全屏模式下使用 Simulator, 自 Xcode 9b3 以后，这个问题便不存在了：</p>
 <p><img src="http://cc.cocimg.com/api/uploads//20180125/1516864278298406.gif" alt=""></p>
-<p>这个功能并不是对所有人默认开放的，如果不幸你的 Xcode 没有默认开启这个功能也不要灰心，我们可以通过打开 Apple Internal menu 来启用这个功能，通过 Apple Internal menu 你能挖掘出 Simulator 的更多新特性。那么问题来了，怎么开启 Apple Internal menu 呢？首先，在更目录里创建 AppleInternal 文件夹，然后重启 Simulator:
+<p>这个功能并不是对所有人默认开放的，如果不幸你的 Xcode 没有默认开启这个功能也不要灰心，我们可以通过打开 Apple Internal menu 来启用这个功能，通过 Apple Internal menu 你能挖掘出 Simulator 的更多新特性。那么问题来了，怎么开启 Apple Internal menu 呢？首先，在更目录里创建 AppleInternal 文件夹，然后重启 Simulator:<br>
 <img src="http://cc.cocimg.com/api/uploads//20180125/1516864313510848.png" alt=""></p>
 <pre><code>cd ~/ 
 sudo mkdir /AppleInternal
 </code></pre>
-<p>多重启 Simulator 后就可以看到 internal 选项 ☝
+<p>多重启 Simulator 后就可以看到 internal 选项 ☝<br>
 但是，</p>
-<p>我在 Mac 使用过程中遇到 <code>Operation Not Permitted</code> 问题，之前都是略过，今天好好摸索了一把，搞明白了道理，记录下来。
-好几次整理移动硬盘数据的时候，都遇到了 Operation Not Permitted 问题，文件移动不了，也删除不掉，第一次遇到没理会，第二次是打开虚拟机，在 Windows 中操作这些问题文件，今天又遇到了，决定消灭它。
+<p>我在 Mac 使用过程中遇到 <code>Operation Not Permitted</code> 问题，之前都是略过，今天好好摸索了一把，搞明白了道理，记录下来。<br>
+好几次整理移动硬盘数据的时候，都遇到了 Operation Not Permitted 问题，文件移动不了，也删除不掉，第一次遇到没理会，第二次是打开虚拟机，在 Windows 中操作这些问题文件，今天又遇到了，决定消灭它。<br>
 OS X EI Capitan 的 SIP</p>
-<p>Apple 在 OS X 10.11 以后的版本中默认启动了一项系统保护程序，叫做 System Integrity Protection，也被唤作 rootless（寓意让 root 弱一点），该程序意在保护电脑不被恶意程序攻击，但是对于我们这群程序员，很多保护是多余的，甚至给我们带来了很多麻烦。
+<p>Apple 在 OS X 10.11 以后的版本中默认启动了一项系统保护程序，叫做 System Integrity Protection，也被唤作 rootless（寓意让 root 弱一点），该程序意在保护电脑不被恶意程序攻击，但是对于我们这群程序员，很多保护是多余的，甚至给我们带来了很多麻烦。<br>
 SIP 会锁定几个系统文件目录：</p>
 <pre><code>/System
 /sbin
@@ -1638,7 +1759,7 @@ System Integrity Protection status: enabled.
 <pre><code>xcrun simctl io booted recordVideo --type=mp4 &lt;PATH TO VIDEO FILE&gt;
 </code></pre>
 <p><img src="http://outiw4np3.bkt.clouddn.com/5734dc156e651dcfe0b6b11bad8cd335.jpg" alt=""></p>
-<p>上传文件到模拟器中
+<p>上传文件到模拟器中<br>
 <img src="http://outiw4np3.bkt.clouddn.com/e85146fe9468f795c4895c4883727d2e.jpg" alt=""></p>
 <p>打开url(所有苹果的URL计划列表请查阅<a href="https://developer.apple.com/library/content/featuredarticles/iPhoneURLScheme_Reference/Introduction/Introduction.html">文档</a>。)</p>
 <pre><code>xcrun simctl openurl booted &lt;URL&gt;
@@ -1800,57 +1921,6 @@ UIScrollViewContentInsetAdjustmentAlways,
 <p><a href="http://www.cocoachina.com/ios/20171011/20737.html">iOS11、iPhone X、Xcode9 适配指南</a></p>
 <p><a href="http://www.10tiao.com/html/330/201707/2653579210/1.html">你可能需要为你的 APP 适配 iOS 11</a></p>
 <p><a href="https://www.lee1994.com/guan-yu-iphone/">关于iPhone X 的适配</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[iPhone X互交设计官方指南]]></title>
-        <id>https://tingke.github.io//post/iphone-x-hu-jiao-she-ji-guan-fang-zhi-nan</id>
-        <link href="https://tingke.github.io//post/iphone-x-hu-jiao-she-ji-guan-fang-zhi-nan">
-        </link>
-        <updated>2017-09-14T07:00:59.000Z</updated>
-        <summary type="html"><![CDATA[<p>One More Thing!</p>
-<p>iPhone X来了，全面屏+独特的“刘海”造型。让我们来了解一下iPhone X吧。</p>
-<h2 id="iphone-x">iPhone X</h2>
-<p>iPhone X包括一个大的、高分辨率的、圆形的、边对边的显示，它提供了前所未有的沉浸式、内容丰富的体验。</p>
-<p><img src="https://developer.apple.com/ios/human-interface-guidelines/images/OV_Hero.png" alt=""></p>
-]]></summary>
-        <content type="html"><![CDATA[<p>One More Thing!</p>
-<p>iPhone X来了，全面屏+独特的“刘海”造型。让我们来了解一下iPhone X吧。</p>
-<h2 id="iphone-x">iPhone X</h2>
-<p>iPhone X包括一个大的、高分辨率的、圆形的、边对边的显示，它提供了前所未有的沉浸式、内容丰富的体验。</p>
-<p><img src="https://developer.apple.com/ios/human-interface-guidelines/images/OV_Hero.png" alt=""></p>
-<!-- more --> 
-<h2 id="screen-size">Screen Size</h2>
-<p>在竖屏方向，iPhoneX显示屏的宽度与iPhone 6、iPhone 7和iPhone 8 4.7显示器的宽度相匹配。但是在iPhone X比4.7寸屏幕高145pt，导致大约20%额外的垂直空间的内容。</p>
-<p><img src="http://outiw4np3.bkt.clouddn.com/09c50a07e949b9bd883ec53245682a2f.jpg" alt=""></p>
-<p><strong>在你的应用程序的所有切图必须提供高分辨率的图像</strong>。iPhone X有一个高分辨率屏幕，符号等的平面、矢量图形，最好是提供独立的PDF文件的分辨率。用于光栅化的切图，同时提供@3X和@2x版本的切图。参见<a href="https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/image-size-and-resolution/"> Image Size and Resolution </a>和<a href="https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/custom-icons/">Custom Icons</a>。</p>
-<h2 id="layout">Layout</h2>
-<p>当为iPhone X设计时，必须确保布局填满屏幕，而不是被设备的圆角、传感器外壳或访问主屏幕的指示器所掩盖。</p>
-<p><img src="http://outiw4np3.bkt.clouddn.com/dfe7cf9898bef9f77db2594c3e3572d6.jpg" alt=""></p>
-<p>大多数使用标准的、系统提供的UI元素（如导航栏、表格和集合）的应用程序会自动适应设备的新形式因素。背景材料扩展到显示的边缘，并且适当地插入和定位UI元素。</p>
-<p><img src="http://outiw4np3.bkt.clouddn.com/e083d0fe55f9407524af1b263e207889.jpg" alt=""></p>
-<p>对于具有自定义布局的应用程序，支持 iPhone X 也应该比较容易，特别是如果您的应用程序使用 Auto Layout 并遵守安全区域和边距布局指南。</p>
-<p><strong>在 iPhone X 上预览您的应用程序</strong>。您可以使用 Simulator(附带 Xcode)来预览应用程序，并检查剪辑和其他布局问题。如宽彩色图像这样的属性，最好在设备上预览。</p>
-<p><strong>提供全屏体验</strong>。确保背景延伸到屏幕的边缘，并且垂直可滚动的布局(如表格和集合)一直延续到底部。</p>
-<p><img src="http://outiw4np3.bkt.clouddn.com/ea144cbca3b93422bc232615b2a64a6e.jpg" alt=""></p>
-<p><strong>插入必要内容以防止裁剪</strong>。一般来说，内容应该是居中对称的，所以它在任何方向看起来都很棒，不会被角落或设备的传感器外壳裁剪，或被访问主屏幕的指示器遮挡。为获得最佳效果，请使用标准的系统提供的界面元素和 Auto Layout 构建您的界面。所有应用程序都应遵循 UIKit 定义的安全区域和布局边距，这些区域可以根据设备和上下文进行适当的填充。安全区域还可以防止内容覆盖状态栏、导航栏、工具栏和标签栏。</p>
-<p><strong>注意状态栏的高度。状态栏在 iPhone X 上比在其他 iPhone 上更高</strong>。如果您的应用程序的固定状态栏高度在状态栏的下方，则您必须更新您的应用程序，才能根据用户的设备动态定位内容。请注意，当背景任务(如录音和位置跟踪)处于活动状态时，iPhoneX 上的状态栏不会改变高度。</p>
-<p><strong>如果您的应用程序目前隐藏状态栏，请重新考虑 iPhone X 上的决定</strong>。iPhone 上的显示高度为 4.7 英寸，iPhone 的显示屏提供了更多的垂直空间内容，状态栏占据了您应用程序本可能赢得的屏幕区域，状态栏还显示了人们发现的有用的信息，只有在交换附加值时候才能被隐藏。</p>
-<p><img src="http://outiw4np3.bkt.clouddn.com/6b91a2d084267fef4dd3912f89fac422.jpg" alt=""></p>
-<p><strong>在重复使用现有图稿时，请注意长宽比差异</strong>。iPhone X 具有不同于 4.7 英寸 iPhone 的长宽比，因此，全屏 4.7 英寸 iPhone 图形在 iPhone X 上全屏显示时出现裁剪或 letterboxed。同样，全屏 iPhone X 图稿在显示时被裁剪或被添加黑边。 全屏显示在 4.7 英寸 iPhone 上，确保重要的视觉内容保持在两种显示尺寸上。</p>
-<p><strong>避免将交互式控件放置在屏幕最底部和角落里</strong>。人们使用显示屏底部的滑动手势访问主屏幕和应用程序切换器，这些手势可能会取消您在此区域中实现的自定义手势。屏幕的两个角落很难让人触及。</p>
-<p><strong>不要遮挡或突出显示关键的显示特性</strong>。请勿尝试隐藏设备的圆角、传感器外壳或通过在屏幕顶部和底部放置黑色条来指示主屏幕的指示器。不要使用像括号、边框、形状或教学文字等视觉装饰来让人注意这些区域。</p>
-<p><strong>允许自动隐藏虚拟Home键，以便轻松访问主屏幕</strong>。当启用自动隐藏时，如果用户没有触摸屏幕几秒钟，Home 键将自动隐藏。当用户再次触摸屏幕时，它会重新出现。这种行为应该只能用于被动观看体验，如播放视频或幻灯片。请参阅 适应性和布局。</p>
-<p>参见 <a href="https://developer.apple.com/ios/human-interface-guidelines/visual-design/adaptivity-and-layout/">Adaptivity and Layout</a>.</p>
-<h2 id="statusbar">StatusBar</h2>
-<p><img src="http://outiw4np3.bkt.clouddn.com/db3f5dd7683619eb72b13fd20d662ba4.jpg" alt=""></p>
-<h2 id="navigationbar的标题">NavigationBar的标题</h2>
-<p>考虑在导航栏中显示当前视图的标题。在大多数情况下，标题帮助人们理解他们在看什么。然而，如果标题导航栏似乎是多余的，你可以把标题空。例如，Notes不会对当前的便笺进行标题，因为第一行内容提供了所需的所有上下文。</p>
-<p><img src="http://outiw4np3.bkt.clouddn.com/8970c1e7760170dc34f0ec1580a04107.jpg" alt=""></p>
-<p><strong>当需要额外强调上下文时，使用大标题</strong>。在一些应用程序中，大标题的粗体文本可以帮助人们浏览和搜索。在标签的布局，例如，大标题可以帮助澄清活动标签和通知用户当他们滚动到顶部。手机使用这种方法，而音乐使用大标题来区分内容区域，如专辑、艺术家、播放列表和广播。当用户开始滚动内容时，一个大标题转换为一个标准标题。大标题在所有应用程序中都没有意义，不应该与内容竞争。虽然时钟应用程序有一个选项卡式布局，但大标题是不必要的，因为每个选项卡都有一个独特的、可识别的布局。对于开发商的引导，参考<a href="https://developer.apple.com/documentation/uikit/uinavigationbar/2908999-preferslargetitles">preferslargetitles</a>。</p>
-<h2 id="tabbar">TabBar</h2>
-<p><img src="http://outiw4np3.bkt.clouddn.com/29d68ad8dae84f8330a02bdd430dd3a8.jpg" alt=""></p>
-<p>本文翻译于<a href="https://developer.apple.com/ios/human-interface-guidelines/overview/iphone-x/">Apple Developer</a></p>
 ]]></content>
     </entry>
 </feed>

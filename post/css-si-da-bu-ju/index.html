@@ -1,0 +1,242 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CSS 四大布局 | 好学习</title>
+<link rel="shortcut icon" href="https://tingke.github.io//favicon.ico?v=1565203104490">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://tingke.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142389147-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-142389147-1');
+</script>
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://tingke.github.io/">
+  <img class="avatar" src="https://tingke.github.io//images/avatar.png?v=1565203104490" alt="">
+  </a>
+  <h1 class="site-title">
+    好学习
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              CSS 四大布局
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2019-07-08 ·
+              </time>
+              
+            </div>
+            
+              <div class="post-feature-image" style="background-image: url('https://tingke.github.io//post-images/css-si-da-bu-ju.png')">
+              </div>
+            
+            <div class="post-content">
+              <h1 id="css-四大布局">CSS 四大布局</h1>
+<p>本文简单介绍 CSS 中的一些常见布局</p>
+<h2 id="1-流式布局">1. 流式布局</h2>
+<p>流式布局遵守标准文档流规则，通过CSS改变标签的display属性 block/inline-block。</p>
+<p>HTML 中有 block 和 inline-block 两种标签，它们在流式布局中具有不同的表现：</p>
+<ol>
+<li>
+<p>inline-block 标签可以嵌套在 block 标签中，反之则不可；</p>
+</li>
+<li>
+<p>可以通过 display 修改标签属于 block 或者 inline-block 类型；</p>
+</li>
+<li>
+<p>block 类型的标签布局是每一个标签独占一行，而 inline-block 标签会一个挨着一个进行布局；<br>
+<img src="https://tingke.github.io//post-images/1562596159796.png" alt=""></p>
+<p><img src="https://tingke.github.io//post-images/1562596197614.png" alt=""></p>
+</li>
+</ol>
+<h2 id="2-定位">2. 定位</h2>
+<p>通过 position 的方式可以打破流式布局，它支持的值有：static，relative，absolute，fix 和 sticky。</p>
+<ol>
+<li>static：默认值，它遵循流水布局；</li>
+<li>relative：相对布局，需要结合 top、bottom、left 和 right 配合使用，仅设置 position:relative 属性不管作用。它不会打破默认的布局的方式，只会在默认的布局方式发生偏移</li>
+<li>absolute：绝对布局，这种布局方式会 使元素脱离原有的流式布局</li>
+<li>fix：它的作用就是把某个元素固定到某个位置，比如把下面的标题「Web布局方式」始终固定到顶部，无论如何滑动都不会改变其位置。</li>
+<li>sticky：它的作用是在某个位置固定某个元素的位置，比如滑动到某个位置后，让其固定。</li>
+</ol>
+<pre><code class="language-css">.div2 {
+    /* 绝对定位:脱离标准文档流，相对父级元素位置定位 */
+    background-color: blue;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+}
+.div3 {
+    /* 固定定位:脱离标准文档流，固定于网页窗口位置定位 */
+    background-color: green;
+    position: fixed;
+    left: 250px;
+    top: 250px;
+}
+.div4 {
+    background-color: green;
+    /* 继承父级元素的定位属性 */
+    position: inherit;  
+    left: 250px;
+    top: 250px;
+}
+</code></pre>
+<p><img src="https://tingke.github.io//post-images/1562596209511.png" alt=""></p>
+<h2 id="3-flexbox">3. Flexbox</h2>
+<p>Flexbox 布局是通过 CSS 中的属性 display：flex 来控制的，布局时需要指定一个容器 flex container，然后把要布局的元素放到容器中，这些元素被称为 flex item</p>
+<p>Flexbox 会把整个布局按两根轴（主轴（main axis），与主轴交叉的轴（cross axis））来布局。最外层为容器，容器内部为 item。整个布局思路就是按照不同的轴对 item 进行布局。</p>
+<h3 id="flex相关属性">Flex相关属性：</h3>
+<ol>
+<li>flex-direction: 布局方向，决定子元素要按照什么方向进行布局，也就是「主轴」的方向。</li>
+<li>flex-wrap: 定义子元素「超出」容器后该如何布局; no-wrap：可超出 | wrap：自动换行 | wrap-reverse：反向主轴排序自动换行</li>
+<li>flex-flow: 为 flex-direction | flex-wrap 的复合</li>
+<li>justify-content: 「主轴」的对齐方式；flex-start：左对齐 | flex-end：右对齐 | center：居中 | space-between：两端对齐，项目之间间隔相等 | space-around：项目两侧间隔相等，中间间隔是两边的2倍</li>
+<li>align-items: 定义交叉轴的对齐方式; center：居中对齐 | flex-start：左对齐 | flex-end：右对齐 | stretch：拉伸 | baseline：基线</li>
+<li>align-content: 如果存在多行，将对多行进行对齐，如果只有一行将不起作用，它会影响 align-items 的对齐方式；</li>
+</ol>
+<h3 id="flex-item相关属性">Flex-item相关属性：</h3>
+<ol>
+<li>order : 控制显示顺序，默认值为 0，可以设置负数和整数。值越小越往前排，值越大越往后排</li>
+<li>flex-grow : 表示当容器存在「剩余空间」时，该如何分配剩余空间，默认值为 0，也就是说不会分配剩余空间</li>
+<li>flex-shrink : 当容器空间不足时该如何缩小子元素，默认值为 1。如果设置为 0，即使容器空间不足，也不会缩小；</li>
+<li>flex-basic ：它表示占用的最小空间，计算剩余空间会利用这个值来计算。</li>
+<li>flex ：为 flex-grow, flex-shrink, flex-basic 的混合值，默认为0 1 auto；</li>
+<li>align-self : 对齐方式，它默认继承自父元素的 align-items 值，可通过这个属性来修改这个值</li>
+</ol>
+<pre><code class="language-css">.container {
+    display: flex;
+    /* #
+    row 主轴就是 X 轴的方向（默认）
+    #row-reverse 主轴的相反方向
+    #column 主轴方向为 Y 轴
+    #column-reverse 主轴的相反方向 
+    */
+    flex-direction: column;
+    text-align: center;
+}
+.container1 {
+    display: flex;
+    /* flex-wrap: 定义子元素「超出」容器后该如何布局; */
+    flex-wrap: wrap;
+    /* justify-content: 「主轴」的对齐方式； */
+    justify-content: center;
+    /* align-items: 定义交叉轴的对齐方式; */
+}
+.container1 div {
+    /* width: 50px;
+    height: 50px; */
+    padding: 60px;
+    background-color: blue;
+    box-sizing: border-box;
+    display: inline;
+    margin: 10px;
+}
+.container1 div:nth-child(3) {
+    background-color: red;
+    order: 1;
+    flex-grow: 1;
+    align-self: center;
+}
+.footer {
+    background-color: yellow;
+}
+</code></pre>
+<p><img src="https://tingke.github.io//post-images/1562596231416.png" alt=""></p>
+<h2 id="4-grid">4. Grid</h2>
+<p>它将网页划分成一个个网格，可以任意组合不同的网格，做出各种各样的布局。</p>
+<p>Flex 布局是轴线布局，只能指定&quot;项目&quot;针对轴线的位置，可以看作是一维布局。Grid 布局则是将容器划分成&quot;行&quot;和&quot;列&quot;，产生单元格，然后指定&quot;项目所在&quot;的单元格，可以看作是二维布局。Grid 布局远比 Flex 布局强大。</p>
+
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://tingke.github.io//post/code-review-ji-zhi-he-shi-shi-fang-an">
+              <h3 class="post-title">
+                Code Review 机制和实施方案
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> Copyright © 2019 | 
+  <a class="rss" href="https://tingke.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

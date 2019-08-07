@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>编写高质量iOS与OS X代码的52个有效方法 | 好学习</title>
-<link rel="shortcut icon" href="https://tingke.github.io//favicon.ico?v=1562078616937">
+<link rel="shortcut icon" href="https://tingke.github.io//favicon.ico?v=1565203104490">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://tingke.github.io//styles/main.css">
@@ -29,7 +29,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://tingke.github.io/">
-  <img class="avatar" src="https://tingke.github.io//images/avatar.png?v=1562078616937" alt="">
+  <img class="avatar" src="https://tingke.github.io//images/avatar.png?v=1565203104490" alt="">
   </a>
   <h1 class="site-title">
     好学习
@@ -211,7 +211,7 @@ obj-&gt;perform(parameter1,parameter2);
 <pre><code>&lt;?php
 namespace Root\Sub\subnamespace;
 </code></pre>
-<p>这就会导致当你不小心实现了两个相同名字的类，或者把两个相对独立的库导入项目时而他们又恰好有重名的类的时候该类所对应的符号和Meta Class符号定义了两次。所以很容易产生这种命名冲突，让程序的链接过程中出现出现重复的符号造成报错。
+<p>这就会导致当你不小心实现了两个相同名字的类，或者把两个相对独立的库导入项目时而他们又恰好有重名的类的时候该类所对应的符号和Meta Class符号定义了两次。所以很容易产生这种命名冲突，让程序的链接过程中出现出现重复的符号造成报错。<br>
 为了避免这种情况，我们要尽量在类名，以及分类和分类方法上增加前缀，还有一些宏定义等等根据自己项目来定吧</p>
 <h3 id="第16条提供全能初始化方法">第16条：提供“全能初始化方法”</h3>
 <ol>
@@ -317,8 +317,8 @@ namespace Root\Sub\subnamespace;
 <ol>
 <li>
 <p>为什么不使用异常处理机制？<br>
-答：事实上，OC是具备异常处理机制的，但是具体情况下不会启用该机制。原因是ARC下默认不是“异常安全”的。
-理由是,如果抛出异常，那么本应该在作用域末尾释放的对象在现在不能自动释放了。 如果想生成“异常安全”的代码，需要设置编译标志“-fobjc-arc-exceptions”，并且需要引入额外的代码，在不抛出异常时，也照样执行这段代码。
+答：事实上，OC是具备异常处理机制的，但是具体情况下不会启用该机制。原因是ARC下默认不是“异常安全”的。<br>
+理由是,如果抛出异常，那么本应该在作用域末尾释放的对象在现在不能自动释放了。 如果想生成“异常安全”的代码，需要设置编译标志“-fobjc-arc-exceptions”，并且需要引入额外的代码，在不抛出异常时，也照样执行这段代码。<br>
 即使不用ARC，也很难在抛出异常后不会导致内存泄露。</p>
 </li>
 <li>
@@ -405,9 +405,9 @@ namespace Root\Sub\subnamespace;
 <p>autorelease就是自动释放，当給一个对象发送autorelease消息时，方法会在未来某个时间給这个对象发送release消息将其释放，在这个时间段内，对象还是可以使用的。</p>
 <p>原理 : 对象接收到autorelease消息时，它会被添加到了当前的自动释放池中，当自动释放池被销毁时，会給池里所有的对象发送release消息。</p>
 <ol>
-<li>设置ARC有效的编译方法如下：
+<li>设置ARC有效的编译方法如下：<br>
 指定编译器属性为：”-fobjc-arc”。</li>
-<li>设置ARC无效的编译方法如下：
+<li>设置ARC无效的编译方法如下：<br>
 指定编译器属性为：”-fno-objc-arc”。</li>
 </ol>
 <h3 id="第30条以arc简化引用计数">第30条：以ARC简化引用计数</h3>
@@ -424,7 +424,7 @@ namespace Root\Sub\subnamespace;
 <h3 id="第32条编写异常安全代码时留意内存管理问题">第32条：编写“异常安全代码”时留意内存管理问题</h3>
 <p>OC中抛出异常的时候可能会引起内存泄漏，注意一下使用的时机，或者注意在@try捕获异常中清理干净。</p>
 <h3 id="第33条以弱引用避免保留环">第33条：以弱引用避免保留环</h3>
-<p>几个对象以某种方式相互引用，造成内存泄露，我们称之为<strong>循环引用</strong>。
+<p>几个对象以某种方式相互引用，造成内存泄露，我们称之为<strong>循环引用</strong>。<br>
 为避免循环引用，常使用<code>weak</code>或<code>unsafe_unretained</code>修饰。</p>
 <p><code>weak</code>和<code>unsafe_unretained</code>的区别：<br>
 当引用的对象移除后，<code>unsafe_unretained</code>仍指向那个回收的实例，而<code>weak</code>指向nil。（所以<code>weak</code>比<code>unsafe_unretained</code>更安全）</p>
@@ -534,7 +534,7 @@ typedef void (^SuccessBlock)(id responseDic);
     }
 }
 </code></pre>
-<p>这样写法效率很低，而且也不能保证线程中觉得的安全。如果有很多属性，那么每个属性的同步块都要等其他同步块执行完毕才能执行。
+<p>这样写法效率很低，而且也不能保证线程中觉得的安全。如果有很多属性，那么每个属性的同步块都要等其他同步块执行完毕才能执行。<br>
 应该用GCD来替换：</p>
 <pre><code>_syncQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
 
@@ -673,8 +673,8 @@ dispatch_group_notify(group,dispatch_get_main_queue(),^{
 </code></pre>
 </li>
 </ol>
-<p>CFArrayRef aCFArray = (__bridge CFArrayRef)anNSArray;
-NSLog(@&quot;Size of array = %li&quot;, CFArrayGetCount(aCFArray));
+<p>CFArrayRef aCFArray = (__bridge CFArrayRef)anNSArray;<br>
+NSLog(@&quot;Size of array = %li&quot;, CFArrayGetCount(aCFArray));<br>
 //Output: Size of array = 5</p>
 <pre><code>// __bridge:将oc对象转换为c的数据结构，arc依然具备这个对象的所有权。c的数据结构转换为oc对象，arc并没有对象的所有权
 //__bridge_retain:将oc对象转换为c的数据结构，arc失去这个对象的所有权，故c的数据结构使用完毕后要添加CFRelease(aCFArray)将其释放

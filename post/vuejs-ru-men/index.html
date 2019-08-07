@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Vue.js入门 | 好学习</title>
-<link rel="shortcut icon" href="https://tingke.github.io//favicon.ico?v=1562078616937">
+<link rel="shortcut icon" href="https://tingke.github.io//favicon.ico?v=1565203104490">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://tingke.github.io//styles/main.css">
@@ -29,7 +29,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://tingke.github.io/">
-  <img class="avatar" src="https://tingke.github.io//images/avatar.png?v=1562078616937" alt="">
+  <img class="avatar" src="https://tingke.github.io//images/avatar.png?v=1565203104490" alt="">
   </a>
   <h1 class="site-title">
     好学习
@@ -112,13 +112,13 @@
 </code></pre>
 </li>
 <li>
-<p><strong>NPM</strong>
+<p><strong>NPM</strong><br>
 在用 <strong>Vue</strong> 构建大型应用时推荐使用 NPM 安装[1]。NPM 能很好地和诸如 webpack 或 Browserify 模块打包器配合使用。同时 Vue 也提供配套工具来开发单文件组件。</p>
 <pre><code class="language-sh">$ npm install vue
 </code></pre>
 </li>
 <li>
-<p><strong>命令行工具（CLI）</strong>
+<p><strong>命令行工具（CLI）</strong><br>
 Vue 提供一个官方命令行工具，可用于快速搭建大型单页应用。该工具为现代化的前端开发工作流提供了开箱即用的构建配置。只需几分钟即可创建并启动一个带热重载、保存时静态检查以及可用于生产环境的构建配置的项目：</p>
 <pre><code class="language-sh"># 全局安装 vue-clir
 $ npm install --global vue-cli
@@ -130,7 +130,7 @@ $ npm run dev
 
 </code></pre>
 <blockquote>
-<p>[warning]
+<p>[warning]<br>
 CLI 工具假定用户对 Node.js 和相关构建工具有一定程度的了解。如果你是新手，我们强烈建议先在不用构建工具的情况下通读指南，在熟悉 Vue 本身之后再使用 CLI。</p>
 </blockquote>
 </li>
@@ -228,7 +228,7 @@ var app =new Vue({
 <h3 id="实例生命周期钩子">实例生命周期钩子</h3>
 <p><code>beforeCreate</code>:在实例初始化之后，数据观测 (data observer) 和 event/watcher 事件配置之前被调用。</p>
 <p><code>creaated</code>:在实例创建完成后被立即调用。在这一步，实例已完成以下的配置：数据观测 (data observer)，属性和方法的运算，watch/event 事件回调。然而，挂载阶段还没开始，<code>$el</code> 属性目前不可见。</p>
-<p><code>beforeMount</code>:在挂载开始之前被调用：相关的 <code>render</code> 函数首次被调用。
+<p><code>beforeMount</code>:在挂载开始之前被调用：相关的 <code>render</code> 函数首次被调用。<br>
 <code>mounted</code>:<code>el</code> 被新创建的 <code>vm.$el</code> 替换，并挂载到实例上去之后调用该钩子。如果 root 实例挂载了一个文档内元素，当 <code>mounted</code> 被调用时 <code>vm.$el</code> 也在文档内。</p>
 <p><code>beforeUpdate</code>: 数据更新时调用，发生在虚拟 DOM 打补丁之前。这里适合在更新之前访问现有的 DOM，比如手动移除已添加的事件监听器。</p>
 <p><code>updated</code>:由于数据更改导致的虚拟 DOM 重新渲染和打补丁，在这之后会调用该钩子</p>
@@ -273,7 +273,7 @@ var app =new Vue({
 <p><strong>v-on</strong>：事件绑定。【v-on：同等于@】，用于需要人机操作交互的地方</p>
 </li>
 <li>
-<p><strong>v-cloak</strong>：这个指令保持在元素上直到关联实例结束编译。和 CSS 规则如 <code>[v-cloak] { display: none }</code> 一起用时，这个指令可以隐藏未编译的 Mustache 标签直到实例准备完毕。
+<p><strong>v-cloak</strong>：这个指令保持在元素上直到关联实例结束编译。和 CSS 规则如 <code>[v-cloak] { display: none }</code> 一起用时，这个指令可以隐藏未编译的 Mustache 标签直到实例准备完毕。<br>
 在使用 HTML 绑定 Vue实例时，在页面加载时会闪烁。为了效果更明显，我们可以延后加载 Vue 实例。</p>
 <pre><code class="language-js">setTimeout(() =&gt; {
     new Vue({

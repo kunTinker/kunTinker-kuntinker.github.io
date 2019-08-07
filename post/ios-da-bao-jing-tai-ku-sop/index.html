@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>iOS打包静态库SOP | 好学习</title>
-<link rel="shortcut icon" href="https://tingke.github.io//favicon.ico?v=1562078616937">
+<link rel="shortcut icon" href="https://tingke.github.io//favicon.ico?v=1565203104490">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://tingke.github.io//styles/main.css">
@@ -29,7 +29,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://tingke.github.io/">
-  <img class="avatar" src="https://tingke.github.io//images/avatar.png?v=1562078616937" alt="">
+  <img class="avatar" src="https://tingke.github.io//images/avatar.png?v=1565203104490" alt="">
   </a>
   <h1 class="site-title">
     好学习
@@ -116,24 +116,24 @@
 </ul>
 <p><strong>3、静态库和动态库的存在形式和使用区别</strong></p>
 <p>存在形式：</p>
-<p>静态库
-以&quot;.a&quot;或者“.framework”为文件后缀名
-动态库
+<p>静态库<br>
+以&quot;.a&quot;或者“.framework”为文件后缀名<br>
+动态库<br>
 以&quot;.dylib&quot;或者“.framework”为文件后缀名</p>
 <p>使用区别：</p>
-<p>静态库链接时会被完整的复制到可执行文件中，被多次使用就有多份拷贝。
+<p>静态库链接时会被完整的复制到可执行文件中，被多次使用就有多份拷贝。<br>
 动态库链接时不复制，程序运行时由系统动态加载到内存，供程序调用。而且系统只加载一次，多个程序共用，节省内存。</p>
 <h2 id="a文件静态库打包"><code>.a</code>文件静态库打包</h2>
-<p><strong>步骤一、新建一个新工程或在老项目中新建一个新Target，选择<code>Cocoa Touch Static Library</code></strong>
+<p><strong>步骤一、新建一个新工程或在老项目中新建一个新Target，选择<code>Cocoa Touch Static Library</code></strong><br>
 <img src="http://outiw4np3.bkt.clouddn.com/7f52d89fead89117d921568bb87141f9.jpg" alt=""></p>
 <p><strong>步骤二、修改静态库的配置</strong></p>
 <p><code>buildSeting -&gt; Build Active Architecture Only</code>设为NO，使编译后的库支持所有架构。</p>
 <p><img src="http://outiw4np3.bkt.clouddn.com/66345bad9034e95d979b7f8c910d39d9.jpg" alt=""></p>
-<p><code>buildSeting -&gt; iOS Deployment Target</code>设置静态库支持的iOS版本
+<p><code>buildSeting -&gt; iOS Deployment Target</code>设置静态库支持的iOS版本<br>
 <img src="http://outiw4np3.bkt.clouddn.com/0c5ecacd2a60f359b1d69580ff2c80de.jpg" alt=""></p>
 <p><strong>步骤三、新建或拖入需打包的内容</strong></p>
 <p><img src="http://outiw4np3.bkt.clouddn.com/015550852490ac499d17d8d6ba4ca7de.jpg" alt=""></p>
-<p><strong>步骤四、设置公开.h文件</strong>
+<p><strong>步骤四、设置公开.h文件</strong><br>
 <img src="http://outiw4np3.bkt.clouddn.com/6d7cec281fa3f6cf0fa658f75e3e9c6a.jpg" alt=""></p>
 <p><strong>步骤五、选中本Target,<code>Command+B</code>编译（一般编译两次，模拟器的Debug状态和真机的Release状态）。</strong></p>
 <p><img src="http://outiw4np3.bkt.clouddn.com/0a2bd0f7478a9d3830df90c3875dff54.jpg" alt=""></p>

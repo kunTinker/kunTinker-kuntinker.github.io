@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>高效的使用Xcode 9 | 好学习</title>
-<link rel="shortcut icon" href="https://tingke.github.io//favicon.ico?v=1562078616937">
+<link rel="shortcut icon" href="https://tingke.github.io//favicon.ico?v=1565203104490">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://tingke.github.io//styles/main.css">
@@ -29,7 +29,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://tingke.github.io/">
-  <img class="avatar" src="https://tingke.github.io//images/avatar.png?v=1562078616937" alt="">
+  <img class="avatar" src="https://tingke.github.io//images/avatar.png?v=1565203104490" alt="">
   </a>
   <h1 class="site-title">
     好学习
@@ -107,30 +107,30 @@
 <h2 id="2-折叠代码">2. 折叠代码</h2>
 <p>Command+Option+左右箭头  = 折叠或打开代码块</p>
 <h2 id="3-重构相关">3. 重构相关</h2>
-<p>对一个方法或者变量的重命名,在方法上CMD+单击,出现的菜单,选择rename
+<p>对一个方法或者变量的重命名,在方法上CMD+单击,出现的菜单,选择rename<br>
 <img src="http://api.cocoachina.com/uploads//20170922/1506048006956030.png" alt=""></p>
 <h2 id="4-folder和group的同步性">4. Folder和Group的同步性</h2>
 <p>之前,我们在XCode中,更改Folder的名字,在FInder中工程对应的文件夹的名字并不会同步的改变,这会造成我们重命名文件夹变得非常不方便,往往要先在XCode中移除,然后在Finder中重命名,再添加回Xcode</p>
 <p>现在 在Xcode9中重名命Folder,Finder中的也同步的改变了</p>
-<p>我们之前建议一个虚拟的group,并不会在对应的文件夹中建立真实的目录,当然,这可能是你需要的,也可能是你不需要的功能.在9中,默认行为改变了.变成了会建立对应的真实文件夹.如果还想像之前那样只是建立虚拟的group,需要选择New Group without Folder
+<p>我们之前建议一个虚拟的group,并不会在对应的文件夹中建立真实的目录,当然,这可能是你需要的,也可能是你不需要的功能.在9中,默认行为改变了.变成了会建立对应的真实文件夹.如果还想像之前那样只是建立虚拟的group,需要选择New Group without Folder<br>
 <img src="http://api.cocoachina.com/uploads//20170922/1506049901602588.png" alt=""></p>
 <p>你可能你会担心,区分不了这个group到底是虚拟的,还是实际的</p>
-<p>放心,苹果给出了标识来区分的,虚拟的左下角有个小的三角形
+<p>放心,苹果给出了标识来区分的,虚拟的左下角有个小的三角形<br>
 <img src="http://api.cocoachina.com/uploads//20170922/1506049933727526.png" alt=""></p>
 <h2 id="5-runtime问题检测">5. runtime问题检测</h2>
 <p>在8中,已经包含了Address Scanitizer和Thread Scanitizer,在Xcode9中,又新增了 Undefiner Behavior Scanitizer,它可以实时的检测一系列的问题.不过我们更能明显感受到的是Main Thread Checker,它可以在运行时确保你没有把UI更新 代码写在了非主线程中</p>
-<p>例如,代码中
+<p>例如,代码中<br>
 <img src="http://api.cocoachina.com/uploads//20170922/1506048625225251.png" alt=""></p>
 <p>可见还是很强大的,虽然我们没有Fabric的源码,但是其内部调用了[UIApplicationsharedApplication].statusBarOrientation],还是被检测到了</p>
-<p>当然了,如果你想关掉它,可以在 scheme editor中操作
+<p>当然了,如果你想关掉它,可以在 scheme editor中操作<br>
 <img src="http://api.cocoachina.com/uploads//20170922/1506048660434469.png" alt=""></p>
 <h2 id="6-模拟器可以多开了并且模拟器可以登录">6. 模拟器可以多开了,并且,模拟器可以登录</h2>
 <p><img src="http://api.cocoachina.com/uploads//20170922/1506049353869658.png" alt=""></p>
 <p>模拟器的外观样式也回归了,直接是iPhone的外观了,以前可能是因为模拟器不能任意调整大小,所以才没外观的吧</p>
-<p>当然了,你可以去掉外观皮肤. 在模拟器的Window show Device Bezels,去掉选项就和以前一样了
+<p>当然了,你可以去掉外观皮肤. 在模拟器的Window show Device Bezels,去掉选项就和以前一样了<br>
 <img src="http://api.cocoachina.com/uploads//20170922/1506049444615552.png" alt=""></p>
 <h2 id="7-无线开发">7. 无线开发</h2>
-<p>这个只支持ios11的机器,很简单,只要在Device那打开支持就行.
+<p>这个只支持ios11的机器,很简单,只要在Device那打开支持就行.<br>
 <img src="http://outiw4np3.bkt.clouddn.com/c7036aafad24dc729374d88f5b96e637.jpg" alt=""></p>
 <h2 id="8-调整字体">8. 调整字体</h2>
 <p>cmd +/- 可以用来调整编辑器的字体大小了</p>
@@ -166,17 +166,17 @@ typedefvoid (^UpdateSwichBtnBlock)();
 <h2 id="11-xcode-在全屏模式下使用-simulator">11. Xcode 在全屏模式下使用 Simulator</h2>
 <p>如果你用的是 13 寸的电脑，那么 Xcode 的全屏模式你应该早已习惯，其实即使是配有显示器，我还是习惯在 Xcode 的全屏模式下开发😎。很可惜的是不能在 Xcode 的全屏模式下使用 Simulator, 自 Xcode 9b3 以后，这个问题便不存在了：</p>
 <p><img src="http://cc.cocimg.com/api/uploads//20180125/1516864278298406.gif" alt=""></p>
-<p>这个功能并不是对所有人默认开放的，如果不幸你的 Xcode 没有默认开启这个功能也不要灰心，我们可以通过打开 Apple Internal menu 来启用这个功能，通过 Apple Internal menu 你能挖掘出 Simulator 的更多新特性。那么问题来了，怎么开启 Apple Internal menu 呢？首先，在更目录里创建 AppleInternal 文件夹，然后重启 Simulator:
+<p>这个功能并不是对所有人默认开放的，如果不幸你的 Xcode 没有默认开启这个功能也不要灰心，我们可以通过打开 Apple Internal menu 来启用这个功能，通过 Apple Internal menu 你能挖掘出 Simulator 的更多新特性。那么问题来了，怎么开启 Apple Internal menu 呢？首先，在更目录里创建 AppleInternal 文件夹，然后重启 Simulator:<br>
 <img src="http://cc.cocimg.com/api/uploads//20180125/1516864313510848.png" alt=""></p>
 <pre><code>cd ~/ 
 sudo mkdir /AppleInternal
 </code></pre>
-<p>多重启 Simulator 后就可以看到 internal 选项 ☝
+<p>多重启 Simulator 后就可以看到 internal 选项 ☝<br>
 但是，</p>
-<p>我在 Mac 使用过程中遇到 <code>Operation Not Permitted</code> 问题，之前都是略过，今天好好摸索了一把，搞明白了道理，记录下来。
-好几次整理移动硬盘数据的时候，都遇到了 Operation Not Permitted 问题，文件移动不了，也删除不掉，第一次遇到没理会，第二次是打开虚拟机，在 Windows 中操作这些问题文件，今天又遇到了，决定消灭它。
+<p>我在 Mac 使用过程中遇到 <code>Operation Not Permitted</code> 问题，之前都是略过，今天好好摸索了一把，搞明白了道理，记录下来。<br>
+好几次整理移动硬盘数据的时候，都遇到了 Operation Not Permitted 问题，文件移动不了，也删除不掉，第一次遇到没理会，第二次是打开虚拟机，在 Windows 中操作这些问题文件，今天又遇到了，决定消灭它。<br>
 OS X EI Capitan 的 SIP</p>
-<p>Apple 在 OS X 10.11 以后的版本中默认启动了一项系统保护程序，叫做 System Integrity Protection，也被唤作 rootless（寓意让 root 弱一点），该程序意在保护电脑不被恶意程序攻击，但是对于我们这群程序员，很多保护是多余的，甚至给我们带来了很多麻烦。
+<p>Apple 在 OS X 10.11 以后的版本中默认启动了一项系统保护程序，叫做 System Integrity Protection，也被唤作 rootless（寓意让 root 弱一点），该程序意在保护电脑不被恶意程序攻击，但是对于我们这群程序员，很多保护是多余的，甚至给我们带来了很多麻烦。<br>
 SIP 会锁定几个系统文件目录：</p>
 <pre><code>/System
 /sbin
@@ -198,7 +198,7 @@ System Integrity Protection status: enabled.
 <pre><code>xcrun simctl io booted recordVideo --type=mp4 &lt;PATH TO VIDEO FILE&gt;
 </code></pre>
 <p><img src="http://outiw4np3.bkt.clouddn.com/5734dc156e651dcfe0b6b11bad8cd335.jpg" alt=""></p>
-<p>上传文件到模拟器中
+<p>上传文件到模拟器中<br>
 <img src="http://outiw4np3.bkt.clouddn.com/e85146fe9468f795c4895c4883727d2e.jpg" alt=""></p>
 <p>打开url(所有苹果的URL计划列表请查阅<a href="https://developer.apple.com/library/content/featuredarticles/iPhoneURLScheme_Reference/Introduction/Introduction.html">文档</a>。)</p>
 <pre><code>xcrun simctl openurl booted &lt;URL&gt;
