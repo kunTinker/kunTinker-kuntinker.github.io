@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>关于 | 好学习</title>
+<title>Flutter 安装与入门 | 好学习</title>
 <link rel="shortcut icon" href="https://tingke.github.io//favicon.ico?v=1580526593782">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -83,22 +83,80 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              关于
+              Flutter 安装与入门
             </h2>
             <div class="post-info">
               <time class="post-time">
-                · 2019-01-25 ·
+                · 2019-09-01 ·
               </time>
               
             </div>
             
+              <div class="post-feature-image" style="background-image: url('https://tingke.github.io//post-images/flutter-an-zhuang-yu-ru-men.png')">
+              </div>
+            
             <div class="post-content">
-              <p>It's my life!</p>
+              <h1 id="flutter-入门">Flutter 入门</h1>
+<h3 id="网站">网站：</h3>
+<p>官方：https://flutter.io/docs/development/tools/ide/vs-code<br>
+中文网：https://flutterchina.club/setup-macos/</p>
+<h3 id="安装与配置">安装与配置：</h3>
+<ol>
+<li>
+<p>下载Flutter</p>
+<pre><code class="language-bash">cd ~
+git clone -b master https://github.com/flutter/flutter.git
+</code></pre>
+</li>
+<li>
+<p>vscode 安装 Flutter 插件</p>
+</li>
+<li>
+<p>本地配置路径</p>
+<pre><code class="language-bash">vim ~/.zshrc
+</code></pre>
+<p>输入以下代码</p>
+<pre><code>#for flutter by 2018-11-13
+export PATH=/Users/kun/flutter/bin:$PATH	
+export PUB_HOSTED_URL=https://dart-pub.mirrors.sjtug.sjtu.edu.cn
+export FLUTTER_STORAGE_BASE_URL=https://mirrors.sjtug.sjtu.edu.cn
+</code></pre>
+</li>
+<li>
+<p>vscode 导入本地 Flutter SDK</p>
+</li>
+<li>
+<p>cd 到 Flutter 根目录 运行 <code>flutter doctor</code> 安装相关包</p>
+</li>
+</ol>
+<h3 id="简单命令">简单命令</h3>
+<pre><code>flutter -h // 帮助
+
+flutter create 【文件名称】 // 创建工程
+
+flutter run // 运行,默认运行 lib/main.dart,如果 main 函数不 在main.dart 中需指定文件
+</code></pre>
+<h3 id="常用快捷键">常用快捷键</h3>
+<pre><code>r 键：点击后热加载，也就算是重新加载吧。
+R 键：点击后热重载，也就算是重新加载吧。
+p 键：显示网格，这个可以很好的掌握布局情况，工作中很有用。
+o 键：切换android和ios的预览模式。
+q 键：退出调试预览模式。
+</code></pre>
 
             </div>
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://tingke.github.io//post/css-si-da-bu-ju">
+              <h3 class="post-title">
+                CSS 四大布局
+              </h3>
+            </a>
+          </div>
         
 
         

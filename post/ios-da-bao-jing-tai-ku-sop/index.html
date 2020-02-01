@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>iOS打包静态库SOP | 好学习</title>
-<link rel="shortcut icon" href="https://tingke.github.io//favicon.ico?v=1565203104490">
+<link rel="shortcut icon" href="https://tingke.github.io//favicon.ico?v=1580526593782">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://tingke.github.io//styles/main.css">
@@ -29,7 +29,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://tingke.github.io/">
-  <img class="avatar" src="https://tingke.github.io//images/avatar.png?v=1565203104490" alt="">
+  <img class="avatar" src="https://tingke.github.io//images/avatar.png?v=1580526593782" alt="">
   </a>
   <h1 class="site-title">
     好学习
@@ -128,15 +128,15 @@
 <img src="http://outiw4np3.bkt.clouddn.com/7f52d89fead89117d921568bb87141f9.jpg" alt=""></p>
 <p><strong>步骤二、修改静态库的配置</strong></p>
 <p><code>buildSeting -&gt; Build Active Architecture Only</code>设为NO，使编译后的库支持所有架构。</p>
-<p><img src="http://outiw4np3.bkt.clouddn.com/66345bad9034e95d979b7f8c910d39d9.jpg" alt=""></p>
+<figure data-type="image" tabindex="1"><img src="http://outiw4np3.bkt.clouddn.com/66345bad9034e95d979b7f8c910d39d9.jpg" alt=""></figure>
 <p><code>buildSeting -&gt; iOS Deployment Target</code>设置静态库支持的iOS版本<br>
 <img src="http://outiw4np3.bkt.clouddn.com/0c5ecacd2a60f359b1d69580ff2c80de.jpg" alt=""></p>
 <p><strong>步骤三、新建或拖入需打包的内容</strong></p>
-<p><img src="http://outiw4np3.bkt.clouddn.com/015550852490ac499d17d8d6ba4ca7de.jpg" alt=""></p>
+<figure data-type="image" tabindex="2"><img src="http://outiw4np3.bkt.clouddn.com/015550852490ac499d17d8d6ba4ca7de.jpg" alt=""></figure>
 <p><strong>步骤四、设置公开.h文件</strong><br>
 <img src="http://outiw4np3.bkt.clouddn.com/6d7cec281fa3f6cf0fa658f75e3e9c6a.jpg" alt=""></p>
 <p><strong>步骤五、选中本Target,<code>Command+B</code>编译（一般编译两次，模拟器的Debug状态和真机的Release状态）。</strong></p>
-<p><img src="http://outiw4np3.bkt.clouddn.com/0a2bd0f7478a9d3830df90c3875dff54.jpg" alt=""></p>
+<figure data-type="image" tabindex="3"><img src="http://outiw4np3.bkt.clouddn.com/0a2bd0f7478a9d3830df90c3875dff54.jpg" alt=""></figure>
 <p><code>Products</code>中的libKPPW变黑表示编译成功，右键<code>Show in Finder</code>打开静态库路径</p>
 <p><strong>步骤六、打开终端，输入以下命令合并模拟器和真机的静态库</strong></p>
 <pre><code>lipo -create 真机库的路径 模拟器库的路径 -output 合并后新库的路径
@@ -146,15 +146,15 @@
 <ol>
 <li>
 <p>选择 framework</p>
-<p><img src="http://mmbiz.qpic.cn/mmbiz/foPACGrddJ0HsbypCB0TDBkUaI3CWphvA8ZWV7VVuBS74cicJkI0AXkdTe423iciaxiask4ficqE5p4OnkR30EqQSSA/640" alt=""></p>
+<figure data-type="image" tabindex="4"><img src="http://mmbiz.qpic.cn/mmbiz/foPACGrddJ0HsbypCB0TDBkUaI3CWphvA8ZWV7VVuBS74cicJkI0AXkdTe423iciaxiask4ficqE5p4OnkR30EqQSSA/640" alt=""></figure>
 </li>
 <li>
 <p>编译时默认制作成动态库，要在下面选择</p>
-<p><img src="http://mmbiz.qpic.cn/mmbiz/foPACGrddJ0HsbypCB0TDBkUaI3CWphvt8icFAhSH6XwuNquYfOTu6ofAEe1e9dvFJyjEFXphZYYt8vokIuByRw/640" alt=""></p>
+<figure data-type="image" tabindex="5"><img src="http://mmbiz.qpic.cn/mmbiz/foPACGrddJ0HsbypCB0TDBkUaI3CWphvt8icFAhSH6XwuNquYfOTu6ofAEe1e9dvFJyjEFXphZYYt8vokIuByRw/640" alt=""></figure>
 </li>
 <li>
 <p>合并静态库的时候，要选择 <code>.framework</code> 文件里的 <code>libstaticclib</code> 文件</p>
-<p><img src="http://mmbiz.qpic.cn/mmbiz/foPACGrddJ0HsbypCB0TDBkUaI3CWphvI13fTK8hhjSgMXjdHvwTvUk57C0MWPoyicjerjfpJyrmuMPbptNWH2g/640" alt=""></p>
+<figure data-type="image" tabindex="6"><img src="http://mmbiz.qpic.cn/mmbiz/foPACGrddJ0HsbypCB0TDBkUaI3CWphvI13fTK8hhjSgMXjdHvwTvUk57C0MWPoyicjerjfpJyrmuMPbptNWH2g/640" alt=""></figure>
 </li>
 </ol>
 

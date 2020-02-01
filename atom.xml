@@ -2,14 +2,69 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://tingke.github.io/</id>
     <title>好学习</title>
-    <updated>2019-08-07T18:38:33.065Z</updated>
+    <updated>2020-02-01T03:11:38.667Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://tingke.github.io/"/>
     <link rel="self" href="https://tingke.github.io//atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://tingke.github.io//images/avatar.png</logo>
     <icon>https://tingke.github.io//favicon.ico</icon>
-    <rights>All rights reserved 2019, 好学习</rights>
+    <rights>All rights reserved 2020, 好学习</rights>
+    <entry>
+        <title type="html"><![CDATA[Flutter 安装与入门]]></title>
+        <id>https://tingke.github.io//post/flutter-an-zhuang-yu-ru-men</id>
+        <link href="https://tingke.github.io//post/flutter-an-zhuang-yu-ru-men">
+        </link>
+        <updated>2019-09-01T00:49:08.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="flutter-入门">Flutter 入门</h1>
+<h3 id="网站">网站：</h3>
+<p>官方：https://flutter.io/docs/development/tools/ide/vs-code<br>
+中文网：https://flutterchina.club/setup-macos/</p>
+<h3 id="安装与配置">安装与配置：</h3>
+<ol>
+<li>
+<p>下载Flutter</p>
+<pre><code class="language-bash">cd ~
+git clone -b master https://github.com/flutter/flutter.git
+</code></pre>
+</li>
+<li>
+<p>vscode 安装 Flutter 插件</p>
+</li>
+<li>
+<p>本地配置路径</p>
+<pre><code class="language-bash">vim ~/.zshrc
+</code></pre>
+<p>输入以下代码</p>
+<pre><code>#for flutter by 2018-11-13
+export PATH=/Users/kun/flutter/bin:$PATH	
+export PUB_HOSTED_URL=https://dart-pub.mirrors.sjtug.sjtu.edu.cn
+export FLUTTER_STORAGE_BASE_URL=https://mirrors.sjtug.sjtu.edu.cn
+</code></pre>
+</li>
+<li>
+<p>vscode 导入本地 Flutter SDK</p>
+</li>
+<li>
+<p>cd 到 Flutter 根目录 运行 <code>flutter doctor</code> 安装相关包</p>
+</li>
+</ol>
+<h3 id="简单命令">简单命令</h3>
+<pre><code>flutter -h // 帮助
+
+flutter create 【文件名称】 // 创建工程
+
+flutter run // 运行,默认运行 lib/main.dart,如果 main 函数不 在main.dart 中需指定文件
+</code></pre>
+<h3 id="常用快捷键">常用快捷键</h3>
+<pre><code>r 键：点击后热加载，也就算是重新加载吧。
+R 键：点击后热重载，也就算是重新加载吧。
+p 键：显示网格，这个可以很好的掌握布局情况，工作中很有用。
+o 键：切换android和ios的预览模式。
+q 键：退出调试预览模式。
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[CSS 四大布局]]></title>
         <id>https://tingke.github.io//post/css-si-da-bu-ju</id>
@@ -31,7 +86,7 @@
 <li>
 <p>block 类型的标签布局是每一个标签独占一行，而 inline-block 标签会一个挨着一个进行布局；<br>
 <img src="https://tingke.github.io//post-images/1562596159796.png" alt=""></p>
-<p><img src="https://tingke.github.io//post-images/1562596197614.png" alt=""></p>
+<figure data-type="image" tabindex="1"><img src="https://tingke.github.io//post-images/1562596197614.png" alt=""></figure>
 </li>
 </ol>
 <h2 id="2-定位">2. 定位</h2>
@@ -65,7 +120,7 @@
     top: 250px;
 }
 </code></pre>
-<p><img src="https://tingke.github.io//post-images/1562596209511.png" alt=""></p>
+<figure data-type="image" tabindex="2"><img src="https://tingke.github.io//post-images/1562596209511.png" alt=""></figure>
 <h2 id="3-flexbox">3. Flexbox</h2>
 <p>Flexbox 布局是通过 CSS 中的属性 display：flex 来控制的，布局时需要指定一个容器 flex container，然后把要布局的元素放到容器中，这些元素被称为 flex item</p>
 <p>Flexbox 会把整个布局按两根轴（主轴（main axis），与主轴交叉的轴（cross axis））来布局。最外层为容器，容器内部为 item。整个布局思路就是按照不同的轴对 item 进行布局。</p>
@@ -125,7 +180,7 @@
     background-color: yellow;
 }
 </code></pre>
-<p><img src="https://tingke.github.io//post-images/1562596231416.png" alt=""></p>
+<figure data-type="image" tabindex="3"><img src="https://tingke.github.io//post-images/1562596231416.png" alt=""></figure>
 <h2 id="4-grid">4. Grid</h2>
 <p>它将网页划分成一个个网格，可以任意组合不同的网格，做出各种各样的布局。</p>
 <p>Flex 布局是轴线布局，只能指定&quot;项目&quot;针对轴线的位置，可以看作是一维布局。Grid 布局则是将容器划分成&quot;行&quot;和&quot;列&quot;，产生单元格，然后指定&quot;项目所在&quot;的单元格，可以看作是二维布局。Grid 布局远比 Flex 布局强大。</p>
@@ -271,7 +326,7 @@
 <p>首先FileMerge，不仅仅只是支持Compare，还能很好的支持merge。而merge是我们管理代码的时候经常性遇到的基础需求。废话少说。下面展示下FileMerge怎么使用</p>
 <!-- more -->
 <p>FileMerge 在 XCode的安装目录可以找到。如下图路径</p>
-<p><img src="http://outiw4np3.bkt.clouddn.com/3edd23c52c074e1e0e87d2763db7f945.jpg" alt=""></p>
+<figure data-type="image" tabindex="1"><img src="http://outiw4np3.bkt.clouddn.com/3edd23c52c074e1e0e87d2763db7f945.jpg" alt=""></figure>
 <p>打开应用后界面如下图：<br>
 <img src="http://outiw4np3.bkt.clouddn.com/6374cf0895f1c5b0da7c5be1af19c138.jpg" alt=""></p>
 <p>界面很简单，接下来就是设置Left ，Right。Left Right就是你要比较的项目的根目录。请记住你Left 和 RIght。这个在接下来的操作中非常重要。好了，点击 Compare 进入</p>
@@ -377,7 +432,7 @@
 <p>“DNS 协议提供通过域名查找 IP 地址，或逆向从 IP 地址反查域名的服务”</p>
 </blockquote>
 <h3 id="http-与-dnstcpip-关系图">HTTP 与 DNS/TCP/IP 关系图</h3>
-<p><img src="http://outiw4np3.bkt.clouddn.com/8cfb742e225135a59dde1c57682acd95.jpg" alt=""></p>
+<figure data-type="image" tabindex="1"><img src="http://outiw4np3.bkt.clouddn.com/8cfb742e225135a59dde1c57682acd95.jpg" alt=""></figure>
 <h3 id="uri-和-url">URI 和 URL</h3>
 <p>URI:（Uniform Resource Identifier，统一资源标识符）<br>
 URL：(Uniform Resource Locator，统一资源定位符）</p>
@@ -393,11 +448,11 @@ URL：(Uniform Resource Locator，统一资源定位符）</p>
 <p><code>GET</code> 表示访问服务器的类型，俗称“方法”<br>
 <code>//feed/v1/feed/get_attention_list?...uid=</code> 指明了访问的资源对象，也叫做“URI”<br>
 <code>HTTP/1.1</code> 及 HTTP 的版本号，用来提示客户端使用的http协议功能</p>
-<p><img src="http://outiw4np3.bkt.clouddn.com/297363515632a28a51650e64c6a68d56.jpg" alt=""></p>
+<figure data-type="image" tabindex="2"><img src="http://outiw4np3.bkt.clouddn.com/297363515632a28a51650e64c6a68d56.jpg" alt=""></figure>
 <p><strong>请求报文</strong>是由请求方法、请求 URI、协议版本、可选的请求首部字段和内容实体构成的。</p>
-<p><img src="http://outiw4np3.bkt.clouddn.com/68e6c6b31aadffeada3e2b572230a0c1.jpg" alt=""></p>
+<figure data-type="image" tabindex="3"><img src="http://outiw4np3.bkt.clouddn.com/68e6c6b31aadffeada3e2b572230a0c1.jpg" alt=""></figure>
 <p><strong>响应报文</strong>基本上由协议版本、状态码（表示请求成功或失败的数字代码）、用以解释状态码的原因短语、可选的响应首部字段以及实体主体构成</p>
-<p><img src="http://outiw4np3.bkt.clouddn.com/54322dbb9d6225627c4c19a9fc48b1dd.jpg" alt=""></p>
+<figure data-type="image" tabindex="4"><img src="http://outiw4np3.bkt.clouddn.com/54322dbb9d6225627c4c19a9fc48b1dd.jpg" alt=""></figure>
 <blockquote>
 <p>“HTTP 是一种不保存状态，即无状态（stateless）协议。HTTP 协议自身不对请求和响应之间的通信状态进行保存。也就是说在 HTTP 这个级别，协议对于发送过的请求或响应都不做持久化处理”</p>
 <p>“HTTP/1.1 虽然是无状态协议，但为了实现期望的保持状态功能，于是引入了 Cookie 技术。有了 Cookie 再用 HTTP 协议通信，就可以管理状态了”</p>
@@ -451,11 +506,11 @@ URL：(Uniform Resource Locator，统一资源定位符）</p>
 <p>“持久连接使得多数请求以管线化（pipelining）方式发送成为可能。从前发送请求后需等待并收到响应，才能发送下一个请求。管线化技术出现后，不用等待响应亦可直接发送下一个请求”</p>
 <h3 id="cookie-的状态管理">Cookie 的状态管理</h3>
 <p>“Cookie 技术通过在请求和响应报文中写入 Cookie 信息来控制客户端的状态”</p>
-<p><img src="http://outiw4np3.bkt.clouddn.com/cb588f16318cb814154c878fcbe44a0c.jpg" alt=""></p>
+<figure data-type="image" tabindex="5"><img src="http://outiw4np3.bkt.clouddn.com/cb588f16318cb814154c878fcbe44a0c.jpg" alt=""></figure>
 <h2 id="http-报文内的-http-信息">HTTP 报文内的 HTTP 信息</h2>
 <p>用于 HTTP 协议交互的信息被称为 HTTP 报文。</p>
 <h4 id="http-报文结构">HTTP 报文结构</h4>
-<p><img src="http://outiw4np3.bkt.clouddn.com/7ce8b40311ecd74a53337a4e80fb762f.jpg" alt=""></p>
+<figure data-type="image" tabindex="6"><img src="http://outiw4np3.bkt.clouddn.com/7ce8b40311ecd74a53337a4e80fb762f.jpg" alt=""></figure>
 <h4 id="http-首部字段">HTTP 首部字段</h4>
 <ol>
 <li>
@@ -833,7 +888,7 @@ var app =new Vue({
 <p><code>updated</code>:由于数据更改导致的虚拟 DOM 重新渲染和打补丁，在这之后会调用该钩子</p>
 <p><code>beforeDestroy</code>:实例销毁之前调用。在这一步，实例仍然完全可用</p>
 <p><code>destroyed</code>:Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。</p>
-<p><img src="https://cn.vuejs.org/images/lifecycle.png" alt=""></p>
+<figure data-type="image" tabindex="1"><img src="https://cn.vuejs.org/images/lifecycle.png" alt=""></figure>
 <h2 id="指令">指令</h2>
 <h3 id="基本介绍">基本介绍</h3>
 <ol>
@@ -931,7 +986,7 @@ var app =new Vue({
 <ol>
 <li>
 <p>什么是字符串模板？什么是HTML模板？</p>
-<p><img src="http://outiw4np3.bkt.clouddn.com/94b524f73f9c0afd8bb88bf1b14c0d25.jpg" alt="123"></p>
+<figure data-type="image" tabindex="2"><img src="http://outiw4np3.bkt.clouddn.com/94b524f73f9c0afd8bb88bf1b14c0d25.jpg" alt="123"></figure>
 <blockquote>
 <p>你写在html中的 就是非字符串模板。你写在js中的 template:&quot;&quot;,这个就是字符串 模板</p>
 </blockquote>
@@ -981,15 +1036,15 @@ var app =new Vue({
 <img src="http://outiw4np3.bkt.clouddn.com/7f52d89fead89117d921568bb87141f9.jpg" alt=""></p>
 <p><strong>步骤二、修改静态库的配置</strong></p>
 <p><code>buildSeting -&gt; Build Active Architecture Only</code>设为NO，使编译后的库支持所有架构。</p>
-<p><img src="http://outiw4np3.bkt.clouddn.com/66345bad9034e95d979b7f8c910d39d9.jpg" alt=""></p>
+<figure data-type="image" tabindex="1"><img src="http://outiw4np3.bkt.clouddn.com/66345bad9034e95d979b7f8c910d39d9.jpg" alt=""></figure>
 <p><code>buildSeting -&gt; iOS Deployment Target</code>设置静态库支持的iOS版本<br>
 <img src="http://outiw4np3.bkt.clouddn.com/0c5ecacd2a60f359b1d69580ff2c80de.jpg" alt=""></p>
 <p><strong>步骤三、新建或拖入需打包的内容</strong></p>
-<p><img src="http://outiw4np3.bkt.clouddn.com/015550852490ac499d17d8d6ba4ca7de.jpg" alt=""></p>
+<figure data-type="image" tabindex="2"><img src="http://outiw4np3.bkt.clouddn.com/015550852490ac499d17d8d6ba4ca7de.jpg" alt=""></figure>
 <p><strong>步骤四、设置公开.h文件</strong><br>
 <img src="http://outiw4np3.bkt.clouddn.com/6d7cec281fa3f6cf0fa658f75e3e9c6a.jpg" alt=""></p>
 <p><strong>步骤五、选中本Target,<code>Command+B</code>编译（一般编译两次，模拟器的Debug状态和真机的Release状态）。</strong></p>
-<p><img src="http://outiw4np3.bkt.clouddn.com/0a2bd0f7478a9d3830df90c3875dff54.jpg" alt=""></p>
+<figure data-type="image" tabindex="3"><img src="http://outiw4np3.bkt.clouddn.com/0a2bd0f7478a9d3830df90c3875dff54.jpg" alt=""></figure>
 <p><code>Products</code>中的libKPPW变黑表示编译成功，右键<code>Show in Finder</code>打开静态库路径</p>
 <p><strong>步骤六、打开终端，输入以下命令合并模拟器和真机的静态库</strong></p>
 <pre><code>lipo -create 真机库的路径 模拟器库的路径 -output 合并后新库的路径
@@ -999,15 +1054,15 @@ var app =new Vue({
 <ol>
 <li>
 <p>选择 framework</p>
-<p><img src="http://mmbiz.qpic.cn/mmbiz/foPACGrddJ0HsbypCB0TDBkUaI3CWphvA8ZWV7VVuBS74cicJkI0AXkdTe423iciaxiask4ficqE5p4OnkR30EqQSSA/640" alt=""></p>
+<figure data-type="image" tabindex="4"><img src="http://mmbiz.qpic.cn/mmbiz/foPACGrddJ0HsbypCB0TDBkUaI3CWphvA8ZWV7VVuBS74cicJkI0AXkdTe423iciaxiask4ficqE5p4OnkR30EqQSSA/640" alt=""></figure>
 </li>
 <li>
 <p>编译时默认制作成动态库，要在下面选择</p>
-<p><img src="http://mmbiz.qpic.cn/mmbiz/foPACGrddJ0HsbypCB0TDBkUaI3CWphvt8icFAhSH6XwuNquYfOTu6ofAEe1e9dvFJyjEFXphZYYt8vokIuByRw/640" alt=""></p>
+<figure data-type="image" tabindex="5"><img src="http://mmbiz.qpic.cn/mmbiz/foPACGrddJ0HsbypCB0TDBkUaI3CWphvt8icFAhSH6XwuNquYfOTu6ofAEe1e9dvFJyjEFXphZYYt8vokIuByRw/640" alt=""></figure>
 </li>
 <li>
 <p>合并静态库的时候，要选择 <code>.framework</code> 文件里的 <code>libstaticclib</code> 文件</p>
-<p><img src="http://mmbiz.qpic.cn/mmbiz/foPACGrddJ0HsbypCB0TDBkUaI3CWphvI13fTK8hhjSgMXjdHvwTvUk57C0MWPoyicjerjfpJyrmuMPbptNWH2g/640" alt=""></p>
+<figure data-type="image" tabindex="6"><img src="http://mmbiz.qpic.cn/mmbiz/foPACGrddJ0HsbypCB0TDBkUaI3CWphvI13fTK8hhjSgMXjdHvwTvUk57C0MWPoyicjerjfpJyrmuMPbptNWH2g/640" alt=""></figure>
 </li>
 </ol>
 ]]></content>
@@ -1127,7 +1182,7 @@ obj-&gt;perform(parameter1,parameter2);
 </li>
 </ol>
 <h3 id="第12条理解消息转发机制">第12条：理解消息转发机制</h3>
-<p><img src="http://upload-images.jianshu.io/upload_images/1818095-e7a25f32f80550ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<figure data-type="image" tabindex="1"><img src="http://upload-images.jianshu.io/upload_images/1818095-e7a25f32f80550ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></figure>
 <h3 id="第13条用方法调配技术调试黑盒方法">第13条：用“方法调配技术”调试“黑盒方法”</h3>
 <ol>
 <li><strong>方法调配</strong>又称为**“method swizzling”**，使用另一份实现来替换原有的方法实现。</li>
@@ -1385,7 +1440,7 @@ for (NSStirng *name in people) {
 <ol>
 <li>
 <p>如何开启僵尸对象</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1457495-586f50d111cab802.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<figure data-type="image" tabindex="2"><img src="http://upload-images.jianshu.io/upload_images/1457495-586f50d111cab802.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></figure>
 </li>
 <li>
 <p>什么是僵尸对象</p>
@@ -1654,16 +1709,16 @@ __weak typeof(self) weakself = self;
         <summary type="html"><![CDATA[<p>随着iOS 11的发布，Xcode版本也升级到了9。那么这个版本的Xcode又有哪些变化呢？</p>
 <h2 id="1-跳转方法">1. 跳转方法</h2>
 <p>以前按住Command键，单击任何方法名都可以跳转到方法声明处或者苹果文档中。但是现在却弹出个弹框，如图</p>
-<p><img src="http://outiw4np3.bkt.clouddn.com/136bddeb50e67439fd2425a1b5ec88ce.jpg" alt=""></p>
+<figure data-type="image" tabindex="1"><img src="http://outiw4np3.bkt.clouddn.com/136bddeb50e67439fd2425a1b5ec88ce.jpg" alt=""></figure>
 <p>此时却Command+Shift+左键才能跳转，才麻烦了。我们只需要在设置中这样就能设置回我们熟悉操作：</p>
-<p><img src="http://api.cocoachina.com/uploads//20170922/1506047607578005.png" alt=""></p>
+<figure data-type="image" tabindex="2"><img src="http://api.cocoachina.com/uploads//20170922/1506047607578005.png" alt=""></figure>
 ]]></summary>
         <content type="html"><![CDATA[<p>随着iOS 11的发布，Xcode版本也升级到了9。那么这个版本的Xcode又有哪些变化呢？</p>
 <h2 id="1-跳转方法">1. 跳转方法</h2>
 <p>以前按住Command键，单击任何方法名都可以跳转到方法声明处或者苹果文档中。但是现在却弹出个弹框，如图</p>
-<p><img src="http://outiw4np3.bkt.clouddn.com/136bddeb50e67439fd2425a1b5ec88ce.jpg" alt=""></p>
+<figure data-type="image" tabindex="1"><img src="http://outiw4np3.bkt.clouddn.com/136bddeb50e67439fd2425a1b5ec88ce.jpg" alt=""></figure>
 <p>此时却Command+Shift+左键才能跳转，才麻烦了。我们只需要在设置中这样就能设置回我们熟悉操作：</p>
-<p><img src="http://api.cocoachina.com/uploads//20170922/1506047607578005.png" alt=""></p>
+<figure data-type="image" tabindex="2"><img src="http://api.cocoachina.com/uploads//20170922/1506047607578005.png" alt=""></figure>
 <!-- more -->
 <h2 id="2-折叠代码">2. 折叠代码</h2>
 <p>Command+Option+左右箭头  = 折叠或打开代码块</p>
@@ -1686,7 +1741,7 @@ __weak typeof(self) weakself = self;
 <p>当然了,如果你想关掉它,可以在 scheme editor中操作<br>
 <img src="http://api.cocoachina.com/uploads//20170922/1506048660434469.png" alt=""></p>
 <h2 id="6-模拟器可以多开了并且模拟器可以登录">6. 模拟器可以多开了,并且,模拟器可以登录</h2>
-<p><img src="http://api.cocoachina.com/uploads//20170922/1506049353869658.png" alt=""></p>
+<figure data-type="image" tabindex="3"><img src="http://api.cocoachina.com/uploads//20170922/1506049353869658.png" alt=""></figure>
 <p>模拟器的外观样式也回归了,直接是iPhone的外观了,以前可能是因为模拟器不能任意调整大小,所以才没外观的吧</p>
 <p>当然了,你可以去掉外观皮肤. 在模拟器的Window show Device Bezels,去掉选项就和以前一样了<br>
 <img src="http://api.cocoachina.com/uploads//20170922/1506049444615552.png" alt=""></p>
@@ -1717,16 +1772,16 @@ typedefvoid (^UpdateSwichBtnBlock)();
 <li>
 <p>彻底的暂时解决所有这种警告的方式</p>
 <p>在工程的设置中</p>
-<p><img src="http://api.cocoachina.com/uploads//20170922/1506047796141945.png" alt=""></p>
+<figure data-type="image" tabindex="4"><img src="http://api.cocoachina.com/uploads//20170922/1506047796141945.png" alt=""></figure>
 <p>设置为NO,则这些警告就消失了</p>
 <p>不过这不是一种好习惯,只是暂时性的不让提示这种类型的警告而已</p>
 </li>
 </ol>
 <h2 id="10-crash可以直接在本机上看到了">10. crash可以直接在本机上看到了</h2>
-<p><img src="http://api.cocoachina.com/uploads//20170922/1506048237529869.png" alt=""></p>
+<figure data-type="image" tabindex="5"><img src="http://api.cocoachina.com/uploads//20170922/1506048237529869.png" alt=""></figure>
 <h2 id="11-xcode-在全屏模式下使用-simulator">11. Xcode 在全屏模式下使用 Simulator</h2>
 <p>如果你用的是 13 寸的电脑，那么 Xcode 的全屏模式你应该早已习惯，其实即使是配有显示器，我还是习惯在 Xcode 的全屏模式下开发😎。很可惜的是不能在 Xcode 的全屏模式下使用 Simulator, 自 Xcode 9b3 以后，这个问题便不存在了：</p>
-<p><img src="http://cc.cocimg.com/api/uploads//20180125/1516864278298406.gif" alt=""></p>
+<figure data-type="image" tabindex="6"><img src="http://cc.cocimg.com/api/uploads//20180125/1516864278298406.gif" alt=""></figure>
 <p>这个功能并不是对所有人默认开放的，如果不幸你的 Xcode 没有默认开启这个功能也不要灰心，我们可以通过打开 Apple Internal menu 来启用这个功能，通过 Apple Internal menu 你能挖掘出 Simulator 的更多新特性。那么问题来了，怎么开启 Apple Internal menu 呢？首先，在更目录里创建 AppleInternal 文件夹，然后重启 Simulator:<br>
 <img src="http://cc.cocimg.com/api/uploads//20180125/1516864313510848.png" alt=""></p>
 <pre><code>cd ~/ 
@@ -1758,7 +1813,7 @@ System Integrity Protection status: enabled.
 <p>使用命令行，在录制当前模拟器的屏幕</p>
 <pre><code>xcrun simctl io booted recordVideo --type=mp4 &lt;PATH TO VIDEO FILE&gt;
 </code></pre>
-<p><img src="http://outiw4np3.bkt.clouddn.com/5734dc156e651dcfe0b6b11bad8cd335.jpg" alt=""></p>
+<figure data-type="image" tabindex="7"><img src="http://outiw4np3.bkt.clouddn.com/5734dc156e651dcfe0b6b11bad8cd335.jpg" alt=""></figure>
 <p>上传文件到模拟器中<br>
 <img src="http://outiw4np3.bkt.clouddn.com/e85146fe9468f795c4895c4883727d2e.jpg" alt=""></p>
 <p>打开url(所有苹果的URL计划列表请查阅<a href="https://developer.apple.com/library/content/featuredarticles/iPhoneURLScheme_Reference/Introduction/Introduction.html">文档</a>。)</p>
@@ -1766,161 +1821,6 @@ System Integrity Protection status: enabled.
 </code></pre>
 <p>参考阅读：<br>
 <a href="https://medium.com/flawless-app-stories/simulator-on-steroids-c12774ca6b">iOS Simulator on steroids: Tips &amp; Tricks</a></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[iOS11下的适配工作]]></title>
-        <id>https://tingke.github.io//post/ios11-xia-de-gua-pei-gong-zuo</id>
-        <link href="https://tingke.github.io//post/ios11-xia-de-gua-pei-gong-zuo">
-        </link>
-        <updated>2017-10-13T13:53:12.000Z</updated>
-        <summary type="html"><![CDATA[<blockquote>
-<p>今年的苹果，发布iOS 11的同时，也大胆的发布了异型屏iPhone X。独特的“刘海”造型又在手机样式方面独领风骚。但是这也为iOS开发工作增加了难度。</p>
-</blockquote>
-<p>iPhone X的屏幕尺寸相关变化</p>
-<ol>
-<li>高度增加了145pt，变成812pt.</li>
-<li>屏幕圆角显示，注意至少留10pt边距。</li>
-<li>状态栏高度由20pt变成44pt，留意这个距离就能避开“刘海”的尴尬，相应的导航栏以上变化64-&gt;88。</li>
-<li>底部工具栏需要为home indicator留出34pt边距。</li>
-<li>物理分辨率为1125px * 2436px，使用@3倍图</li>
-</ol>
-]]></summary>
-        <content type="html"><![CDATA[<blockquote>
-<p>今年的苹果，发布iOS 11的同时，也大胆的发布了异型屏iPhone X。独特的“刘海”造型又在手机样式方面独领风骚。但是这也为iOS开发工作增加了难度。</p>
-</blockquote>
-<p>iPhone X的屏幕尺寸相关变化</p>
-<ol>
-<li>高度增加了145pt，变成812pt.</li>
-<li>屏幕圆角显示，注意至少留10pt边距。</li>
-<li>状态栏高度由20pt变成44pt，留意这个距离就能避开“刘海”的尴尬，相应的导航栏以上变化64-&gt;88。</li>
-<li>底部工具栏需要为home indicator留出34pt边距。</li>
-<li>物理分辨率为1125px * 2436px，使用@3倍图</li>
-</ol>
-<!-- more -->
-<p>本次系统升级带来了以下内容：</p>
-<ol>
-<li>集成了搜索的大标题栏</li>
-<li>提倡在安全区域内布局</li>
-<li>导航栏的titleView支持自动布局</li>
-<li>废除了xxx，新增了xxx</li>
-<li>App中必须添加 1024 x 1024 的应用图标的图片</li>
-</ol>
-<h2 id="app启动图片适配">App启动图片适配</h2>
-<p>相信有一部分道友的APP在iPhone X上运行时并没有像想象中那样占满整个屏幕, 而是保持着原有的高度 在屏幕中心位置, 针对这个问题 目前经过实验得出可以通过以下方式使APP按照全屏模式运行:</p>
-<ol>
-<li>通过LaunchScreen.storyboard方式启动</li>
-<li>如果使用的是Assets中的LaunchImage, 在增加了iPhone X尺寸的图片配置后.</li>
-</ol>
-<p>LaunchScreen.storyboard方式不用多说, 这里说一下如何在LaunchImage中增加iPhone X尺寸的图片配置.</p>
-<p>准备一张尺寸:1125 * 2436的启动图片, 移动到LaunchImage的Finder目录中, 并在LaunchImage中的Contents.json文件中增加 (注意Json格式):</p>
-<pre><code class="language-json">{
-    &quot;extent&quot; : &quot;full-screen&quot;,
-    &quot;idiom&quot; : &quot;iphone&quot;,
-    &quot;subtype&quot; : &quot;2436h&quot;,
-    &quot;filename&quot; : &quot;图片名.png&quot;,
-    &quot;minimum-system-version&quot; : &quot;11.0&quot;,
-    &quot;orientation&quot; : &quot;portrait&quot;,
-    &quot;scale&quot; : &quot;3x&quot;
-}
-</code></pre>
-<p>iOS 11为UIView增加了两个新的属性safeAreaInsets和safeAreaLayoutGuide, 通过这两个属性我们可以获得安全区域的范围, 通过上图可以很清楚的看到安全区域的范围, 我们要做的是让那些不能被遮挡的内容和控件在安全区域范围内显示, 注意!这句话非常重要.</p>
-<ul>
-<li>safeAreaInsets 适用于手动计算.</li>
-<li>safeAreaLayoutGuide 适用于自动布局.</li>
-</ul>
-<h2 id="uinavigation">UINavigation</h2>
-<ol>
-<li>
-<p>大标题</p>
-<p>在UI navigation bar中新增了一个BOOL属性prefersLargeTitles,将该属性设置为ture，navigation bar就会在整个APP中显示大标题，如果想要在控制不同页面大标题的显示，可以通过设置当前页面的navigationItem的largeTitleDisplayMode属性；</p>
-<pre><code class="language-objc">if (@available(iOS 11.0, *)) {
-        self.navigationController.navigationBar.prefersLargeTitles = YES;
-}
-</code></pre>
-<p><img src="http://outiw4np3.bkt.clouddn.com/b4814514cb2f3e3b4ca3bd04b131dba6.jpg" alt=""></p>
-</li>
-<li>
-<p>titleView引入自动布局</p>
-<p>会导致titleView变形，只需要在自定义view中实现<code>intrinsicContentSize</code>方法</p>
-<pre><code class="language-objc">- (CGSize)intrinsicContentSize {
-    return UILayoutFittingExpandedSize;
-}
-</code></pre>
-</li>
-<li>
-<p>加入<code>searchController</code>属性</p>
-<p>把你的UISearchController赋值给navigationItem，就可以实现将UISearchController集成到Navigation。</p>
-<pre><code class="language-objc">if (@available(iOS 11.0, *)) {
-    self.navigationItem.searchController = self.searchController;
-    self.navigationItem.hidesSearchBarWhenScrolling = YES;
-}else{
-    self.searchController.searchBar.bounds = CGRectMake(0, 0, self.view.frame.size.width, 44);
-    self.tableView.tableHeaderView = self.searchController.searchBar;
-    [self.tableView setContentOffset:CGPointMake(0, 44)];
-}
-</code></pre>
-<p><img src="http://outiw4np3.bkt.clouddn.com/fab08ab5005d661bda069710de20b8c7.jpg" alt=""></p>
-</li>
-</ol>
-<h2 id="uitableview">UITableView</h2>
-<ol>
-<li>
-<p>在iOS 11中默认启用Self-Sizing</p>
-<p>这个应该是UITableView最大的改变。我们知道在iOS8引入Self-Sizing 之后，我们可以通过实现estimatedRowHeight相关的属性来展示动态的内容，实现了estimatedRowHeight属性后，得到的初始contenSize是个估算值，是通过estimatedRowHeight x cell的个数得到的，并不是最终的contenSize，tableView就不会一次性计算所有的cell的高度了，只会计算当前屏幕能够显示的cell个数再加上几个，滑动时，tableView不停地得到新的cell，更新自己的contenSize，在滑到最后的时候，会得到正确的contenSize。</p>
-<p>Self-Sizing在iOS11下是默认开启的，Headers, footers, and cells都默认开启Self-Sizing，所有estimated 高度默认值从iOS11之前的 0 改变为UITableViewAutomaticDimension。</p>
-<p>iOS11下不想使用Self-Sizing的话，可以通过以下方式关闭：（前言中提到的问题也是通过这种方式解决的）</p>
-<pre><code class="language-objc">self.tableView.estimatedRowHeight = 0;
-self.tableView.estimatedSectionHeaderHeight = 0;
-self.tableView.estimatedSectionFooterHeight = 0;
-</code></pre>
-</li>
-</ol>
-<h2 id="uiviewcontroller">UIViewController</h2>
-<ol>
-<li>
-<p><code>automaticallyAdjustsScrollViewInsets</code> &amp;&amp; <code>contentInsetAdjustmentBehavior</code></p>
-<blockquote>
-<p>在iOS 11之前，由于<code>UIViewController</code>的<code>automaticallyAdjustsScrollViewInsets = true</code>，在UI布局时，会出现界面中的第一个scrollView控件中的内容向下偏移64px。所以部分开发者会在开始UI布局时会将将<code>automaticallyAdjustsScrollViewInsets = false</code>。</p>
-</blockquote>
-<blockquote>
-<p>而在iOS 11直接废除了这个属性，而在<code>UIScrollView</code>中添加了<code>contentInsetAdjustmentBehavior</code>属性来计算<code>adjustedContentInset</code>的范围。<code>adjustContentInset</code>表示<code>contentView.frame.origin</code>偏移了<code>scrollview.frame.origin</code>多少；</p>
-</blockquote>
-<pre><code class="language-objc">/*
-如果scrollview在一个automaticallyAdjustsScrollViewContentInset = YES的controller上，
-并且这个Controller包含在一个navigation controller中，
-这种情况下会设置在top &amp; bottom上 adjustedContentInset = safeAreaInset + contentInset不管是否滚动。
-其他情况下与UIScrollViewContentInsetAdjustmentScrollableAxes相同
-*/ 
-UIScrollViewContentInsetAdjustmentAutomatic, 
-</code></pre>
-<pre><code class="language-objc">/*
-在可滚动方向上adjustedContentInset = safeAreaInset + contentInset，
-在不可滚动方向上adjustedContentInset = contentInset；
-依赖于scrollEnabled和alwaysBounceHorizontal / vertical = YES，scrollEnabled默认为yes，
-所以大多数情况下，计算方式还是adjustedContentInset = safeAreaInset + contentInset
-*/ 
-UIScrollViewContentInsetAdjustmentScrollableAxes, 
-</code></pre>
-<pre><code class="language-objc">/*
-不计算内边距,adjustedContentInset = contentInset
-*/ 
-UIScrollViewContentInsetAdjustmentNever, 
-</code></pre>
-<pre><code class="language-objc">/*
-根据safeAreaInsets 计算内边距,adjustedContentInset = safeAreaInset + contentInset
-*/ 
-UIScrollViewContentInsetAdjustmentAlways, 
-</code></pre>
-</li>
-</ol>
-<h1 id="iphone-x-在push时tabbar上移">iPhone X 在push时TabBar上移</h1>
-<h2 id="总结">总结</h2>
-<p>在iOS 11发布了不久后，APP适配iOS 11和iPhone X也是踩坑不少，把自己遇到过的坑记录下来，和大家一起分享。</p>
-<p>参考文章：</p>
-<p><a href="http://www.cocoachina.com/ios/20171011/20737.html">iOS11、iPhone X、Xcode9 适配指南</a></p>
-<p><a href="http://www.10tiao.com/html/330/201707/2653579210/1.html">你可能需要为你的 APP 适配 iOS 11</a></p>
-<p><a href="https://www.lee1994.com/guan-yu-iphone/">关于iPhone X 的适配</a></p>
 ]]></content>
     </entry>
 </feed>
