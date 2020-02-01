@@ -2,18 +2,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://tingke.github.io/</id>
     <title>好学习</title>
-    <updated>2020-02-01T03:17:35.595Z</updated>
+    <updated>2020-02-01T03:28:34.461Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://tingke.github.io/"/>
-    <link rel="self" href="https://tingke.github.io//atom.xml"/>
+    <link rel="self" href="https://tingke.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>https://tingke.github.io//images/avatar.png</logo>
-    <icon>https://tingke.github.io//favicon.ico</icon>
+    <logo>https://tingke.github.io/images/avatar.png</logo>
+    <icon>https://tingke.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 好学习</rights>
     <entry>
         <title type="html"><![CDATA[Flutter 安装与入门]]></title>
-        <id>https://tingke.github.io//post/flutter-an-zhuang-yu-ru-men</id>
-        <link href="https://tingke.github.io//post/flutter-an-zhuang-yu-ru-men">
+        <id>https://tingke.github.io/post/flutter-an-zhuang-yu-ru-men</id>
+        <link href="https://tingke.github.io/post/flutter-an-zhuang-yu-ru-men">
         </link>
         <updated>2019-09-01T00:49:08.000Z</updated>
         <content type="html"><![CDATA[<h1 id="flutter-入门">Flutter 入门</h1>
@@ -67,8 +67,8 @@ q 键：退出调试预览模式。
     </entry>
     <entry>
         <title type="html"><![CDATA[CSS 四大布局]]></title>
-        <id>https://tingke.github.io//post/css-si-da-bu-ju</id>
-        <link href="https://tingke.github.io//post/css-si-da-bu-ju">
+        <id>https://tingke.github.io/post/css-si-da-bu-ju</id>
+        <link href="https://tingke.github.io/post/css-si-da-bu-ju">
         </link>
         <updated>2019-07-08T13:47:22.000Z</updated>
         <content type="html"><![CDATA[<h1 id="css-四大布局">CSS 四大布局</h1>
@@ -85,8 +85,8 @@ q 键：退出调试预览模式。
 </li>
 <li>
 <p>block 类型的标签布局是每一个标签独占一行，而 inline-block 标签会一个挨着一个进行布局；<br>
-<img src="https://tingke.github.io//post-images/1562596159796.png" alt=""></p>
-<figure data-type="image" tabindex="1"><img src="https://tingke.github.io//post-images/1562596197614.png" alt=""></figure>
+<img src="https://tingke.github.io//post-images/1562596159796.png" alt="" loading="lazy"></p>
+<figure data-type="image" tabindex="1"><img src="https://tingke.github.io//post-images/1562596197614.png" alt="" loading="lazy"></figure>
 </li>
 </ol>
 <h2 id="2-定位">2. 定位</h2>
@@ -120,7 +120,7 @@ q 键：退出调试预览模式。
     top: 250px;
 }
 </code></pre>
-<figure data-type="image" tabindex="2"><img src="https://tingke.github.io//post-images/1562596209511.png" alt=""></figure>
+<figure data-type="image" tabindex="2"><img src="https://tingke.github.io//post-images/1562596209511.png" alt="" loading="lazy"></figure>
 <h2 id="3-flexbox">3. Flexbox</h2>
 <p>Flexbox 布局是通过 CSS 中的属性 display：flex 来控制的，布局时需要指定一个容器 flex container，然后把要布局的元素放到容器中，这些元素被称为 flex item</p>
 <p>Flexbox 会把整个布局按两根轴（主轴（main axis），与主轴交叉的轴（cross axis））来布局。最外层为容器，容器内部为 item。整个布局思路就是按照不同的轴对 item 进行布局。</p>
@@ -180,7 +180,7 @@ q 键：退出调试预览模式。
     background-color: yellow;
 }
 </code></pre>
-<figure data-type="image" tabindex="3"><img src="https://tingke.github.io//post-images/1562596231416.png" alt=""></figure>
+<figure data-type="image" tabindex="3"><img src="https://tingke.github.io//post-images/1562596231416.png" alt="" loading="lazy"></figure>
 <h2 id="4-grid">4. Grid</h2>
 <p>它将网页划分成一个个网格，可以任意组合不同的网格，做出各种各样的布局。</p>
 <p>Flex 布局是轴线布局，只能指定&quot;项目&quot;针对轴线的位置，可以看作是一维布局。Grid 布局则是将容器划分成&quot;行&quot;和&quot;列&quot;，产生单元格，然后指定&quot;项目所在&quot;的单元格，可以看作是二维布局。Grid 布局远比 Flex 布局强大。</p>
@@ -188,8 +188,8 @@ q 键：退出调试预览模式。
     </entry>
     <entry>
         <title type="html"><![CDATA[Code Review 机制和实施方案]]></title>
-        <id>https://tingke.github.io//post/code-review-ji-zhi-he-shi-shi-fang-an</id>
-        <link href="https://tingke.github.io//post/code-review-ji-zhi-he-shi-shi-fang-an">
+        <id>https://tingke.github.io/post/code-review-ji-zhi-he-shi-shi-fang-an</id>
+        <link href="https://tingke.github.io/post/code-review-ji-zhi-he-shi-shi-fang-an">
         </link>
         <updated>2019-06-25T14:33:06.000Z</updated>
         <summary type="html"><![CDATA[<h2 id="开展-review-的目的">开展 Review 的目的</h2>
@@ -313,8 +313,8 @@ q 键：退出调试预览模式。
     </entry>
     <entry>
         <title type="html"><![CDATA[FileMerge的基本使用]]></title>
-        <id>https://tingke.github.io//post/filemerge-de-ji-ben-shi-yong</id>
-        <link href="https://tingke.github.io//post/filemerge-de-ji-ben-shi-yong">
+        <id>https://tingke.github.io/post/filemerge-de-ji-ben-shi-yong</id>
+        <link href="https://tingke.github.io/post/filemerge-de-ji-ben-shi-yong">
         </link>
         <updated>2018-09-13T13:54:41.000Z</updated>
         <summary type="html"><![CDATA[<p>作为一个开放人员，比较代码和合并代码是常有的事，以前都是用Beyond Compare这软件来比较的，后面发现Xcode自带的FileMerge也挺好用的，还省的多下载一个软件。下面我将介绍下 XCode自带的FileMerge进行代码合并管理的使用。</p>
@@ -326,22 +326,22 @@ q 键：退出调试预览模式。
 <p>首先FileMerge，不仅仅只是支持Compare，还能很好的支持merge。而merge是我们管理代码的时候经常性遇到的基础需求。废话少说。下面展示下FileMerge怎么使用</p>
 <!-- more -->
 <p>FileMerge 在 XCode的安装目录可以找到。如下图路径</p>
-<figure data-type="image" tabindex="1"><img src="http://outiw4np3.bkt.clouddn.com/3edd23c52c074e1e0e87d2763db7f945.jpg" alt=""></figure>
+<figure data-type="image" tabindex="1"><img src="http://outiw4np3.bkt.clouddn.com/3edd23c52c074e1e0e87d2763db7f945.jpg" alt="" loading="lazy"></figure>
 <p>打开应用后界面如下图：<br>
-<img src="http://outiw4np3.bkt.clouddn.com/6374cf0895f1c5b0da7c5be1af19c138.jpg" alt=""></p>
+<img src="http://outiw4np3.bkt.clouddn.com/6374cf0895f1c5b0da7c5be1af19c138.jpg" alt="" loading="lazy"></p>
 <p>界面很简单，接下来就是设置Left ，Right。Left Right就是你要比较的项目的根目录。请记住你Left 和 RIght。这个在接下来的操作中非常重要。好了，点击 Compare 进入</p>
 <p>经过比较，灰色为完全相同的文件，黑色表示有不同之处的文件<br>
-<img src="http://outiw4np3.bkt.clouddn.com/cc7fd60fc0125f56722414ee1fe366a1.jpg" alt=""></p>
+<img src="http://outiw4np3.bkt.clouddn.com/cc7fd60fc0125f56722414ee1fe366a1.jpg" alt="" loading="lazy"></p>
 <p>使用Comparison打开文件<br>
-<img src="http://outiw4np3.bkt.clouddn.com/34c75426999338eb957f71cea52a17ba.jpg" alt=""><br>
-<img src="http://outiw4np3.bkt.clouddn.com/468790cb7817aa7da408aac59e6e8e0b.jpg" alt=""></p>
+<img src="http://outiw4np3.bkt.clouddn.com/34c75426999338eb957f71cea52a17ba.jpg" alt="" loading="lazy"><br>
+<img src="http://outiw4np3.bkt.clouddn.com/468790cb7817aa7da408aac59e6e8e0b.jpg" alt="" loading="lazy"></p>
 <p>FileMerge是需要等你处理了所有不同处的Actions 以后，在关闭这个界面，回到上一层的时候。看到View 选项下面有 Merge 选项。Combine Filles 其实就是相当于应用你保存的Actions并合并代码。</p>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[《图解HTTP》读书笔记]]></title>
-        <id>https://tingke.github.io//post/lesslesstu-jie-httpgreatergreater-du-shu-bi-ji</id>
-        <link href="https://tingke.github.io//post/lesslesstu-jie-httpgreatergreater-du-shu-bi-ji">
+        <id>https://tingke.github.io/post/lesslesstu-jie-httpgreatergreater-du-shu-bi-ji</id>
+        <link href="https://tingke.github.io/post/lesslesstu-jie-httpgreatergreater-du-shu-bi-ji">
         </link>
         <updated>2018-06-29T12:00:40.000Z</updated>
         <summary type="html"><![CDATA[<h2 id="tcpip-协议族分层">TCP/IP 协议族分层</h2>
@@ -368,7 +368,7 @@ q 键：退出调试预览模式。
 </li>
 </ol>
 <p>传输图解<br>
-<img src="http://outiw4np3.bkt.clouddn.com/15e41c7da0dd411dabdbbad1266da079.jpg" alt=""></p>
+<img src="http://outiw4np3.bkt.clouddn.com/15e41c7da0dd411dabdbbad1266da079.jpg" alt="" loading="lazy"></p>
 ]]></summary>
         <content type="html"><![CDATA[<h2 id="tcpip-协议族分层">TCP/IP 协议族分层</h2>
 <ol>
@@ -394,7 +394,7 @@ q 键：退出调试预览模式。
 </li>
 </ol>
 <p>传输图解<br>
-<img src="http://outiw4np3.bkt.clouddn.com/15e41c7da0dd411dabdbbad1266da079.jpg" alt=""></p>
+<img src="http://outiw4np3.bkt.clouddn.com/15e41c7da0dd411dabdbbad1266da079.jpg" alt="" loading="lazy"></p>
 <!-- more -->
 <h2 id="与-http-紧密相连的tcpip-协议族">与 HTTP 紧密相连的TCP/IP 协议族</h2>
 <h3 id="负责传输的-ip-协议">负责传输的 IP 协议</h3>
@@ -402,7 +402,7 @@ q 键：退出调试预览模式。
 <p>IP 地址指明了节点被分配到的地址，MAC 地址是指网卡所属的固定地址。IP 地址可以和 MAC 地址进行配对。IP 地址可变换，但 MAC 地址基本上不会更改。”</p>
 <h3 id="确保可靠性的-tcp-协议">确保可靠性的 TCP 协议</h3>
 <p>“为了准确无误地将数据送达目标处，TCP 协议采用了<strong>三次握手</strong>（three-way handshaking）策略。用 TCP 协议把数据包送出去后，TCP 不会对传送后的情况置之不理，它一定会向对方确认是否成功送达。握手过程中使用了 TCP 的标志（flag） —— SYN（synchronize） 和 ACK（acknowledgement）”<br>
-<img src="http://outiw4np3.bkt.clouddn.com/757742571edfeb7cf1146efeed251d2f.jpg" alt=""></p>
+<img src="http://outiw4np3.bkt.clouddn.com/757742571edfeb7cf1146efeed251d2f.jpg" alt="" loading="lazy"></p>
 <p>TCP 为什么是三次握手，不是两次或四次呢？</p>
 <pre><code>三次握手：
 “喂，你听得到吗？”
@@ -432,27 +432,27 @@ q 键：退出调试预览模式。
 <p>“DNS 协议提供通过域名查找 IP 地址，或逆向从 IP 地址反查域名的服务”</p>
 </blockquote>
 <h3 id="http-与-dnstcpip-关系图">HTTP 与 DNS/TCP/IP 关系图</h3>
-<figure data-type="image" tabindex="1"><img src="http://outiw4np3.bkt.clouddn.com/8cfb742e225135a59dde1c57682acd95.jpg" alt=""></figure>
+<figure data-type="image" tabindex="1"><img src="http://outiw4np3.bkt.clouddn.com/8cfb742e225135a59dde1c57682acd95.jpg" alt="" loading="lazy"></figure>
 <h3 id="uri-和-url">URI 和 URL</h3>
 <p>URI:（Uniform Resource Identifier，统一资源标识符）<br>
 URL：(Uniform Resource Locator，统一资源定位符）</p>
 <p>URI基本格式：<br>
-<img src="http://outiw4np3.bkt.clouddn.com/bb1889fcf7a8d59ac92c161190334370.jpg" alt=""></p>
+<img src="http://outiw4np3.bkt.clouddn.com/bb1889fcf7a8d59ac92c161190334370.jpg" alt="" loading="lazy"></p>
 <p>协议方案：获取访问资源时要指定协议类型，如ftp、https等<br>
 登录信息：指定用户名和密码作为从服务器端获取资源时必要的登录信息（身份认证）<font color='red'>可选</font><br>
 片段标识：使用片段标识符通常可标记出已获取资源中的子资源（文档内的某个位置）</p>
 <h2 id="http-协议">HTTP 协议</h2>
 <p>一个 HTTP 协议必定有两端，请求访问资源的一端为客户端，提供资源响应的一端为服务器端，并且 HTTP 协议能明确区分哪是客户端哪是服务器端。</p>
 <p>下面是从客户端发送给某服务器的请求报文<br>
-<img src="http://outiw4np3.bkt.clouddn.com/2baf0cb2cca193520fbb5bb85de31ab8.jpg" alt=""></p>
+<img src="http://outiw4np3.bkt.clouddn.com/2baf0cb2cca193520fbb5bb85de31ab8.jpg" alt="" loading="lazy"></p>
 <p><code>GET</code> 表示访问服务器的类型，俗称“方法”<br>
 <code>//feed/v1/feed/get_attention_list?...uid=</code> 指明了访问的资源对象，也叫做“URI”<br>
 <code>HTTP/1.1</code> 及 HTTP 的版本号，用来提示客户端使用的http协议功能</p>
-<figure data-type="image" tabindex="2"><img src="http://outiw4np3.bkt.clouddn.com/297363515632a28a51650e64c6a68d56.jpg" alt=""></figure>
+<figure data-type="image" tabindex="2"><img src="http://outiw4np3.bkt.clouddn.com/297363515632a28a51650e64c6a68d56.jpg" alt="" loading="lazy"></figure>
 <p><strong>请求报文</strong>是由请求方法、请求 URI、协议版本、可选的请求首部字段和内容实体构成的。</p>
-<figure data-type="image" tabindex="3"><img src="http://outiw4np3.bkt.clouddn.com/68e6c6b31aadffeada3e2b572230a0c1.jpg" alt=""></figure>
+<figure data-type="image" tabindex="3"><img src="http://outiw4np3.bkt.clouddn.com/68e6c6b31aadffeada3e2b572230a0c1.jpg" alt="" loading="lazy"></figure>
 <p><strong>响应报文</strong>基本上由协议版本、状态码（表示请求成功或失败的数字代码）、用以解释状态码的原因短语、可选的响应首部字段以及实体主体构成</p>
-<figure data-type="image" tabindex="4"><img src="http://outiw4np3.bkt.clouddn.com/54322dbb9d6225627c4c19a9fc48b1dd.jpg" alt=""></figure>
+<figure data-type="image" tabindex="4"><img src="http://outiw4np3.bkt.clouddn.com/54322dbb9d6225627c4c19a9fc48b1dd.jpg" alt="" loading="lazy"></figure>
 <blockquote>
 <p>“HTTP 是一种不保存状态，即无状态（stateless）协议。HTTP 协议自身不对请求和响应之间的通信状态进行保存。也就是说在 HTTP 这个级别，协议对于发送过的请求或响应都不做持久化处理”</p>
 <p>“HTTP/1.1 虽然是无状态协议，但为了实现期望的保持状态功能，于是引入了 Cookie 技术。有了 Cookie 再用 HTTP 协议通信，就可以管理状态了”</p>
@@ -506,11 +506,11 @@ URL：(Uniform Resource Locator，统一资源定位符）</p>
 <p>“持久连接使得多数请求以管线化（pipelining）方式发送成为可能。从前发送请求后需等待并收到响应，才能发送下一个请求。管线化技术出现后，不用等待响应亦可直接发送下一个请求”</p>
 <h3 id="cookie-的状态管理">Cookie 的状态管理</h3>
 <p>“Cookie 技术通过在请求和响应报文中写入 Cookie 信息来控制客户端的状态”</p>
-<figure data-type="image" tabindex="5"><img src="http://outiw4np3.bkt.clouddn.com/cb588f16318cb814154c878fcbe44a0c.jpg" alt=""></figure>
+<figure data-type="image" tabindex="5"><img src="http://outiw4np3.bkt.clouddn.com/cb588f16318cb814154c878fcbe44a0c.jpg" alt="" loading="lazy"></figure>
 <h2 id="http-报文内的-http-信息">HTTP 报文内的 HTTP 信息</h2>
 <p>用于 HTTP 协议交互的信息被称为 HTTP 报文。</p>
 <h4 id="http-报文结构">HTTP 报文结构</h4>
-<figure data-type="image" tabindex="6"><img src="http://outiw4np3.bkt.clouddn.com/7ce8b40311ecd74a53337a4e80fb762f.jpg" alt=""></figure>
+<figure data-type="image" tabindex="6"><img src="http://outiw4np3.bkt.clouddn.com/7ce8b40311ecd74a53337a4e80fb762f.jpg" alt="" loading="lazy"></figure>
 <h4 id="http-首部字段">HTTP 首部字段</h4>
 <ol>
 <li>
@@ -710,8 +710,8 @@ URL：(Uniform Resource Locator，统一资源定位符）</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[被苹果弃用的PCH]]></title>
-        <id>https://tingke.github.io//post/bei-ping-guo-qi-yong-de-pch</id>
-        <link href="https://tingke.github.io//post/bei-ping-guo-qi-yong-de-pch">
+        <id>https://tingke.github.io/post/bei-ping-guo-qi-yong-de-pch</id>
+        <link href="https://tingke.github.io/post/bei-ping-guo-qi-yong-de-pch">
         </link>
         <updated>2018-05-29T12:00:03.000Z</updated>
         <summary type="html"><![CDATA[<h4 id="pch是什么">PCH是什么？</h4>
@@ -741,8 +741,8 @@ URL：(Uniform Resource Locator，统一资源定位符）</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[Vue.js入门]]></title>
-        <id>https://tingke.github.io//post/vuejs-ru-men</id>
-        <link href="https://tingke.github.io//post/vuejs-ru-men">
+        <id>https://tingke.github.io/post/vuejs-ru-men</id>
+        <link href="https://tingke.github.io/post/vuejs-ru-men">
         </link>
         <updated>2018-03-23T07:00:14.000Z</updated>
         <summary type="html"><![CDATA[<h2 id="vuejs是什么">Vue.js是什么</h2>
@@ -888,7 +888,7 @@ var app =new Vue({
 <p><code>updated</code>:由于数据更改导致的虚拟 DOM 重新渲染和打补丁，在这之后会调用该钩子</p>
 <p><code>beforeDestroy</code>:实例销毁之前调用。在这一步，实例仍然完全可用</p>
 <p><code>destroyed</code>:Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。</p>
-<figure data-type="image" tabindex="1"><img src="https://cn.vuejs.org/images/lifecycle.png" alt=""></figure>
+<figure data-type="image" tabindex="1"><img src="https://cn.vuejs.org/images/lifecycle.png" alt="" loading="lazy"></figure>
 <h2 id="指令">指令</h2>
 <h3 id="基本介绍">基本介绍</h3>
 <ol>
@@ -986,7 +986,7 @@ var app =new Vue({
 <ol>
 <li>
 <p>什么是字符串模板？什么是HTML模板？</p>
-<figure data-type="image" tabindex="2"><img src="http://outiw4np3.bkt.clouddn.com/94b524f73f9c0afd8bb88bf1b14c0d25.jpg" alt="123"></figure>
+<figure data-type="image" tabindex="2"><img src="http://outiw4np3.bkt.clouddn.com/94b524f73f9c0afd8bb88bf1b14c0d25.jpg" alt="123" loading="lazy"></figure>
 <blockquote>
 <p>你写在html中的 就是非字符串模板。你写在js中的 template:&quot;&quot;,这个就是字符串 模板</p>
 </blockquote>
@@ -996,8 +996,8 @@ var app =new Vue({
     </entry>
     <entry>
         <title type="html"><![CDATA[iOS打包静态库SOP]]></title>
-        <id>https://tingke.github.io//post/ios-da-bao-jing-tai-ku-sop</id>
-        <link href="https://tingke.github.io//post/ios-da-bao-jing-tai-ku-sop">
+        <id>https://tingke.github.io/post/ios-da-bao-jing-tai-ku-sop</id>
+        <link href="https://tingke.github.io/post/ios-da-bao-jing-tai-ku-sop">
         </link>
         <updated>2018-02-20T13:50:49.000Z</updated>
         <summary type="html"><![CDATA[<p>今天，领导要求将App中网络请求的核心代码打包成静态库。故上网研究了一下静态库打包的相关知识，边看边试的打包成功了。现在在这里总结下：</p>
@@ -1033,18 +1033,18 @@ var app =new Vue({
 动态库链接时不复制，程序运行时由系统动态加载到内存，供程序调用。而且系统只加载一次，多个程序共用，节省内存。</p>
 <h2 id="a文件静态库打包"><code>.a</code>文件静态库打包</h2>
 <p><strong>步骤一、新建一个新工程或在老项目中新建一个新Target，选择<code>Cocoa Touch Static Library</code></strong><br>
-<img src="http://outiw4np3.bkt.clouddn.com/7f52d89fead89117d921568bb87141f9.jpg" alt=""></p>
+<img src="http://outiw4np3.bkt.clouddn.com/7f52d89fead89117d921568bb87141f9.jpg" alt="" loading="lazy"></p>
 <p><strong>步骤二、修改静态库的配置</strong></p>
 <p><code>buildSeting -&gt; Build Active Architecture Only</code>设为NO，使编译后的库支持所有架构。</p>
-<figure data-type="image" tabindex="1"><img src="http://outiw4np3.bkt.clouddn.com/66345bad9034e95d979b7f8c910d39d9.jpg" alt=""></figure>
+<figure data-type="image" tabindex="1"><img src="http://outiw4np3.bkt.clouddn.com/66345bad9034e95d979b7f8c910d39d9.jpg" alt="" loading="lazy"></figure>
 <p><code>buildSeting -&gt; iOS Deployment Target</code>设置静态库支持的iOS版本<br>
-<img src="http://outiw4np3.bkt.clouddn.com/0c5ecacd2a60f359b1d69580ff2c80de.jpg" alt=""></p>
+<img src="http://outiw4np3.bkt.clouddn.com/0c5ecacd2a60f359b1d69580ff2c80de.jpg" alt="" loading="lazy"></p>
 <p><strong>步骤三、新建或拖入需打包的内容</strong></p>
-<figure data-type="image" tabindex="2"><img src="http://outiw4np3.bkt.clouddn.com/015550852490ac499d17d8d6ba4ca7de.jpg" alt=""></figure>
+<figure data-type="image" tabindex="2"><img src="http://outiw4np3.bkt.clouddn.com/015550852490ac499d17d8d6ba4ca7de.jpg" alt="" loading="lazy"></figure>
 <p><strong>步骤四、设置公开.h文件</strong><br>
-<img src="http://outiw4np3.bkt.clouddn.com/6d7cec281fa3f6cf0fa658f75e3e9c6a.jpg" alt=""></p>
+<img src="http://outiw4np3.bkt.clouddn.com/6d7cec281fa3f6cf0fa658f75e3e9c6a.jpg" alt="" loading="lazy"></p>
 <p><strong>步骤五、选中本Target,<code>Command+B</code>编译（一般编译两次，模拟器的Debug状态和真机的Release状态）。</strong></p>
-<figure data-type="image" tabindex="3"><img src="http://outiw4np3.bkt.clouddn.com/0a2bd0f7478a9d3830df90c3875dff54.jpg" alt=""></figure>
+<figure data-type="image" tabindex="3"><img src="http://outiw4np3.bkt.clouddn.com/0a2bd0f7478a9d3830df90c3875dff54.jpg" alt="" loading="lazy"></figure>
 <p><code>Products</code>中的libKPPW变黑表示编译成功，右键<code>Show in Finder</code>打开静态库路径</p>
 <p><strong>步骤六、打开终端，输入以下命令合并模拟器和真机的静态库</strong></p>
 <pre><code>lipo -create 真机库的路径 模拟器库的路径 -output 合并后新库的路径
@@ -1054,23 +1054,23 @@ var app =new Vue({
 <ol>
 <li>
 <p>选择 framework</p>
-<figure data-type="image" tabindex="4"><img src="http://mmbiz.qpic.cn/mmbiz/foPACGrddJ0HsbypCB0TDBkUaI3CWphvA8ZWV7VVuBS74cicJkI0AXkdTe423iciaxiask4ficqE5p4OnkR30EqQSSA/640" alt=""></figure>
+<figure data-type="image" tabindex="4"><img src="http://mmbiz.qpic.cn/mmbiz/foPACGrddJ0HsbypCB0TDBkUaI3CWphvA8ZWV7VVuBS74cicJkI0AXkdTe423iciaxiask4ficqE5p4OnkR30EqQSSA/640" alt="" loading="lazy"></figure>
 </li>
 <li>
 <p>编译时默认制作成动态库，要在下面选择</p>
-<figure data-type="image" tabindex="5"><img src="http://mmbiz.qpic.cn/mmbiz/foPACGrddJ0HsbypCB0TDBkUaI3CWphvt8icFAhSH6XwuNquYfOTu6ofAEe1e9dvFJyjEFXphZYYt8vokIuByRw/640" alt=""></figure>
+<figure data-type="image" tabindex="5"><img src="http://mmbiz.qpic.cn/mmbiz/foPACGrddJ0HsbypCB0TDBkUaI3CWphvt8icFAhSH6XwuNquYfOTu6ofAEe1e9dvFJyjEFXphZYYt8vokIuByRw/640" alt="" loading="lazy"></figure>
 </li>
 <li>
 <p>合并静态库的时候，要选择 <code>.framework</code> 文件里的 <code>libstaticclib</code> 文件</p>
-<figure data-type="image" tabindex="6"><img src="http://mmbiz.qpic.cn/mmbiz/foPACGrddJ0HsbypCB0TDBkUaI3CWphvI13fTK8hhjSgMXjdHvwTvUk57C0MWPoyicjerjfpJyrmuMPbptNWH2g/640" alt=""></figure>
+<figure data-type="image" tabindex="6"><img src="http://mmbiz.qpic.cn/mmbiz/foPACGrddJ0HsbypCB0TDBkUaI3CWphvI13fTK8hhjSgMXjdHvwTvUk57C0MWPoyicjerjfpJyrmuMPbptNWH2g/640" alt="" loading="lazy"></figure>
 </li>
 </ol>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[编写高质量iOS与OS X代码的52个有效方法]]></title>
-        <id>https://tingke.github.io//post/bian-xie-gao-zhi-liang-ios-yu-os-x-dai-ma-de-52-ge-you-xiao-fang-fa</id>
-        <link href="https://tingke.github.io//post/bian-xie-gao-zhi-liang-ios-yu-os-x-dai-ma-de-52-ge-you-xiao-fang-fa">
+        <id>https://tingke.github.io/post/bian-xie-gao-zhi-liang-ios-yu-os-x-dai-ma-de-52-ge-you-xiao-fang-fa</id>
+        <link href="https://tingke.github.io/post/bian-xie-gao-zhi-liang-ios-yu-os-x-dai-ma-de-52-ge-you-xiao-fang-fa">
         </link>
         <updated>2017-12-14T07:00:00.000Z</updated>
         <summary type="html"><![CDATA[<h2 id="第一章-熟悉objective-c">第一章 熟悉Objective-C</h2>
@@ -1182,7 +1182,7 @@ obj-&gt;perform(parameter1,parameter2);
 </li>
 </ol>
 <h3 id="第12条理解消息转发机制">第12条：理解消息转发机制</h3>
-<figure data-type="image" tabindex="1"><img src="http://upload-images.jianshu.io/upload_images/1818095-e7a25f32f80550ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></figure>
+<figure data-type="image" tabindex="1"><img src="http://upload-images.jianshu.io/upload_images/1818095-e7a25f32f80550ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy"></figure>
 <h3 id="第13条用方法调配技术调试黑盒方法">第13条：用“方法调配技术”调试“黑盒方法”</h3>
 <ol>
 <li><strong>方法调配</strong>又称为**“method swizzling”**，使用另一份实现来替换原有的方法实现。</li>
@@ -1440,7 +1440,7 @@ for (NSStirng *name in people) {
 <ol>
 <li>
 <p>如何开启僵尸对象</p>
-<figure data-type="image" tabindex="2"><img src="http://upload-images.jianshu.io/upload_images/1457495-586f50d111cab802.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></figure>
+<figure data-type="image" tabindex="2"><img src="http://upload-images.jianshu.io/upload_images/1457495-586f50d111cab802.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="" loading="lazy"></figure>
 </li>
 <li>
 <p>什么是僵尸对象</p>
@@ -1702,52 +1702,52 @@ __weak typeof(self) weakself = self;
     </entry>
     <entry>
         <title type="html"><![CDATA[高效的使用Xcode 9]]></title>
-        <id>https://tingke.github.io//post/gao-xiao-de-shi-yong-xcode-9</id>
-        <link href="https://tingke.github.io//post/gao-xiao-de-shi-yong-xcode-9">
+        <id>https://tingke.github.io/post/gao-xiao-de-shi-yong-xcode-9</id>
+        <link href="https://tingke.github.io/post/gao-xiao-de-shi-yong-xcode-9">
         </link>
         <updated>2017-11-01T08:56:28.000Z</updated>
         <summary type="html"><![CDATA[<p>随着iOS 11的发布，Xcode版本也升级到了9。那么这个版本的Xcode又有哪些变化呢？</p>
 <h2 id="1-跳转方法">1. 跳转方法</h2>
 <p>以前按住Command键，单击任何方法名都可以跳转到方法声明处或者苹果文档中。但是现在却弹出个弹框，如图</p>
-<figure data-type="image" tabindex="1"><img src="http://outiw4np3.bkt.clouddn.com/136bddeb50e67439fd2425a1b5ec88ce.jpg" alt=""></figure>
+<figure data-type="image" tabindex="1"><img src="http://outiw4np3.bkt.clouddn.com/136bddeb50e67439fd2425a1b5ec88ce.jpg" alt="" loading="lazy"></figure>
 <p>此时却Command+Shift+左键才能跳转，才麻烦了。我们只需要在设置中这样就能设置回我们熟悉操作：</p>
-<figure data-type="image" tabindex="2"><img src="http://api.cocoachina.com/uploads//20170922/1506047607578005.png" alt=""></figure>
+<figure data-type="image" tabindex="2"><img src="http://api.cocoachina.com/uploads//20170922/1506047607578005.png" alt="" loading="lazy"></figure>
 ]]></summary>
         <content type="html"><![CDATA[<p>随着iOS 11的发布，Xcode版本也升级到了9。那么这个版本的Xcode又有哪些变化呢？</p>
 <h2 id="1-跳转方法">1. 跳转方法</h2>
 <p>以前按住Command键，单击任何方法名都可以跳转到方法声明处或者苹果文档中。但是现在却弹出个弹框，如图</p>
-<figure data-type="image" tabindex="1"><img src="http://outiw4np3.bkt.clouddn.com/136bddeb50e67439fd2425a1b5ec88ce.jpg" alt=""></figure>
+<figure data-type="image" tabindex="1"><img src="http://outiw4np3.bkt.clouddn.com/136bddeb50e67439fd2425a1b5ec88ce.jpg" alt="" loading="lazy"></figure>
 <p>此时却Command+Shift+左键才能跳转，才麻烦了。我们只需要在设置中这样就能设置回我们熟悉操作：</p>
-<figure data-type="image" tabindex="2"><img src="http://api.cocoachina.com/uploads//20170922/1506047607578005.png" alt=""></figure>
+<figure data-type="image" tabindex="2"><img src="http://api.cocoachina.com/uploads//20170922/1506047607578005.png" alt="" loading="lazy"></figure>
 <!-- more -->
 <h2 id="2-折叠代码">2. 折叠代码</h2>
 <p>Command+Option+左右箭头  = 折叠或打开代码块</p>
 <h2 id="3-重构相关">3. 重构相关</h2>
 <p>对一个方法或者变量的重命名,在方法上CMD+单击,出现的菜单,选择rename<br>
-<img src="http://api.cocoachina.com/uploads//20170922/1506048006956030.png" alt=""></p>
+<img src="http://api.cocoachina.com/uploads//20170922/1506048006956030.png" alt="" loading="lazy"></p>
 <h2 id="4-folder和group的同步性">4. Folder和Group的同步性</h2>
 <p>之前,我们在XCode中,更改Folder的名字,在FInder中工程对应的文件夹的名字并不会同步的改变,这会造成我们重命名文件夹变得非常不方便,往往要先在XCode中移除,然后在Finder中重命名,再添加回Xcode</p>
 <p>现在 在Xcode9中重名命Folder,Finder中的也同步的改变了</p>
 <p>我们之前建议一个虚拟的group,并不会在对应的文件夹中建立真实的目录,当然,这可能是你需要的,也可能是你不需要的功能.在9中,默认行为改变了.变成了会建立对应的真实文件夹.如果还想像之前那样只是建立虚拟的group,需要选择New Group without Folder<br>
-<img src="http://api.cocoachina.com/uploads//20170922/1506049901602588.png" alt=""></p>
+<img src="http://api.cocoachina.com/uploads//20170922/1506049901602588.png" alt="" loading="lazy"></p>
 <p>你可能你会担心,区分不了这个group到底是虚拟的,还是实际的</p>
 <p>放心,苹果给出了标识来区分的,虚拟的左下角有个小的三角形<br>
-<img src="http://api.cocoachina.com/uploads//20170922/1506049933727526.png" alt=""></p>
+<img src="http://api.cocoachina.com/uploads//20170922/1506049933727526.png" alt="" loading="lazy"></p>
 <h2 id="5-runtime问题检测">5. runtime问题检测</h2>
 <p>在8中,已经包含了Address Scanitizer和Thread Scanitizer,在Xcode9中,又新增了 Undefiner Behavior Scanitizer,它可以实时的检测一系列的问题.不过我们更能明显感受到的是Main Thread Checker,它可以在运行时确保你没有把UI更新 代码写在了非主线程中</p>
 <p>例如,代码中<br>
-<img src="http://api.cocoachina.com/uploads//20170922/1506048625225251.png" alt=""></p>
+<img src="http://api.cocoachina.com/uploads//20170922/1506048625225251.png" alt="" loading="lazy"></p>
 <p>可见还是很强大的,虽然我们没有Fabric的源码,但是其内部调用了[UIApplicationsharedApplication].statusBarOrientation],还是被检测到了</p>
 <p>当然了,如果你想关掉它,可以在 scheme editor中操作<br>
-<img src="http://api.cocoachina.com/uploads//20170922/1506048660434469.png" alt=""></p>
+<img src="http://api.cocoachina.com/uploads//20170922/1506048660434469.png" alt="" loading="lazy"></p>
 <h2 id="6-模拟器可以多开了并且模拟器可以登录">6. 模拟器可以多开了,并且,模拟器可以登录</h2>
-<figure data-type="image" tabindex="3"><img src="http://api.cocoachina.com/uploads//20170922/1506049353869658.png" alt=""></figure>
+<figure data-type="image" tabindex="3"><img src="http://api.cocoachina.com/uploads//20170922/1506049353869658.png" alt="" loading="lazy"></figure>
 <p>模拟器的外观样式也回归了,直接是iPhone的外观了,以前可能是因为模拟器不能任意调整大小,所以才没外观的吧</p>
 <p>当然了,你可以去掉外观皮肤. 在模拟器的Window show Device Bezels,去掉选项就和以前一样了<br>
-<img src="http://api.cocoachina.com/uploads//20170922/1506049444615552.png" alt=""></p>
+<img src="http://api.cocoachina.com/uploads//20170922/1506049444615552.png" alt="" loading="lazy"></p>
 <h2 id="7-无线开发">7. 无线开发</h2>
 <p>这个只支持ios11的机器,很简单,只要在Device那打开支持就行.<br>
-<img src="http://outiw4np3.bkt.clouddn.com/c7036aafad24dc729374d88f5b96e637.jpg" alt=""></p>
+<img src="http://outiw4np3.bkt.clouddn.com/c7036aafad24dc729374d88f5b96e637.jpg" alt="" loading="lazy"></p>
 <h2 id="8-调整字体">8. 调整字体</h2>
 <p>cmd +/- 可以用来调整编辑器的字体大小了</p>
 <h2 id="9-关于警告">9. 关于警告</h2>
@@ -1772,18 +1772,18 @@ typedefvoid (^UpdateSwichBtnBlock)();
 <li>
 <p>彻底的暂时解决所有这种警告的方式</p>
 <p>在工程的设置中</p>
-<figure data-type="image" tabindex="4"><img src="http://api.cocoachina.com/uploads//20170922/1506047796141945.png" alt=""></figure>
+<figure data-type="image" tabindex="4"><img src="http://api.cocoachina.com/uploads//20170922/1506047796141945.png" alt="" loading="lazy"></figure>
 <p>设置为NO,则这些警告就消失了</p>
 <p>不过这不是一种好习惯,只是暂时性的不让提示这种类型的警告而已</p>
 </li>
 </ol>
 <h2 id="10-crash可以直接在本机上看到了">10. crash可以直接在本机上看到了</h2>
-<figure data-type="image" tabindex="5"><img src="http://api.cocoachina.com/uploads//20170922/1506048237529869.png" alt=""></figure>
+<figure data-type="image" tabindex="5"><img src="http://api.cocoachina.com/uploads//20170922/1506048237529869.png" alt="" loading="lazy"></figure>
 <h2 id="11-xcode-在全屏模式下使用-simulator">11. Xcode 在全屏模式下使用 Simulator</h2>
 <p>如果你用的是 13 寸的电脑，那么 Xcode 的全屏模式你应该早已习惯，其实即使是配有显示器，我还是习惯在 Xcode 的全屏模式下开发😎。很可惜的是不能在 Xcode 的全屏模式下使用 Simulator, 自 Xcode 9b3 以后，这个问题便不存在了：</p>
-<figure data-type="image" tabindex="6"><img src="http://cc.cocimg.com/api/uploads//20180125/1516864278298406.gif" alt=""></figure>
+<figure data-type="image" tabindex="6"><img src="http://cc.cocimg.com/api/uploads//20180125/1516864278298406.gif" alt="" loading="lazy"></figure>
 <p>这个功能并不是对所有人默认开放的，如果不幸你的 Xcode 没有默认开启这个功能也不要灰心，我们可以通过打开 Apple Internal menu 来启用这个功能，通过 Apple Internal menu 你能挖掘出 Simulator 的更多新特性。那么问题来了，怎么开启 Apple Internal menu 呢？首先，在更目录里创建 AppleInternal 文件夹，然后重启 Simulator:<br>
-<img src="http://cc.cocimg.com/api/uploads//20180125/1516864313510848.png" alt=""></p>
+<img src="http://cc.cocimg.com/api/uploads//20180125/1516864313510848.png" alt="" loading="lazy"></p>
 <pre><code>cd ~/ 
 sudo mkdir /AppleInternal
 </code></pre>
@@ -1813,9 +1813,9 @@ System Integrity Protection status: enabled.
 <p>使用命令行，在录制当前模拟器的屏幕</p>
 <pre><code>xcrun simctl io booted recordVideo --type=mp4 &lt;PATH TO VIDEO FILE&gt;
 </code></pre>
-<figure data-type="image" tabindex="7"><img src="http://outiw4np3.bkt.clouddn.com/5734dc156e651dcfe0b6b11bad8cd335.jpg" alt=""></figure>
+<figure data-type="image" tabindex="7"><img src="http://outiw4np3.bkt.clouddn.com/5734dc156e651dcfe0b6b11bad8cd335.jpg" alt="" loading="lazy"></figure>
 <p>上传文件到模拟器中<br>
-<img src="http://outiw4np3.bkt.clouddn.com/e85146fe9468f795c4895c4883727d2e.jpg" alt=""></p>
+<img src="http://outiw4np3.bkt.clouddn.com/e85146fe9468f795c4895c4883727d2e.jpg" alt="" loading="lazy"></p>
 <p>打开url(所有苹果的URL计划列表请查阅<a href="https://developer.apple.com/library/content/featuredarticles/iPhoneURLScheme_Reference/Introduction/Introduction.html">文档</a>。)</p>
 <pre><code>xcrun simctl openurl booted &lt;URL&gt;
 </code></pre>
