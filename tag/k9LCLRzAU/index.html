@@ -1,203 +1,202 @@
+<!DOCTYPE html>
 <html>
   <head>
-  <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" >
+
 <title>🍎iOS | 好学习</title>
-<link rel="shortcut icon" href="https://tingke.github.io//favicon.ico?v=1583248136896">
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://tingke.github.io//favicon.ico?v=1585011434288">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://tingke.github.io//styles/main.css">
 
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142389147-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-142389147-1');
-</script>
 
 
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://tingke.github.io/">
-  <img class="avatar" src="https://tingke.github.io//images/avatar.png?v=1583248136896" alt="">
-  </a>
-  <h1 class="site-title">
-    好学习
-  </h1>
-  <p class="site-description">
-    温故而知新
-  </p>
-  <div class="menu-container">
-    
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://tingke.github.io/">
+        <img src="https://tingke.github.io//images/avatar.png?v=1585011434288" class="site-logo">
+        <h1 class="site-title">好学习</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
       
-        <a href="/" class="menu">
-          首页
-        </a>
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
       
-    
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
       
-        <a href="/archives" class="menu">
-          归档
-        </a>
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
       
-    
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
       
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
+    </div>
   </div>
-  <div class="social-container">
-    
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
       
-    
+        
       
-    
+        
       
-    
+        
       
-    
+        
       
-    
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> Copyright © 2019 | <a class="rss" href="https://tingke.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
   </div>
 </div>
 
-        <div class="current-tag-container">
-            <h2 class="title">
-                标签：#🍎iOS
-            </h2> 
-        </div>
-        <div class="post-container">
-  
-    <article class="post">
-      <a href="https://tingke.github.io/post/filemerge-de-ji-ben-shi-yong">
-        <h2 class="post-title">FileMerge的基本使用</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2018-09-13 ·
-        </time>
-        
-          <a href="https://tingke.github.io/tag/k9LCLRzAU" class="post-tag">
-            # 🍎iOS
-          </a>
-        
-      </div>
-      
-      <div class="post-abstract">
-        <p>作为一个开放人员，比较代码和合并代码是常有的事，以前都是用Beyond Compare这软件来比较的，后面发现Xcode自带的FileMerge也挺好用的，还省的多下载一个软件。下面我将介绍下 XCode自带的FileMerge进行代码合并管理的使用。</p>
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <h2 class="current-tag">标签: 🍎iOS</h2>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://tingke.github.io/post/filemerge-de-ji-ben-shi-yong">
+                  <h2 class="post-title">FileMerge的基本使用</h2>
+                </a>
+                <div class="post-date">
+                  2018-09-13
+                </div>
+                <div class="post-abstract">
+                  <p>作为一个开放人员，比较代码和合并代码是常有的事，以前都是用Beyond Compare这软件来比较的，后面发现Xcode自带的FileMerge也挺好用的，还省的多下载一个软件。下面我将介绍下 XCode自带的FileMerge进行代码合并管理的使用。</p>
 <p>首先。FileMerge是XCode 4.x 自带的一个管理代码合并的工具，在XCode中如果提交svn 或者 git的时候，在展示diff的时候，其实就用到了这个工具的部分功能。</p>
 <p>首先FileMerge，不仅仅只是支持Compare，还能很好的支持merge。而merge是我们管理代码的时候经常性遇到的基础需求。废话少说。下面展示下FileMerge怎么使用</p>
 
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://tingke.github.io/post/bei-ping-guo-qi-yong-de-pch">
-        <h2 class="post-title">被苹果弃用的PCH</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2018-05-29 ·
-        </time>
-        
-          <a href="https://tingke.github.io/tag/k9LCLRzAU" class="post-tag">
-            # 🍎iOS
-          </a>
-        
-      </div>
-      
-      <div class="post-abstract">
-        <h4 id="pch是什么">PCH是什么？</h4>
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://tingke.github.io/post/bei-ping-guo-qi-yong-de-pch">
+                  <h2 class="post-title">被苹果弃用的PCH</h2>
+                </a>
+                <div class="post-date">
+                  2018-05-29
+                </div>
+                <div class="post-abstract">
+                  <h4 id="pch是什么">PCH是什么？</h4>
 <p><code>PCH</code>是苹果为了提高编译速度引入的一个预编译文件，它所引用的内容能够被项目中的其他文件共享和访问，预编译后的头文件会被缓存起来，再次编译的时候就不需要重新编译 <code>PCH</code> 文件中导入的内容，从而提高编译速度。在Xcode6以前，新增的工程中会自动生成 “工程名-Prefix.pch”文件。</p>
 
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://tingke.github.io/post/ios-da-bao-jing-tai-ku-sop">
-        <h2 class="post-title">iOS打包静态库SOP</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2018-02-20 ·
-        </time>
-        
-          <a href="https://tingke.github.io/tag/k9LCLRzAU" class="post-tag">
-            # 🍎iOS
-          </a>
-        
-      </div>
-      
-      <div class="post-abstract">
-        <p>今天，领导要求将App中网络请求的核心代码打包成静态库。故上网研究了一下静态库打包的相关知识，边看边试的打包成功了。现在在这里总结下：</p>
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://tingke.github.io/post/ios-da-bao-jing-tai-ku-sop">
+                  <h2 class="post-title">iOS打包静态库SOP</h2>
+                </a>
+                <div class="post-date">
+                  2018-02-20
+                </div>
+                <div class="post-abstract">
+                  <p>今天，领导要求将App中网络请求的核心代码打包成静态库。故上网研究了一下静态库打包的相关知识，边看边试的打包成功了。现在在这里总结下：</p>
 <h2 id="库的基本知识">库的基本知识</h2>
 <p><strong>1、 什么是库？</strong></p>
 <p>所谓库就是程序代码的集合，是共享程序代码的一种方式。</p>
 
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://tingke.github.io/post/gao-xiao-de-shi-yong-xcode-9">
-        <h2 class="post-title">高效的使用Xcode 9</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2017-11-01 ·
-        </time>
-        
-          <a href="https://tingke.github.io/tag/k9LCLRzAU" class="post-tag">
-            # 🍎iOS
-          </a>
-        
-      </div>
-      
-      <div class="post-abstract">
-        <p>随着iOS 11的发布，Xcode版本也升级到了9。那么这个版本的Xcode又有哪些变化呢？</p>
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://tingke.github.io/post/gao-xiao-de-shi-yong-xcode-9">
+                  <h2 class="post-title">高效的使用Xcode 9</h2>
+                </a>
+                <div class="post-date">
+                  2017-11-01
+                </div>
+                <div class="post-abstract">
+                  <p>随着iOS 11的发布，Xcode版本也升级到了9。那么这个版本的Xcode又有哪些变化呢？</p>
 <h2 id="1-跳转方法">1. 跳转方法</h2>
 <p>以前按住Command键，单击任何方法名都可以跳转到方法声明处或者苹果文档中。但是现在却弹出个弹框，如图</p>
 <figure data-type="image" tabindex="1"><img src="http://outiw4np3.bkt.clouddn.com/136bddeb50e67439fd2425a1b5ec88ce.jpg" alt="" loading="lazy"></figure>
 <p>此时却Command+Shift+左键才能跳转，才麻烦了。我们只需要在设置中这样就能设置回我们熟悉操作：</p>
 <figure data-type="image" tabindex="2"><img src="http://api.cocoachina.com/uploads//20170922/1506047607578005.png" alt="" loading="lazy"></figure>
 
-      </di>
-    </article>
+                </div>
+              </div>
+              
+            </article>
+          
+
+          <div class="pagination-container">
+  
   
 </div>
 
-        <div class="pagination-container">
-  
-  
-</div>
-
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> Copyright © 2019 | 
-  <a class="rss" href="https://tingke.github.io//atom.xml" target="_blank">RSS</a>
-</div>
-
-<script>
-  hljs.initHighlightingOnLoad()
-</script>
-
+        </div>
       </div>
     </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
   </body>
 </html>

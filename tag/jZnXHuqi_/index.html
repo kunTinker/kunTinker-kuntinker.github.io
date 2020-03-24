@@ -1,108 +1,108 @@
+<!DOCTYPE html>
 <html>
   <head>
-  <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" >
+
 <title>📒读书笔记 | 好学习</title>
-<link rel="shortcut icon" href="https://tingke.github.io//favicon.ico?v=1583248136896">
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://tingke.github.io//favicon.ico?v=1585011434288">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://tingke.github.io//styles/main.css">
 
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142389147-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-142389147-1');
-</script>
 
 
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://tingke.github.io/">
-  <img class="avatar" src="https://tingke.github.io//images/avatar.png?v=1583248136896" alt="">
-  </a>
-  <h1 class="site-title">
-    好学习
-  </h1>
-  <p class="site-description">
-    温故而知新
-  </p>
-  <div class="menu-container">
-    
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://tingke.github.io/">
+        <img src="https://tingke.github.io//images/avatar.png?v=1585011434288" class="site-logo">
+        <h1 class="site-title">好学习</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
       
-        <a href="/" class="menu">
-          首页
-        </a>
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
       
-    
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
       
-        <a href="/archives" class="menu">
-          归档
-        </a>
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
       
-    
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
       
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
+    </div>
   </div>
-  <div class="social-container">
-    
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
       
-    
+        
       
-    
+        
       
-    
+        
       
-    
+        
       
-    
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> Copyright © 2019 | <a class="rss" href="https://tingke.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
   </div>
 </div>
 
-        <div class="current-tag-container">
-            <h2 class="title">
-                标签：#📒读书笔记
-            </h2> 
-        </div>
-        <div class="post-container">
-  
-    <article class="post">
-      <a href="https://tingke.github.io/post/lesslesstu-jie-httpgreatergreater-du-shu-bi-ji">
-        <h2 class="post-title">《图解HTTP》读书笔记</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2018-06-29 ·
-        </time>
-        
-          <a href="https://tingke.github.io/tag/jZnXHuqi_" class="post-tag">
-            # 📒读书笔记
-          </a>
-        
-      </div>
-      
-      <div class="post-abstract">
-        <h2 id="tcpip-协议族分层">TCP/IP 协议族分层</h2>
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <h2 class="current-tag">标签: 📒读书笔记</h2>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://tingke.github.io/post/lesslesstu-jie-httpgreatergreater-du-shu-bi-ji">
+                  <h2 class="post-title">《图解HTTP》读书笔记</h2>
+                </a>
+                <div class="post-date">
+                  2018-06-29
+                </div>
+                <div class="post-abstract">
+                  <h2 id="tcpip-协议族分层">TCP/IP 协议族分层</h2>
 <ol>
 <li>应用层
 <ul>
@@ -128,26 +128,21 @@
 <p>传输图解<br>
 <img src="http://outiw4np3.bkt.clouddn.com/15e41c7da0dd411dabdbbad1266da079.jpg" alt="" loading="lazy"></p>
 
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://tingke.github.io/post/bian-xie-gao-zhi-liang-ios-yu-os-x-dai-ma-de-52-ge-you-xiao-fang-fa">
-        <h2 class="post-title">编写高质量iOS与OS X代码的52个有效方法</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2017-12-14 ·
-        </time>
-        
-          <a href="https://tingke.github.io/tag/jZnXHuqi_" class="post-tag">
-            # 📒读书笔记
-          </a>
-        
-      </div>
-      
-      <div class="post-abstract">
-        <h2 id="第一章-熟悉objective-c">第一章 熟悉Objective-C</h2>
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://tingke.github.io/post/bian-xie-gao-zhi-liang-ios-yu-os-x-dai-ma-de-52-ge-you-xiao-fang-fa">
+                  <h2 class="post-title">编写高质量iOS与OS X代码的52个有效方法</h2>
+                </a>
+                <div class="post-date">
+                  2017-12-14
+                </div>
+                <div class="post-abstract">
+                  <h2 id="第一章-熟悉objective-c">第一章 熟悉Objective-C</h2>
 <h3 id="第1条了解objective-c语言的起源">第1条：了解Objective-C语言的起源</h3>
 <ol>
 <li>
@@ -163,26 +158,40 @@ obj-&gt;perform(parameter1,parameter2);
 </li>
 </ol>
 
-      </di>
-    </article>
+                </div>
+              </div>
+              
+            </article>
+          
+
+          <div class="pagination-container">
+  
   
 </div>
 
-        <div class="pagination-container">
-  
-  
-</div>
-
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> Copyright © 2019 | 
-  <a class="rss" href="https://tingke.github.io//atom.xml" target="_blank">RSS</a>
-</div>
-
-<script>
-  hljs.initHighlightingOnLoad()
-</script>
-
+        </div>
       </div>
     </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
   </body>
 </html>

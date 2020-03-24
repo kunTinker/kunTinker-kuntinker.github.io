@@ -1,100 +1,107 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" >
+
 <title>好学习</title>
-<link rel="shortcut icon" href="https://tingke.github.io//favicon.ico?v=1583248136896">
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://tingke.github.io//favicon.ico?v=1585011434288">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://tingke.github.io//styles/main.css">
 
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142389147-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-142389147-1');
-</script>
 
 
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://tingke.github.io/">
-  <img class="avatar" src="https://tingke.github.io//images/avatar.png?v=1583248136896" alt="">
-  </a>
-  <h1 class="site-title">
-    好学习
-  </h1>
-  <p class="site-description">
-    温故而知新
-  </p>
-  <div class="menu-container">
-    
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://tingke.github.io/">
+        <img src="https://tingke.github.io//images/avatar.png?v=1585011434288" class="site-logo">
+        <h1 class="site-title">好学习</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
       
-        <a href="/" class="menu">
-          首页
-        </a>
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
       
-    
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
       
-        <a href="/archives" class="menu">
-          归档
-        </a>
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
       
-    
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
       
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
+    </div>
   </div>
-  <div class="social-container">
-    
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
       
-    
+        
       
-    
+        
       
-    
+        
       
-    
+        
       
-    
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> Copyright © 2019 | <a class="rss" href="https://tingke.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
   </div>
 </div>
 
-    
-        <div class="post-container">
-  
-    <article class="post">
-      <a href="https://tingke.github.io/post/ios11-xia-de-gua-pei-gong-zuo">
-        <h2 class="post-title">iOS11下的适配工作</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2017-10-13 ·
-        </time>
-        
-      </div>
-      
-      <div class="post-abstract">
-        <blockquote>
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://tingke.github.io/post/ios11-xia-de-gua-pei-gong-zuo">
+                  <h2 class="post-title">iOS11下的适配工作</h2>
+                </a>
+                <div class="post-date">
+                  2017-10-13
+                </div>
+                <div class="post-abstract">
+                  <blockquote>
 <p>今年的苹果，发布iOS 11的同时，也大胆的发布了异型屏iPhone X。独特的“刘海”造型又在手机样式方面独领风骚。但是这也为iOS开发工作增加了难度。</p>
 </blockquote>
 <p>iPhone X的屏幕尺寸相关变化</p>
@@ -106,51 +113,62 @@
 <li>物理分辨率为1125px * 2436px，使用@3倍图</li>
 </ol>
 
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://tingke.github.io/post/iphone-x-hu-jiao-she-ji-guan-fang-zhi-nan">
-        <h2 class="post-title">iPhone X互交设计官方指南</h2>
-      </a>
-      <div class="post-info">
-        <time class="post-time">
-          · 2017-09-14 ·
-        </time>
-        
-      </div>
-      
-      <div class="post-abstract">
-        <p>One More Thing!</p>
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://tingke.github.io/post/iphone-x-hu-jiao-she-ji-guan-fang-zhi-nan">
+                  <h2 class="post-title">iPhone X互交设计官方指南</h2>
+                </a>
+                <div class="post-date">
+                  2017-09-14
+                </div>
+                <div class="post-abstract">
+                  <p>One More Thing!</p>
 <p>iPhone X来了，全面屏+独特的“刘海”造型。让我们来了解一下iPhone X吧。</p>
 <h2 id="iphone-x">iPhone X</h2>
 <p>iPhone X包括一个大的、高分辨率的、圆形的、边对边的显示，它提供了前所未有的沉浸式、内容丰富的体验。</p>
 <figure data-type="image" tabindex="1"><img src="https://developer.apple.com/ios/human-interface-guidelines/images/OV_Hero.png" alt="" loading="lazy"></figure>
 
-      </di>
-    </article>
+                </div>
+              </div>
+              
+            </article>
+          
+
+          <div class="pagination-container">
+  
+    <a href="https://tingke.github.io/" class="prev"><i class="icon-arrow-ios-back-outline"></i> 上一页</a>
+  
   
 </div>
 
-    
-        <div class="pagination-container">
-  
-    <a href="https://tingke.github.io/" class="prev-page">上一页</a>
-  
-  
-</div>
-
-    
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> Copyright © 2019 | 
-  <a class="rss" href="https://tingke.github.io//atom.xml" target="_blank">RSS</a>
-</div>
-
-<script>
-  hljs.initHighlightingOnLoad()
-</script>
-
+        </div>
       </div>
     </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
   </body>
 </html>
