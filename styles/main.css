@@ -44,7 +44,7 @@ body {
  * Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
  */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: "Microsoft YaHei", Helvetica, "PingFang SC", Arial, sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, "Hiragino Sans GB", 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 /* Grouping content
    ========================================================================== */
@@ -405,7 +405,7 @@ a {
 }
 .post-item .left .post-abstract {
   line-height: 24px;
-  font-size: 18px;
+  font-size: 14px;
   color: #868e96;
 }
 .post-item .right {
