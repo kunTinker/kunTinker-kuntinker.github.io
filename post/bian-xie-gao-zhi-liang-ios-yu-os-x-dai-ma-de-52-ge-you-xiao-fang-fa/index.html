@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://tingke.github.io//favicon.ico?v=1585011434288">
+<link rel="shortcut icon" href="https://tingke.github.io//favicon.ico?v=1589815111188">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://tingke.github.io//styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://tingke.github.io/">
-        <img src="https://tingke.github.io//images/avatar.png?v=1585011434288" class="site-logo">
+        <img src="https://tingke.github.io//images/avatar.png?v=1589815111188" class="site-logo">
         <h1 class="site-title">好学习</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -98,6 +98,7 @@
             <div class="post-content">
               <h2 id="第一章-熟悉objective-c">第一章 熟悉Objective-C</h2>
 <h3 id="第1条了解objective-c语言的起源">第1条：了解Objective-C语言的起源</h3>
+<!-- more -->
 <ol>
 <li>
 <p>Objective-C语言由Smalltalk演化而来，后者是消息型语言的鼻祖。消息与函数调用之间的区别看上去就像这样：</p>
@@ -109,13 +110,11 @@ Object *obj = [Object new];
 Objcet *obj = new Object;
 obj-&gt;perform(parameter1,parameter2);
 </code></pre>
- <!-- more -->
 <p>关键区别在于：**使用消息结构的语言，其运行时所执行的代码由运行环境来决定；而使用函数调用的语言，则由编译器决定。**如果范例代码中调用的函数是多态的，那么在运行时就有按照“虚方法表”来查出到底应该执行哪个函数实现。而采用消息结构的语言，不论是否多态，总是在运行时才会去查找所要执行的方法。实际上，编译器甚至不关心接收消息的对象是何种类型。接收消息的对象问题也要在运行时处理，其过程叫做“动态绑定”（dynamic binding），第11条会详述其细节。</p>
 </li>
-</ol>
-<p>more</p>
-<ol start="2">
-<li>Objective-C是C的超集，只有同时掌握了C和OC的核心概念，方能写出高效的OC代码。</li>
+<li>
+<p>Objective-C是C的超集，只有同时掌握了C和OC的核心概念，方能写出高效的OC代码。</p>
+</li>
 </ol>
 <h3 id="第2条在类的头文件中尽量少引入其他头文件">第2条：在类的头文件中尽量少引入其他头文件</h3>
 <ol>
