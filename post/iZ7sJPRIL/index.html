@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>被苹果弃用的PCH | 好学习</title>
+<title>前端基础之CSS属性 | 好学习</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -92,47 +92,39 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">被苹果弃用的PCH</h2>
-            <div class="post-date">2018-05-29</div>
+            <h2 class="post-title">前端基础之CSS属性</h2>
+            <div class="post-date">2020-07-04</div>
             
             <div class="post-content">
-              <h4 id="pch是什么">PCH是什么？</h4>
-<p><code>PCH</code>是苹果为了提高编译速度引入的一个预编译文件，它所引用的内容能够被项目中的其他文件共享和访问，预编译后的头文件会被缓存起来，再次编译的时候就不需要重新编译 <code>PCH</code> 文件中导入的内容，从而提高编译速度。在Xcode6以前，新增的工程中会自动生成 “工程名-Prefix.pch”文件。</p>
-<!-- more -->
-<p>相信很多iOS开发者都使用 <code>PCH</code> 文件做过以下一些事：</p>
-<ol>
-<li>存放一些宏定义</li>
-<li>引入全局使用的头文件</li>
-<li>开关日志打印</li>
-</ol>
-<p>这样的在编码的时候，不用在不同文件中不停的做引用，编写代码的速度简直快的飞起😂😂。</p>
-<h4 id="这么爽的编码体验苹果为什么放弃主动引入pch">这么爽的编码体验，苹果为什么放弃主动引入PCH？</h4>
-<p>正是iOS开发者的滥用 <code>PCH</code> 文件，造成项目编译缓慢，影响用户体验，与苹果当初引入 <code>PCH</code> 的目的背道而驰了，因此苹果不得不放弃 <code>PCH</code> 的使用。</p>
-<p>我想，罪魁祸首就是开发者大量引入共用性不高的宏定义和头文件，每次修改引入内容造成 PCH的重编译；编译的时候整个工程范围地查找和替换这些宏定义字段，重复导入这些头文件，不慢就奇怪了。</p>
-<h4 id="正确的使用方式">正确的使用方式</h4>
-<ol>
-<li>不要把所有的宏定义都放到平常文件中，尤其是共用性较小的宏定义;</li>
-<li>将公用性高的头文件放到 <code>PCH</code> 中，比如<code>Fundation框架</code>等</li>
-<li>将零散的宏定义专门创建一个头文件来放置，再导入到 <code>PCH</code> 中，方便查看和修改</li>
-</ol>
-<p>其实，过分依赖 <code>PCH</code> 文件也有一些问题：它降低了代码的可移植性。把类中使用的框架等放在 <code>PCH</code> 中，要么你要重新去导入，要么把 <code>PCH</code> 一同拖走，还要删掉没用的代码，代价也是蛮大的。</p>
+              <p>前面介绍了CSS的选择器，既然选择了正确的标签，我们该如何改变标签的样式呢？</p>
+<h2 id="0x00-文本元素">0x00 文本元素</h2>
+<p>1、属性</p>
+<pre><code class="language-css">font-size: 50px;         /*文字大小*/
+font-weight: 700;       /*值从100-900，文字粗细,700约等于Bold，不推荐使用font-weight:bold; */
+font-family:微软雅黑;    /*文本的字体*/
+font-style: normal | italic;  /*normal:默认值  italic:斜体*/
+line-height: 50px;            /*行高*/
+</code></pre>
+<p>2、文本属性连写</p>
+<pre><code class="language-css">/* 格式：font: font-style font-weight  font-size/line-height  font-family; */
+font: italic 700 50px/40px  微软雅黑;
+</code></pre>
+<p>注意：font:后边写属性的值。一定按照书写顺序。<br>
+PS：文本属性连写中文字大小和字体为必写项。</p>
+<p>3、文字的表达方式</p>
+<pre><code class="language-css">font-family: 微软雅黑; // 直接写中文名称
+font-family: microsoft yahei; // 写字体的英文名称
+font-family: \5FAE\8F6F\96C5\9ED1; // unicode 编码（解析更快）
+</code></pre>
 
             </div>
-            
-              <div class="tag-container">
-                
-                  <a href="https://tingke.github.io/tag/k9LCLRzAU/" class="tag">
-                    🍎iOS
-                  </a>
-                
-              </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://tingke.github.io/post/vuejs-ru-men/">
+                <a href="https://tingke.github.io/post/3TADld0ke/">
                   <h3 class="post-title">
-                    Vue.js入门
+                    前端基础之CSS选择器
                   </h3>
                 </a>
               </div>
