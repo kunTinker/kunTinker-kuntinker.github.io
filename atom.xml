@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://tingke.github.io/</id>
-    <title>好学习</title>
-    <updated>2020-07-04T14:58:59.542Z</updated>
+    <title>迷航</title>
+    <updated>2020-12-07T16:23:45.234Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://tingke.github.io/"/>
     <link rel="self" href="https://tingke.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>人可以迷失方向，但是不能停下脚步！</subtitle>
     <logo>https://tingke.github.io/images/avatar.png</logo>
     <icon>https://tingke.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, 好学习</rights>
+    <rights>All rights reserved 2020, 迷航</rights>
     <entry>
         <title type="html"><![CDATA[前端基础之CSS属性]]></title>
         <id>https://tingke.github.io/post/iZ7sJPRIL/</id>
